@@ -1,0 +1,42 @@
+item,per_head,per_tool,category,note
+FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. MG90S is a drop-in upgrade with more torque margin
+Dowel pin Ø3x8 hardened (DIN 6325),1,0,hardware,"crank pin, pressed into 04 (runs in the shuttle groove)"
+"Compression spring, stock CW2/BMG idler spring",1,0,hardware,on the tension screw between the seat nyloc and Guidler A's arm
+M3x40 button head (ISO 7380),1,0,hardware,tension screw: shuttle wall -> spring -> Guidler A arm hole
+M3 hex nut (ISO 4032),1,0,hardware,dropped into the shuttle's open-top nut pocket; the tension screw threads into it
+M3 nyloc nut (ISO 10511),2,0,hardware,spring seat + end stop behind Guidler A's arm
+M3 washer (ISO 7089),2,0,hardware,one at each nyloc
+M3 heat-set insert (yours),3,0,hardware,"2 in the plate guide bosses, 1 in the plate back for the servo bracket"
+M3x8 SHCS + M3 DIN 9021 washer (Ø9x0.8),2,0,hardware,shuttle guide bosses: the large washers hold the shuttle on the plate
+M3x6 SHCS,2,0,hardware,"servo bracket -> motor plate (1 into insert, 1 self-taps Ø2.5)"
+M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
+M3x10 SHCS,2,0,hardware,receiver-frame posts -> CW2 front inserts
+Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
+Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
+M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
+M3 heat-set insert + M3x10 SHCS,2,0,hardware,duct legs -> receiver-frame wings (as v18)
+M3x25 SHCS,0,0,hardware,not needed: the two rear CW2->SB-body screws at the upper-left of the plate are left out
+4010 fan 24 V (yours),0,1,hardware,heatsink fan
+M3x14 SHCS,0,4,hardware,4010 -> shroud (self-taps into Ø2.7 holes)
+M2.5x10 SHCS,0,4,hardware,heatsink -> tool top through the 3 mm shroud lip (8 mm is now too short)
+4x2 PTFE to the spool,0,1,hardware,pressed 6 mm into the socket in the guide lever top (no brass tube: the bore above the gears is printed)
+Dowel pin Ø3x12 hardened,0,1,hardware,"guide lever pivot, pressed into the tool top"
+Hotend loom 2x22 AWG + 4x26 AWG,0,1,hardware,as v18
+Zip tie ≤3.6 mm wide,0,2,hardware,loom -> wire column on the tool top
+M5x10 SHCS + 2020 drop-in T-nut,0,2,hardware,dock -> rail (counterbores sized for SHCS heads)
+Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into the dock face, 7 mm stick out; the tool slides onto them in the +X shift"
+"2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, mounted 10 mm higher than in v18 (slot centre at head z 60)"
+Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
+01 CW2 main body,1,0,printed,stock Voron + front slot (same as v18)
+02 Guidler A (stock + Ø4.4 arm hole for the tension screw),1,0,printed,plus stock Guidler B
+03 Opener spring shuttle,1,0,printed,"PC-CF/ASA, back face down"
+04 Opener servo crank,1,0,printed,"PC-CF, flat; press onto the spline (no screw)"
+05 Motor plate with shuttle rail and guide bosses,1,0,printed,back face down
+06 Servo bracket,1,0,printed,flat
+07 Receiver (pins + magnets),1,0,printed,"PC-CF, front face down"
+08 Receiver frame (thicker posts with front buttress),1,0,printed,flange face down
+09 Duct + fan mount (v18 + thicker insert towers),1,0,printed,
+10 Tool top,0,1,printed,"PC-CF/ASA, underside down"
+10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported, brim recommended"
+11 Shroud 4010 TZ-V6 or 12 Shroud 4010 Dragon HF,0,1,printed,lip face down
+13 Dock,0,1,printed,"PETG/ASA, upright as exported; press in the 2 Ø3 pins"

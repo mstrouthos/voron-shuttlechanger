@@ -1,0 +1,212 @@
+[
+ {
+  "file": "01_CW2_main_body.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   62.8,
+   68.7,
+   24.7
+  ],
+  "bed_mm2": 1588,
+  "steep_overhang_mm2": 89,
+  "widest_flat_ceiling_mm": 10.5,
+  "ceilings_over_limit": [],
+  "verdict": "CHECK"
+ },
+ {
+  "file": "02_CW2_guidler_A_arm_hole_4.4.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   19.5,
+   45.0,
+   16.2
+  ],
+  "bed_mm2": 283,
+  "steep_overhang_mm2": 39,
+  "widest_flat_ceiling_mm": 2.1,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "03_opener_spring_shuttle.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   29.5,
+   53.1,
+   13.4
+  ],
+  "bed_mm2": 931,
+  "steep_overhang_mm2": 8,
+  "widest_flat_ceiling_mm": 3.5,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "04_opener_servo_crank.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   15.7,
+   14.4,
+   3.9
+  ],
+  "bed_mm2": 125,
+  "steep_overhang_mm2": 0,
+  "widest_flat_ceiling_mm": 0.0,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "05_CW2_motor_plate_opener_rail.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   73.6,
+   70.8,
+   8.4
+  ],
+  "bed_mm2": 2918,
+  "steep_overhang_mm2": 39,
+  "widest_flat_ceiling_mm": 4.0,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "06_servo_bracket.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   16.0,
+   54.7,
+   7.9
+  ],
+  "bed_mm2": 490,
+  "steep_overhang_mm2": 0,
+  "widest_flat_ceiling_mm": 0.5,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "07_receiver_pins_magnets.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   32.0,
+   11.6,
+   7.6
+  ],
+  "bed_mm2": 264,
+  "steep_overhang_mm2": 14,
+  "widest_flat_ceiling_mm": 6.0,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "08_receiver_frame.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   59.6,
+   39.9,
+   23.4
+  ],
+  "bed_mm2": 1658,
+  "steep_overhang_mm2": 0,
+  "widest_flat_ceiling_mm": 0.5,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "09_duct_and_fan_mount.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   59.4,
+   95.7,
+   63.0
+  ],
+  "bed_mm2": 2566,
+  "steep_overhang_mm2": 14,
+  "widest_flat_ceiling_mm": 7.0,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "10_tool_top_x_each_tool.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   36.0,
+   43.5,
+   28.4
+  ],
+  "bed_mm2": 973,
+  "steep_overhang_mm2": 32,
+  "widest_flat_ceiling_mm": 2.5,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "10b_tool_filament_guide_lever_x_each_tool.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   8.0,
+   20.8,
+   64.6
+  ],
+  "bed_mm2": 82,
+  "steep_overhang_mm2": 15,
+  "widest_flat_ceiling_mm": 2.1,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "11_tool_shroud_4010_TZ-V6.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   40.0,
+   31.9,
+   41.8
+  ],
+  "bed_mm2": 651,
+  "steep_overhang_mm2": 53,
+  "widest_flat_ceiling_mm": 4.6,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "12_tool_shroud_4010_DragonHF.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   40.0,
+   32.0,
+   42.6
+  ],
+  "bed_mm2": 660,
+  "steep_overhang_mm2": 58,
+  "widest_flat_ceiling_mm": 4.9,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ },
+ {
+  "file": "13_dock_x_each_tool.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   32.0,
+   22.1,
+   37.5
+  ],
+  "bed_mm2": 299,
+  "steep_overhang_mm2": 0,
+  "widest_flat_ceiling_mm": 0.5,
+  "ceilings_over_limit": [],
+  "verdict": "OK"
+ }
+]

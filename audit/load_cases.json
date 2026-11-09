@@ -1,0 +1,182 @@
+[
+ {
+  "part": "13 dock",
+  "case": "finger hit sideways at the tip",
+  "load": "30 N",
+  "stress_MPa": 6.7,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "bending + torsion at the tower root"
+ },
+ {
+  "part": "13 dock",
+  "case": "Y pull on the 2 pin holes (magnet breakaway x2.5): bearing",
+  "load": "35 N",
+  "stress_MPa": 1.5,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "2x \u00d83 pins pressed 8 mm"
+ },
+ {
+  "part": "10 tool top",
+  "case": "dock block: pin-hole bearing (magnet breakaway x2.5)",
+  "load": "35 N",
+  "stress_MPa": 1.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "2 holes, 6.8 long"
+ },
+ {
+  "part": "10 tool top",
+  "case": "dock block root (pins at z 58/65, root at the plate z 44)",
+  "load": "35 N",
+  "stress_MPa": 1.8,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "block + foot 12 wide, 12.9 deep at the plate"
+ },
+ {
+  "part": "10 tool top",
+  "case": "nozzle hit sideways: pin-bore bearing",
+  "load": "30 N",
+  "stress_MPa": 0.8,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "\u00d84 steel pins carry the bending"
+ },
+ {
+  "part": "10 tool top",
+  "case": "nozzle hit front/back: bore-end bearing",
+  "load": "30 N",
+  "stress_MPa": 5.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "couple over ~15 mm of engagement"
+ },
+ {
+  "part": "10 tool top",
+  "case": "wire column: 20 N yank on the loom, root above the sleeve",
+  "load": "20 N",
+  "stress_MPa": 3.8,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "8 x 6.6, merged with the pin sleeve below z 52.9"
+ },
+ {
+  "part": "10 tool top",
+  "case": "wire column: same yank at the lower tie slot",
+  "load": "20 N",
+  "stress_MPa": 4.1,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "slot 2.2 wide, 2.0 wall to the wire face"
+ },
+ {
+  "part": "08 receiver frame",
+  "case": "post knocked at the top (Y), above the buttress (z 64)",
+  "load": "30 N",
+  "stress_MPa": 5.4,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "9.7 x 5.4 post + 45 deg front buttress to z 65 (old 6.9 x 3.8 fin: 31 MPa)"
+ },
+ {
+  "part": "10b lever",
+  "case": "finger force on the spine, column root (z 52)",
+  "load": "5 N",
+  "stress_MPa": 2.4,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "a blocked lever is stopped by the body slot 6 mm below the contact, so the root never sees a large moment"
+ },
+ {
+  "part": "10b lever",
+  "case": "pivot boss bearing (\u00d83 pin, 8.4 long)",
+  "load": "20 N",
+  "stress_MPa": 0.8,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "2.0 wall round the pin"
+ },
+ {
+  "part": "04 crank",
+  "case": "arm bending at the hub (servo stall)",
+  "load": "22 N",
+  "stress_MPa": 3.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "printed flat"
+ },
+ {
+  "part": "04 crank",
+  "case": "spline shear (25T MG90S / 21T FS90, 2.6 engaged)",
+  "load": "0.22 N m",
+  "stress_MPa": 4.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "press fit; held axially by the shuttle tongue in front"
+ },
+ {
+  "part": "03 shuttle",
+  "case": "groove wall bearing (stall, worst pressure angle 64 deg)",
+  "load": "51 N",
+  "stress_MPa": 4.6,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "2.6 wall round the \u00d83.4 groove"
+ },
+ {
+  "part": "03 shuttle",
+  "case": "nut-pocket wall bending (spring 20 N on the M3 nut)",
+  "load": "20 N",
+  "stress_MPa": 4.4,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "1.6 walls either side of the nut"
+ },
+ {
+  "part": "03 shuttle",
+  "case": "tongue twist from the 6.9 mm pin/spring offset, per guide boss",
+  "load": "3.4 N",
+  "stress_MPa": 1.0,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "2 \u00d87 bosses 41 mm apart"
+ },
+ {
+  "part": "05 plate",
+  "case": "guide boss root (\u00d87, 4.3 long)",
+  "load": "3.4 N",
+  "stress_MPa": 0.4,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "printed upright with the plate"
+ },
+ {
+  "part": "06 bracket",
+  "case": "post root bending (stall reaction)",
+  "load": "8 N",
+  "stress_MPa": 5.9,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": ""
+ }
+]
