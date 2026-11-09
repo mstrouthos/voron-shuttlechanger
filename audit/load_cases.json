@@ -17,7 +17,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "2x \u00d83 pins pressed 8 mm"
+  "note": "2x Ø3 pins pressed 8 mm"
  },
  {
   "part": "10 tool top",
@@ -47,7 +47,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "\u00d84 steel pins carry the bending"
+  "note": "Ø4 steel pins carry the bending"
  },
  {
   "part": "10 tool top",
@@ -101,7 +101,7 @@
  },
  {
   "part": "10b lever",
-  "case": "pivot boss bearing (\u00d83 pin, 8.4 long)",
+  "case": "pivot boss bearing (Ø3 pin, 8.4 long)",
   "load": "20 N",
   "stress_MPa": 0.8,
   "layers": "along",
@@ -110,73 +110,113 @@
   "note": "2.0 wall round the pin"
  },
  {
-  "part": "04 crank",
-  "case": "arm bending at the hub (servo stall)",
-  "load": "22 N",
-  "stress_MPa": 3.7,
+  "part": "02 Guidler A mast",
+  "case": "column root bending, closed spring load at the rod (root z 104)",
+  "load": "13.5 N",
+  "stress_MPa": 5.5,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "printed flat"
+  "note": "5.6 x 9.7 section, 20.8 mm lever"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "column root bending, servo stall pushing a jammed guidler (rod force 21 N)",
+  "load": "21 N",
+  "stress_MPa": 8.6,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "150 N mm / 7 mm crank"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "screw-head washer bearing on the mast's left face",
+  "load": "13.5 N",
+  "stress_MPa": 0.4,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "Ø7 washer"
+ },
+ {
+  "part": "03 trunnion",
+  "case": "rod cross-hole bearing",
+  "load": "13.5 N",
+  "stress_MPa": 0.8,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "Ø3 rod over the 5.5 mm flats"
+ },
+ {
+  "part": "03 trunnion",
+  "case": "pivot shank bending in the crank bore",
+  "load": "13.5 N",
+  "stress_MPa": 0.6,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "Ø7, 2.6 mm engaged, printed upright"
+ },
+ {
+  "part": "04 crank",
+  "case": "stop tab at servo stall into the plate stop",
+  "load": "28 N",
+  "stress_MPa": 11.2,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "150 N mm at r 5.3; tab 3 x 2.5"
+ },
+ {
+  "part": "04 crank",
+  "case": "trunnion bore bearing, closed",
+  "load": "13.5 N",
+  "stress_MPa": 0.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "Ø7.15 x 2.6"
  },
  {
   "part": "04 crank",
   "case": "spline shear (25T MG90S / 21T FS90, 2.6 engaged)",
-  "load": "0.22 N m",
-  "stress_MPa": 4.7,
+  "load": "0.15 N m",
+  "stress_MPa": 3.4,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "press fit; held axially by the shuttle tongue in front"
- },
- {
-  "part": "03 shuttle",
-  "case": "groove wall bearing (stall, worst pressure angle 64 deg)",
-  "load": "51 N",
-  "stress_MPa": 4.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2.6 wall round the \u00d83.4 groove"
- },
- {
-  "part": "03 shuttle",
-  "case": "nut-pocket wall bending (spring 20 N on the M3 nut)",
-  "load": "20 N",
-  "stress_MPa": 4.4,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "1.6 walls either side of the nut"
- },
- {
-  "part": "03 shuttle",
-  "case": "tongue twist from the 6.9 mm pin/spring offset, per guide boss",
-  "load": "3.4 N",
-  "stress_MPa": 1.0,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2 \u00d87 bosses 41 mm apart"
+  "note": "press fit; trapped by the trunnion and pull rod"
  },
  {
   "part": "05 plate",
-  "case": "guide boss root (\u00d87, 4.3 long)",
-  "load": "3.4 N",
-  "stress_MPa": 0.4,
-  "layers": "across",
-  "allow_MPa": 8.0,
+  "case": "stop-pocket end wall at servo stall",
+  "load": "28 N",
+  "stress_MPa": 3.9,
+  "layers": "along",
+  "allow_MPa": 20.0,
   "ok": true,
-  "note": "printed upright with the plate"
+  "note": "2.4 deep x 3 wide contact"
+ },
+ {
+  "part": "05 plate",
+  "case": "crank hub bushing, closed spring load",
+  "load": "13.5 N",
+  "stress_MPa": 0.2,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "Ø9.4 x 7.8 bore"
  },
  {
   "part": "06 bracket",
-  "case": "post root bending (stall reaction)",
-  "load": "8 N",
-  "stress_MPa": 5.9,
+  "case": "servo reaction at the tab screws (stall)",
+  "load": "5.4 N",
+  "stress_MPa": 0.6,
   "layers": "across",
   "allow_MPa": 8.0,
   "ok": true,
-  "note": ""
+  "note": "150 N mm over 27.8 mm tab pitch; posts 8 deep"
  }
 ]

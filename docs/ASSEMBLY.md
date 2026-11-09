@@ -1,22 +1,24 @@
-# Assembly, Klipper and audit notes (v29)
+# Assembly, Klipper and audit notes (v30)
 
-Stock CW2 + LDO-36 · servo-driven spring shuttle (sets the idler tension and opens it) · tool on 2 Ø4 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
+Stock CW2 + LDO-36 · servo crank and pull rod (sets the idler tension and opens it) · tool on 2 Ø4 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
 
 All parts are in print orientation as single watertight bodies and need no supports (`print_audit.json`). The body is stock Voron geometry and keeps Voron's own bridges.
 
 ## Setup
-1. Guidler A: stock print plus a Ø4.4 hole along the arm for the tension screw. No insert, no dowel.
-2. Motor plate: put inserts in the 2 guide bosses and the bracket hole in the back. Put the shuttle on the rail and hold it with 2x **M3x8 SHCS + DIN 9021 washers** in the bosses.
-3. Tension stack, from the left: drop the M3 hex nut into the shuttle's pocket, then thread in the **M3x40 button head** from the left. Add the seat nyloc + washer, the stock spring, the Guidler A arm, then washer + end nyloc. Leave a 3.5 mm gap between the end washer and the arm when it is closed.
-4. Tension: turn the M3x40 head. Clockwise adds tension (about 3.8 mm of range). Then reset the end nyloc to a 3.5 mm gap.
-5. Crank: press the Ø3x8 dowel in. Centre the servo, then push the crank onto the spline with the pin in the shuttle groove at the closed end. **No horn screw**: the shuttle traps the crank.
-6. Fit the servo into the bracket with its own M2 screws. Fix the bracket to the plate back with 2x **M3x6**. Leave out the two upper-left CW2 rear screws.
-7. Receiver: press the Ø4x30 dowels through until 23 mm stick out at the front. Put 2 magnets in each pocket. Screw it to the receiver frame with 2x **M3x6** (they self-tap into Ø2.5 holes).
-8. Tool magnets: **1 per pocket**. Orient them so the pairs attract.
-9. Tool: put the shroud under the tool top and bolt the heatsink up through both with 4x **M2.5x10**. Press the Ø3x12 pivot pin through the tool top's front into the guide lever (the lever must swing freely). Push the spool's 4x2 PTFE 6 mm into the socket at the lever top.
-10. Receiver frame: bolt it to the CNC Tap with 2x M3x20 and the posts to the CW2 front with 2x **M3x10**. Put inserts in the duct legs and bolt them under the frame wings with 2x M3x10.
-11. Dock: press 2x **Ø3x15 dowels** into the holes in the dock face so 7 mm stick out, then bolt it on with 2x **M5x10 SHCS** into drop-in T-nuts. Set the toolchange Z in your macro so the pins line up with the two Ø3.2 holes in the tool's front-left block (the hole lead-ins catch ±0.8 mm).
-12. Wires: run the heater, thermistor and fan wires up the outside of the shroud's left side to the left edge of the tool top. Lay them on the outer face of the wire column at the front-left. Thread 2 zip ties (≤3.6 mm wide) front-to-back through its slots and around the bundle. Put the tie heads on the front or outer face, never at the back: the back of the column is only 1.5 mm from the receiver frame.
+1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
+2. Motor plate: press 2 M3 inserts into the two blind holes in the back face, top left and top right. Leave out the two upper-left CW2 rear screws (as in v29).
+3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
+4. Crank: power the servo and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion bore points right, 6° below horizontal. Press it onto the spline. A horn screw is optional (M2x12 self-tapping through the centre), because the trunnion and the rod trap the crank.
+5. Trunnion: push its round end into the crank's bore from the front, with the flats facing left and right.
+6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
+7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
+8. Tension: turn the tension nyloc. Tighter = more grip. The reference is about 10.8 mm of spring between the trunnion and the washer, about 13.5 N at the rod. That gives the same idler force as v29's 20 N at the old screw, because the rod pulls 52 mm from the guidler pivot instead of 35.
+9. Receiver: press the Ø4x30 dowels through until 23 mm stick out at the front. Put 2 magnets in each pocket. Screw it to the receiver frame with 2x **M3x6** (they self-tap into Ø2.5 holes).
+10. Tool magnets: **1 per pocket**. Orient them so the pairs attract.
+11. Tool: put the shroud under the tool top and bolt the heatsink up through both with 4x **M2.5x10**. Press the Ø3x12 pivot pin through the tool top's front into the guide lever (the lever must swing freely). Push the spool's 4x2 PTFE 6 mm into the socket at the lever top.
+12. Receiver frame: bolt it to the CNC Tap with 2x M3x20 and the posts to the CW2 front with 2x **M3x10**. Put inserts in the duct legs and bolt them under the frame wings with 2x M3x10.
+13. Dock: press 2x **Ø3x15 dowels** into the holes in the dock face so 7 mm stick out, then bolt it on with 2x **M5x10 SHCS** into drop-in T-nuts. Set the toolchange Z in your macro so the pins line up with the two Ø3.2 holes in the tool's front-left block (the hole lead-ins catch ±0.8 mm).
+14. Wires: run the heater, thermistor and fan wires up the outside of the shroud's left side to the left edge of the tool top. Lay them on the outer face of the wire column at the front-left. Thread 2 zip ties (≤3.6 mm wide) front-to-back through its slots and around the bundle. Put the tie heads on the front or outer face, never at the back: the back of the column is only 1.5 mm from the receiver frame.
 
 ## Klipper
 ```
@@ -26,7 +28,14 @@ maximum_servo_angle: 180
 minimum_pulse_width: 0.0005
 maximum_pulse_width: 0.0025
 ```
-Opener travel is 102° (dwell, unload the spring, pull the idler open, dwell). It opens the idler about 10–11°. FS90 torque margin is about 1.3–1.5×; an MG90S fits the same bracket if it stalls. Set the closed and open angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`.
+Opener travel is 166° of crank (closed at 6° past dead centre, open at 160°):
+- **0–50°:** the spring unloads.
+- **About 50–60°:** slack before the stop nut catches the trunnion.
+- **To 166°:** the rod pushes Guidler A open by 11.4°.
+
+The peak load is about 25 N·mm while the spring unloads. An FS90 makes about 150, so an MG90S isn't needed.
+
+Find the closed angle on the printer with `SET_SERVO SERVO=opener ANGLE=..`. It is the angle where the crank tab just rests on its stop. Open is 166° from it. If the crank moves down first, the servo turns the other way: use closed − 166° for open. After each move you can drop the signal (`SET_SERVO SERVO=opener WIDTH=0`). The crank is over centre, so the spring holds it closed, and when open nothing loads it.
 
 Y safe must be at least 30 mm behind the dock position (23 mm of pin engagement).
 
@@ -39,7 +48,12 @@ Always open the servo before the X shift into the dock.
 - `struct_audit.json`: wall-thickness scan of every STL by inward ray casting. It flags regions under 1.2 mm.
 - `load_cases.json`: hand load cases. Allowables are 20 MPa along layers and 8 MPa across layers. All cases pass. The worst are the dock finger hit sideways (30 N, 6.7 MPa) and the tool-foot root (6.1 MPa).
 
-Fixed in this pass:
+v30 opener (parts 02–06):
+- **Collision sweep:** the whole 166° of crank travel, in 2–4° steps, against the body, the plate, all hardware, the LDO-36, the servo, the tool, the lever and the PTFE. What remains is the servo spline press fit, plus the stock guidler and idler hardware, which the model holds still. v29 shows the same contacts.
+- **Pull-rod hardware:** the mast's rod faces are carved to the envelope of the tilting screw head, washer and push nut. The rod tilts up to 21° in mid-stroke.
+- **Wall thickness and gaps:** the new geometry adds no regions under 1.2 mm and no slits under 1 mm. The 02–06 entries in the audit JSONs come from a re-implemented scan (marked `"scan": "v30"`), which flags a few more stock regions than the v29 scan did. The flagged regions left in 02 and 05 are stock geometry already in the v29 report. One stock flange at the plate's lower-left corner is now 0.5 mm minimum (was 0.69), because the rail was cut back to the CW2 outline there.
+
+Fixed in v29:
 - dock: full-depth tower, front lips 1.95 → 2.95, counterbore walls 0.8 → 2.2 (bolts moved apart), teardrop bolt holes
 - tool top:
   - pins moved to x ±11.75. The M2.5 counterbores were 0.13 mm from the pin bores; now 1.5.
@@ -70,6 +84,7 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30** — pull-rod opener. The servo lies flat behind the plate above the LDO-36 and turns a crank in the gap between the CW2 body and the plate. A trunnion on the crank works an M3x55 pull rod that runs from a mast on Guidler A to the stock spring and a tension nyloc. The spring sits inside the head, so nothing slides out to the left any more, and the crank locks over centre when closed. The shuttle, rail, guide screws and servo pocket are gone, and the plate is cut back to the CW2 outline on the left. Left side: 1.9 mm past the CW2 body closed (was 19), 12 mm open (was about 29). The top of the plate is 2.7 mm higher, and the crank reaches 6 mm higher while it passes 90°. Servo travel 166°, idler opening 11.4°.
 - **v29** — spring shuttle: the servo now unloads the CW2 spring and pulls the idler open, and closed tension is set with the M3x40. Replaces the cam plate and the old side wall. Guidler A goes back to stock plus one hole. Receiver screws are M3x6 and post screws M3x10 (bolt position matched to the CW2 inserts). The head is about 15 mm wider on the left when closed and about 25 mm when open.
 - **v28** — dock: 2 Ø3 steel pins along X into 2 holes in a block on the tool (replaces the T-lug and slot).
 - **v27** — filament path Ø3.0 nominal (prints ≈Ø2.7–2.8): lever, tool top and shroud lip; column and body slot widened round it; open U-channel beside the guidler.

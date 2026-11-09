@@ -15,79 +15,84 @@
   "verdict": "CHECK"
  },
  {
-  "file": "02_CW2_guidler_A_arm_hole_4.4.stl",
+  "file": "02_CW2_guidler_A_mast.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   19.5,
-   45.0,
+   28.5,
+   61.6,
    16.2
   ],
-  "bed_mm2": 283,
-  "steep_overhang_mm2": 39,
-  "widest_flat_ceiling_mm": 2.1,
+  "bed_mm2": 513,
+  "steep_overhang_mm2": 163,
+  "widest_flat_ceiling_mm": 5.7,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
-  "file": "03_opener_spring_shuttle.stl",
+  "file": "03_opener_trunnion.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   29.5,
-   53.1,
-   13.4
+   7.0,
+   8.6,
+   9.2
   ],
-  "bed_mm2": 931,
-  "steep_overhang_mm2": 8,
-  "widest_flat_ceiling_mm": 3.5,
+  "bed_mm2": 38,
+  "steep_overhang_mm2": 15,
+  "widest_flat_ceiling_mm": 0,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "04_opener_servo_crank.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   15.7,
-   14.4,
-   3.9
+   19.2,
+   13.8,
+   10.6
   ],
-  "bed_mm2": 125,
-  "steep_overhang_mm2": 0,
-  "widest_flat_ceiling_mm": 0.0,
+  "bed_mm2": 150,
+  "steep_overhang_mm2": 27,
+  "widest_flat_ceiling_mm": 2.7,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
-  "file": "05_CW2_motor_plate_opener_rail.stl",
+  "file": "05_CW2_motor_plate_opener.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   73.6,
-   70.8,
-   8.4
+   54.1,
+   73.5,
+   8.3
   ],
-  "bed_mm2": 2918,
-  "steep_overhang_mm2": 39,
+  "bed_mm2": 2660,
+  "steep_overhang_mm2": 222,
   "widest_flat_ceiling_mm": 4.0,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "06_servo_bracket.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   16.0,
-   54.7,
-   7.9
+   45.0,
+   16.1,
+   8.0
   ],
-  "bed_mm2": 490,
-  "steep_overhang_mm2": 0,
-  "widest_flat_ceiling_mm": 0.5,
+  "bed_mm2": 381,
+  "steep_overhang_mm2": 5,
+  "widest_flat_ceiling_mm": 1.8,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "07_receiver_pins_magnets.stl",

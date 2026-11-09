@@ -1,14 +1,12 @@
 item,per_head,per_tool,category,note
-FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. MG90S is a drop-in upgrade with more torque margin
-Dowel pin Ø3x8 hardened (DIN 6325),1,0,hardware,"crank pin, pressed into 04 (runs in the shuttle groove)"
-"Compression spring, stock CW2/BMG idler spring",1,0,hardware,on the tension screw between the seat nyloc and Guidler A's arm
-M3x40 button head (ISO 7380),1,0,hardware,tension screw: shuttle wall -> spring -> Guidler A arm hole
-M3 hex nut (ISO 4032),1,0,hardware,dropped into the shuttle's open-top nut pocket; the tension screw threads into it
-M3 nyloc nut (ISO 10511),2,0,hardware,spring seat + end stop behind Guidler A's arm
-M3 washer (ISO 7089),2,0,hardware,one at each nyloc
-M3 heat-set insert (yours),3,0,hardware,"2 in the plate guide bosses, 1 in the plate back for the servo bracket"
-M3x8 SHCS + M3 DIN 9021 washer (Ø9x0.8),2,0,hardware,shuttle guide bosses: the large washers hold the shuttle on the plate
-M3x6 SHCS,2,0,hardware,"servo bracket -> motor plate (1 into insert, 1 self-taps Ø2.5)"
+FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. Peak load is about 25 N·mm (an FS90 makes about 150). MG90S also fits
+"Compression spring, stock CW2/BMG idler spring",1,0,hardware,on the pull rod between the trunnion's right flat and the tension washer (about 10.8 mm long when closed)
+M3x55 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the trunnion cross hole and the spring"
+M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, stop nut 2.5 mm left of the trunnion, tension nut after the spring"
+M3 washer (ISO 7089),2,0,hardware,under the screw head and under the tension nut
+M3 heat-set insert (yours),2,0,hardware,in the two blind holes in the plate back for the servo bracket
+M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
+M2x12 self-tapping screw,0,0,hardware,"optional: through the crank centre into the servo spline (the trunnion and pull rod already trap the crank)"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
 M3x10 SHCS,2,0,hardware,receiver-frame posts -> CW2 front inserts
 Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
@@ -28,11 +26,11 @@ Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into 
 "2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, mounted 10 mm higher than in v18 (slot centre at head z 60)"
 Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
 01 CW2 main body,1,0,printed,stock Voron + front slot (same as v18)
-02 Guidler A (stock + Ø4.4 arm hole for the tension screw),1,0,printed,plus stock Guidler B
-03 Opener spring shuttle,1,0,printed,"PC-CF/ASA, back face down"
-04 Opener servo crank,1,0,printed,"PC-CF, flat; press onto the spline (no screw)"
-05 Motor plate with shuttle rail and guide bosses,1,0,printed,back face down
-06 Servo bracket,1,0,printed,flat
+02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock; plus stock Guidler B"
+03 Opener trunnion,1,0,printed,"PC-CF/ASA, back face down"
+04 Opener servo crank,1,0,printed,"PC-CF, front face down; press onto the spline with the stop tab in the plate pocket"
+05 Motor plate (crank bore and stop pocket),1,0,printed,back face down
+06 Servo bracket,1,0,printed,back face down
 07 Receiver (pins + magnets),1,0,printed,"PC-CF, front face down"
 08 Receiver frame (thicker posts with front buttress),1,0,printed,flange face down
 09 Duct + fan mount (v18 + thicker insert towers),1,0,printed,

@@ -4,16 +4,16 @@ A hotend-only toolchanger for the Voron Trident, inspired by MedusaHC.
 
 **The extruder stays on the head; only the hotends change.** Each tool is a hotend, a 4010 fan and a small printed tool top. The tool hangs on two hardened pins and is held by magnets.
 
-The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2. A micro servo drives a sliding **spring shuttle** that does three things:
+The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2. A micro servo turns a small **crank** that works a **pull rod** on Guidler A. One half-turn of the crank does three things:
 - sets the filament tension when the idler is closed
 - takes the spring load off before opening
-- pulls the idler open, so the filament can leave the drive gears during a tool change
+- pushes the idler open, so the filament can leave the drive gears during a tool change
 
-The tension is set by turning one screw.
+The tension is set by turning one nut. When closed, the crank sits just past dead centre, so the spring holds it shut with the servo switched off.
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v29).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 ## Interactive 3D viewer
 `docs/index.html` is a self-contained three.js viewer of the head, tool and dock. It shows all the hardware and has:
@@ -24,7 +24,7 @@ The tension is set by turning one screw.
 
 Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 
-| Opener closed (spring loaded) | Opener open (spring unloaded, idler pulled open) |
+| Opener closed (crank over centre, spring loaded) | Opener open (spring unloaded, idler pushed open) |
 |---|---|
 | ![closed](images/opener_closed.png) | ![open](images/opener_open.png) |
 
@@ -32,9 +32,13 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 - **Tool mount:** the head carries 2 Ø4×30 dowels and 4 Ø6×2.65 magnets. Each tool top has matching bores and 2 magnets.
 - **Filament path:** the filament runs through a printed Ø3.0 bore in the tool top and a tilting guide lever, up to the drive gears.
 - **Dock:** the tool slides 9 mm along X onto 2 Ø3 steel pins on the dock, which hold it while the head backs away in Y. The same shift tilts the guide lever so the filament clears the gears. Docks sit on a 2020 rail at a 63 mm pitch.
-- **Opener:** the servo crank's pin runs in a groove in the shuttle. The groove has a dwell at each end. Opening, the shuttle first unloads the stock CW2 spring, then pulls Guidler A open by about 10–11°.
-  - Closed tension comes from an M3×40 screw, nuts and the stock spring.
-  - Travel is 102° of servo rotation.
+- **Opener:** everything sits in the gap between the CW2 body and the motor plate, above the guidler latch.
+  - **Servo and crank:** the servo lies flat behind the plate, above the LDO-36, and its spline comes through the plate into the crank.
+  - **Pull rod:** an M3×55 runs from a mast on Guidler A, through a trunnion on the crank, to the stock CW2 spring and a tension nut.
+  - **Opening:** in the first ~50° of crank travel the spring unloads. A stop nut then catches the trunnion and the rod pushes Guidler A open by 11.4°.
+  - **Travel:** 166° of servo rotation. Peak load is about 25 N·mm, about one sixth of what an FS90 makes.
+  - **Holding:** closed, the crank sits 6° past dead centre against a stop in the plate, so the spring holds it closed with no power.
+  - **Size:** compared with v29, the head is about 17 mm narrower on the left, both open and closed. The top of the plate is 2.7 mm higher.
 - **Hotends:** Trianglelab TZ-V6 3.0 or Phaetus Dragon HF, each with its own 4010 fan shroud.
 
 ![Dock](images/dock.png)
@@ -53,10 +57,10 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | # | Part | Qty |
 |---|---|---|
 | 01 | CW2 main body (stock + front filament slot) | 1 |
-| 02 | Guidler A (stock + Ø4.4 arm hole) | 1 |
-| 03 | Opener spring shuttle | 1 |
+| 02 | Guidler A + mast (stock + mast for the pull rod) | 1 |
+| 03 | Opener trunnion | 1 |
 | 04 | Opener servo crank | 1 |
-| 05 | Motor plate with shuttle rail | 1 |
+| 05 | Motor plate (crank bore and stop, servo bracket inserts) | 1 |
 | 06 | Servo bracket | 1 |
 | 07 | Receiver (pins + magnets) | 1 |
 | 08 | Receiver frame | 1 |
@@ -65,13 +69,14 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | 11 / 12 | 4010 shroud for TZ-V6 / Dragon HF | 1 per tool |
 | 13 | Dock | 1 per tool |
 
-**Material:** ASA, PETG or PC-CF. Use PC-CF for the crank, receiver and tool top if you can.
+**Material:** ASA, PETG or PC-CF. Use PC-CF for the crank, trunnion, receiver and tool top if you can.
 
 **Settings:** 0.2 mm layers, 4 walls, 40 % infill, no supports.
 
 **Key hardware:**
 - FS90 or MG90S micro servo
-- hardened dowels: Ø4×30, Ø3×8, Ø3×12, Ø3×15
+- hardened dowels: Ø4×30, Ø3×12, Ø3×15
+- M3×55 SHCS, 3 M3 nylocs and the stock CW2 spring for the pull rod
 - Ø6×2.65 magnets
 - M3 heat-set inserts
 - M3 and M5 screws (exact sizes and counts are in `BOM.csv`)
@@ -84,7 +89,7 @@ maximum_servo_angle: 180
 minimum_pulse_width: 0.0005
 maximum_pulse_width: 0.0025
 ```
-Set the closed and open angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`. The full drop and pickup sequence is in `docs/ASSEMBLY.md`.
+Open is 166° from closed. Set both angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`. You can switch the servo off between changes (`SET_SERVO SERVO=opener WIDTH=0`): the crank is over centre and holds itself closed. The full drop and pickup sequence is in `docs/ASSEMBLY.md`.
 
 ## Credits
 - [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts.
