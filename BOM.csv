@@ -6,9 +6,9 @@ M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, s
 M3 washer (ISO 7089),2,0,hardware,under the screw head and under the tension nut
 M3 heat-set insert (yours),2,0,hardware,in the two blind holes in the plate back for the servo bracket
 M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
-M2x12 self-tapping screw,0,0,hardware,"optional: through the crank centre into the servo spline (the trunnion and pull rod already trap the crank)"
+M2x3 button head (ISO 7380) + M2 washer (DIN 125),1,0,hardware,"holds the trunnion in the crank, from the back; M2x4 is too long"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
-M3x10 SHCS,2,0,hardware,receiver-frame posts -> CW2 front inserts
+M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)"
 Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
 Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
 M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
@@ -25,14 +25,14 @@ M5x10 SHCS + 2020 drop-in T-nut,0,2,hardware,dock -> rail (counterbores sized fo
 Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into the dock face, 7 mm stick out; the tool slides onto them in the +X shift"
 "2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, mounted 10 mm higher than in v18 (slot centre at head z 60)"
 Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
-01 CW2 main body,1,0,printed,stock Voron + front slot (same as v18)
+01 CW2 main body,1,0,printed,"stock Voron + front slot; front holes for the frame-post screws, full right insert pocket"
 02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock; plus stock Guidler B"
-03 Opener trunnion,1,0,printed,"PC-CF/ASA, back face down"
+03 Opener trunnion,1,0,printed,"PC-CF/ASA, on a flat"
 04 Opener servo crank,1,0,printed,"PC-CF, front face down; press onto the spline with the stop tab in the plate pocket"
 05 Motor plate (crank bore and stop pocket),1,0,printed,back face down
 06 Servo bracket,1,0,printed,back face down
 07 Receiver (pins + magnets),1,0,printed,"PC-CF, front face down"
-08 Receiver frame (thicker posts with front buttress),1,0,printed,flange face down
+08 Receiver frame (thicker posts with front buttress),1,0,printed,"flange face down; left post hole lined up with the CW2 insert"
 09 Duct + fan mount (v18 + thicker insert towers),1,0,printed,
 10 Tool top,0,1,printed,"PC-CF/ASA, underside down"
 10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported, brim recommended"

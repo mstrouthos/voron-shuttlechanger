@@ -8,11 +8,12 @@
    68.7,
    24.7
   ],
-  "bed_mm2": 1588,
-  "steep_overhang_mm2": 89,
-  "widest_flat_ceiling_mm": 10.5,
+  "bed_mm2": 1535,
+  "steep_overhang_mm2": 863,
+  "widest_flat_ceiling_mm": 10.0,
   "ceilings_over_limit": [],
-  "verdict": "CHECK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "02_CW2_guidler_A_mast.stl",
@@ -35,13 +36,13 @@
   "bodies": 1,
   "watertight": true,
   "size": [
+   9.1,
    7.0,
-   8.6,
-   9.2
+   7.0
   ],
-  "bed_mm2": 38,
-  "steep_overhang_mm2": 15,
-  "widest_flat_ceiling_mm": 0,
+  "bed_mm2": 26,
+  "steep_overhang_mm2": 29,
+  "widest_flat_ceiling_mm": 0.3,
   "ceilings_over_limit": [],
   "verdict": "OK",
   "scan": "v30"
@@ -55,9 +56,9 @@
    13.8,
    10.6
   ],
-  "bed_mm2": 150,
-  "steep_overhang_mm2": 27,
-  "widest_flat_ceiling_mm": 2.7,
+  "bed_mm2": 154,
+  "steep_overhang_mm2": 44,
+  "widest_flat_ceiling_mm": 1.5,
   "ceilings_over_limit": [],
   "verdict": "OK",
   "scan": "v30"
@@ -119,10 +120,11 @@
    23.4
   ],
   "bed_mm2": 1658,
-  "steep_overhang_mm2": 0,
-  "widest_flat_ceiling_mm": 0.5,
+  "steep_overhang_mm2": 84,
+  "widest_flat_ceiling_mm": 0,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "09_duct_and_fan_mount.stl",

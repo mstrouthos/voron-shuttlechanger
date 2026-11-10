@@ -13,7 +13,7 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.1).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 ## Interactive 3D viewer
 `docs/index.html` is a self-contained three.js viewer of the head, tool and dock. It shows all the hardware and has:
@@ -56,7 +56,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 ## Printed parts
 | # | Part | Qty |
 |---|---|---|
-| 01 | CW2 main body (stock + front filament slot) | 1 |
+| 01 | CW2 main body (stock + front filament slot + front holes for the frame-post screws) | 1 |
 | 02 | Guidler A + mast (stock + mast for the pull rod) | 1 |
 | 03 | Opener trunnion | 1 |
 | 04 | Opener servo crank | 1 |
@@ -77,6 +77,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 - FS90 or MG90S micro servo
 - hardened dowels: Ø4×30, Ø3×12, Ø3×15
 - M3×55 SHCS, 3 M3 nylocs and the stock CW2 spring for the pull rod
+- M2×3 button head + M2 washer to hold the trunnion in the crank
 - Ø6×2.65 magnets
 - M3 heat-set inserts
 - M3 and M5 screws (exact sizes and counts are in `BOM.csv`)

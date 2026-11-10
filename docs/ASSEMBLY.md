@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30)
+# Assembly, Klipper and audit notes (v30.1)
 
 Stock CW2 + LDO-36 · servo crank and pull rod (sets the idler tension and opens it) · tool on 2 Ø4 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
 
@@ -8,15 +8,15 @@ All parts are in print orientation as single watertight bodies and need no suppo
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press 2 M3 inserts into the two blind holes in the back face, top left and top right. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
-4. Crank: power the servo and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion bore points right, 6° below horizontal. Press it onto the spline. A horn screw is optional (M2x12 self-tapping through the centre), because the trunnion and the rod trap the crank.
-5. Trunnion: push its round end into the crank's bore from the front, with the flats facing left and right.
+4. Trunnion: push its round end and Ø4 spigot into the crank's bore from the front. From the back of the crank, put an M2 washer on an **M2x3 button head** and screw it into the spigot until it is tight. The washer clamps the spigot end, not the crank, so the trunnion still turns freely and can't fall out. Don't use an M2x4: it would reach the rod hole.
+5. Crank: power the servo and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.75 with three relief slits; if it is still too tight, open it with a 4.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
 8. Tension: turn the tension nyloc. Tighter = more grip. The reference is about 10.8 mm of spring between the trunnion and the washer, about 13.5 N at the rod. That gives the same idler force as v29's 20 N at the old screw, because the rod pulls 52 mm from the guidler pivot instead of 35.
 9. Receiver: press the Ø4x30 dowels through until 23 mm stick out at the front. Put 2 magnets in each pocket. Screw it to the receiver frame with 2x **M3x6** (they self-tap into Ø2.5 holes).
 10. Tool magnets: **1 per pocket**. Orient them so the pairs attract.
 11. Tool: put the shroud under the tool top and bolt the heatsink up through both with 4x **M2.5x10**. Press the Ø3x12 pivot pin through the tool top's front into the guide lever (the lever must swing freely). Push the spool's 4x2 PTFE 6 mm into the socket at the lever top.
-12. Receiver frame: bolt it to the CNC Tap with 2x M3x20 and the posts to the CW2 front with 2x **M3x10**. Put inserts in the duct legs and bolt them under the frame wings with 2x M3x10.
+12. Receiver frame: bolt it to the CNC Tap with 2x M3x20 and the posts to the CW2 front with 2x **M3x10**. Those two screws go through the holes in the body's front face into M3 inserts pressed in from the back of the body, as on a stock CW2. Put inserts in the duct legs and bolt them under the frame wings with 2x M3x10.
 13. Dock: press 2x **Ø3x15 dowels** into the holes in the dock face so 7 mm stick out, then bolt it on with 2x **M5x10 SHCS** into drop-in T-nuts. Set the toolchange Z in your macro so the pins line up with the two Ø3.2 holes in the tool's front-left block (the hole lead-ins catch ±0.8 mm).
 14. Wires: run the heater, thermistor and fan wires up the outside of the shroud's left side to the left edge of the tool top. Lay them on the outer face of the wire column at the front-left. Thread 2 zip ties (≤3.6 mm wide) front-to-back through its slots and around the bundle. Put the tie heads on the front or outer face, never at the back: the back of the column is only 1.5 mm from the receiver frame.
 
@@ -84,6 +84,11 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.1** — fixes from the first look at the parts:
+  - CW2 body: the receiver-frame post screws had no way through the front face. A 2 mm skin closed both insert pockets, and the right pocket was only half a hole. Both now have a Ø3.4 front hole, the right one a full Ø4.7 pocket with a small boss.
+  - Receiver frame: the left post hole is moved 0.6 mm to line up with its insert, and both Tap-screw holes are opened to Ø3.5.
+  - Trunnion: now held in the crank by an M2x3 button head and washer from the back. Before, only the rod kept it in, and the rod could yaw enough to pull it about 1.7 mm out of its 2.6 mm bore.
+  - Crank: 1.5 mm thicker and sitting in a shallow recess in the plate, so the trunnion screw fits. The spline socket goes from Ø4.6 to Ø4.75 with three relief slits, because Ø4.6 was too tight.
 - **v30** — pull-rod opener. The servo lies flat behind the plate above the LDO-36 and turns a crank in the gap between the CW2 body and the plate. A trunnion on the crank works an M3x55 pull rod that runs from a mast on Guidler A to the stock spring and a tension nyloc. The spring sits inside the head, so nothing slides out to the left any more, and the crank locks over centre when closed. The shuttle, rail, guide screws and servo pocket are gone, and the plate is cut back to the CW2 outline on the left. Left side: 1.9 mm past the CW2 body closed (was 19), 12 mm open (was about 29). The top of the plate is 2.7 mm higher, and the crank reaches 6 mm higher while it passes 90°. Servo travel 166°, idler opening 11.4°.
 - **v29** — spring shuttle: the servo now unloads the CW2 spring and pulls the idler open, and closed tension is set with the M3x40. Replaces the cam plate and the old side wall. Guidler A goes back to stock plus one hole. Receiver screws are M3x6 and post screws M3x10 (bolt position matched to the CW2 inserts). The head is about 15 mm wider on the left when closed and about 25 mm when open.
 - **v28** — dock: 2 Ø3 steel pins along X into 2 holes in a block on the tool (replaces the T-lug and slot).

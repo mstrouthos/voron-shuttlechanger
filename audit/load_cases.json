@@ -151,13 +151,23 @@
  },
  {
   "part": "03 trunnion",
-  "case": "pivot shank bending in the crank bore",
+  "case": "pivot bearing in the crank (Ø7 x 1.2 + Ø4 spigot x 0.9)",
   "load": "13.5 N",
-  "stress_MPa": 0.6,
-  "layers": "across",
-  "allow_MPa": 8.0,
+  "stress_MPa": 1.1,
+  "layers": "along",
+  "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø7, 2.6 mm engaged, printed upright"
+  "note": "printed on a flat, so the pivot axis lies in the layers"
+ },
+ {
+  "part": "03 trunnion",
+  "case": "M2 retaining screw pull-out if the rod yaws forward",
+  "load": "10 N",
+  "stress_MPa": 0.4,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "M2 self-tapping, 3.7 mm engaged in a Ø1.6 pilot"
  },
  {
   "part": "04 crank",
@@ -177,7 +187,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø7.15 x 2.6"
+  "note": "Ø7.15 x 1.2 + Ø4.15 web x 0.9"
  },
  {
   "part": "04 crank",
@@ -187,7 +197,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "press fit; trapped by the trunnion and pull rod"
+  "note": "Ø4.75 socket with 3 relief slits; trapped by the trunnion and pull rod"
  },
  {
   "part": "05 plate",
