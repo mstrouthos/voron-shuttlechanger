@@ -46,7 +46,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 ## Repository layout
 | Path | Contents |
 |---|---|
-| `stl/` | Print-ready STLs, already in print orientation, no supports needed |
+| `stl/` | Print-ready STLs for every printed part, including the one stock CW2 part (02b), already in print orientation, no supports needed |
 | `step/` | STEP (AP214) versions of every part, converted from the meshes: faceted solids, good for measuring and remixing |
 | `BOM.csv` | Full bill of materials (per head and per tool) |
 | `docs/ASSEMBLY.md` | Assembly steps, Klipper servo config, tool-change sequence, audit notes |
@@ -58,6 +58,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 |---|---|---|
 | 01 | CW2 main body (stock + front filament slot + front holes for the frame-post screws) | 1 |
 | 02 | Guidler A + mast (stock + mast for the pull rod) | 1 |
+| 02b | Guidler B (stock CW2, unmodified) | 1 |
 | 03 | Opener trunnion | 1 |
 | 04 | Opener servo crank | 1 |
 | 05 | Motor plate (crank bore and stop, servo bracket inserts) | 1 |
@@ -93,7 +94,7 @@ maximum_pulse_width: 0.0025
 Open is 166° from closed. Set both angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`. You can switch the servo off between changes (`SET_SERVO SERVO=opener WIDTH=0`): the crank is over centre and holds itself closed. The full drop and pickup sequence is in `docs/ASSEMBLY.md`.
 
 ## Credits
-- [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts.
+- [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts; 02b is the stock CW2 Guidler B from the Stealthburner release.
 - MedusaHC, for the hotend-only toolchanger idea.
 - Voron Tap / CNC Tap V2, which the head mounts to.
 

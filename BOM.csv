@@ -26,7 +26,8 @@ Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into 
 "2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, mounted 10 mm higher than in v18 (slot centre at head z 60)"
 Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
 01 CW2 main body,1,0,printed,"stock Voron + front slot; front holes for the frame-post screws, full right insert pocket"
-02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock; plus stock Guidler B"
+02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock"
+02b Guidler B (stock CW2),1,0,printed,"unmodified Voron part, as printed for a stock CW2"
 03 Opener trunnion,1,0,printed,"PC-CF/ASA, on a flat"
 04 Opener servo crank,1,0,printed,"PC-CF, front face down; press onto the spline with the stop tab in the plate pocket"
 05 Motor plate (crank bore and stop pocket),1,0,printed,back face down

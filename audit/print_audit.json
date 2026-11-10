@@ -32,6 +32,22 @@
   "scan": "v30"
  },
  {
+  "file": "02b_CW2_guidler_B_stock.stl",
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   19.2,
+   31.4,
+   10.8
+  ],
+  "bed_mm2": 185,
+  "steep_overhang_mm2": 59,
+  "widest_flat_ceiling_mm": 1.3,
+  "ceilings_over_limit": [],
+  "verdict": "OK",
+  "scan": "v30"
+ },
+ {
   "file": "03_opener_trunnion.stl",
   "bodies": 1,
   "watertight": true,
