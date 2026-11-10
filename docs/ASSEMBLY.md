@@ -1,4 +1,6 @@
-# Assembly, Klipper and audit notes (v30.1)
+# Assembly, Klipper and audit notes (v30.2)
+
+For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
 Stock CW2 + LDO-36 · servo crank and pull rod (sets the idler tension and opens it) · tool on 2 Ø4 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
 
@@ -6,7 +8,7 @@ All parts are in print orientation as single watertight bodies and need no suppo
 
 ## Setup
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
-2. Motor plate: press 2 M3 inserts into the two blind holes in the back face, top left and top right. Leave out the two upper-left CW2 rear screws (as in v29).
+2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
 4. Trunnion: push its round end and Ø4 spigot into the crank's bore from the front. From the back of the crank, put an M2 washer on an **M2x3 button head** and screw it into the spigot until it is tight. The washer clamps the spigot end, not the crank, so the trunnion still turns freely and can't fall out. Don't use an M2x4: it would reach the rod hole.
 5. Crank: power the servo and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.75 with three relief slits; if it is still too tight, open it with a 4.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
@@ -84,6 +86,11 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.2** — one insert size everywhere:
+  - All 12 insert holes are now Ø4.7, for the Voron M3×5×4 insert. The plate's 2 servo-bracket holes and the duct's 2 leg holes were Ø4.0.
+  - The duct leg towers grew 0.1–0.15 mm so their walls stay at 1.2 mm or more.
+  - The unused v29 bracket insert hole in the plate is filled.
+  - Illustrated assembly guide added, with SB2209 servo wiring and Klipper setup.
 - **v30.1** — fixes from the first look at the parts:
   - CW2 body: the receiver-frame post screws had no way through the front face. A 2 mm skin closed both insert pockets, and the right pocket was only half a hole. Both now have a Ø3.4 front hole, the right one a full Ø4.7 pocket with a small boss.
   - Receiver frame: the left post hole is moved 0.6 mm to line up with its insert, and both Tap-screw holes are opened to Ø3.5.

@@ -88,9 +88,9 @@
    73.5,
    8.3
   ],
-  "bed_mm2": 2660,
-  "steep_overhang_mm2": 222,
-  "widest_flat_ceiling_mm": 4.0,
+  "bed_mm2": 2663,
+  "steep_overhang_mm2": 219,
+  "widest_flat_ceiling_mm": 4.7,
   "ceilings_over_limit": [],
   "verdict": "OK",
   "scan": "v30"
@@ -147,15 +147,16 @@
   "bodies": 1,
   "watertight": true,
   "size": [
-   59.4,
+   59.6,
    95.7,
    63.0
   ],
-  "bed_mm2": 2566,
-  "steep_overhang_mm2": 14,
-  "widest_flat_ceiling_mm": 7.0,
+  "bed_mm2": 2195,
+  "steep_overhang_mm2": 1996,
+  "widest_flat_ceiling_mm": 9.2,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "10_tool_top_x_each_tool.stl",

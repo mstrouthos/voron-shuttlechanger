@@ -13,7 +13,9 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.1).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.2).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+
+**Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md).**
 
 ## Interactive 3D viewer
 `docs/index.html` is a self-contained three.js viewer of the head, tool and dock. It shows all the hardware and has:
@@ -49,7 +51,8 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | `stl/` | Print-ready STLs for every printed part, including the one stock CW2 part (02b), already in print orientation, no supports needed |
 | `step/` | STEP (AP214) versions of every part, converted from the meshes: faceted solids, good for measuring and remixing |
 | `BOM.csv` | Full bill of materials (per head and per tool) |
-| `docs/ASSEMBLY.md` | Assembly steps, Klipper servo config, tool-change sequence, audit notes |
+| `docs/ASSEMBLY_GUIDE.md` | Illustrated step-by-step assembly: every insert, magnet and dowel, the opener, SB2209 servo wiring and Klipper setup |
+| `docs/ASSEMBLY.md` | Assembly notes, tool-change sequence, audit notes |
 | `docs/index.html` | Interactive 3D viewer |
 | `audit/` | Printability, wall-thickness and load-case reports |
 
@@ -80,7 +83,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 - M3×55 SHCS, 3 M3 nylocs and the stock CW2 spring for the pull rod
 - M2×3 button head + M2 washer to hold the trunnion in the crank
 - Ø6×2.65 magnets
-- M3 heat-set inserts
+- 12× M3×5×4 heat-set inserts (Ø5 × 4 mm), all in Ø4.7 holes
 - M3 and M5 screws (exact sizes and counts are in `BOM.csv`)
 
 ## Klipper
@@ -91,7 +94,7 @@ maximum_servo_angle: 180
 minimum_pulse_width: 0.0005
 maximum_pulse_width: 0.0025
 ```
-Open is 166° from closed. Set both angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`. You can switch the servo off between changes (`SET_SERVO SERVO=opener WIDTH=0`): the crank is over centre and holds itself closed. The full drop and pickup sequence is in `docs/ASSEMBLY.md`.
+On a BTT SB2209 the servo plugs into pins 1–3 of the BLTouch header: the signal is `PB9` on the STM32 version and `gpio22` on the RP2040 and USB versions. The [assembly guide](docs/ASSEMBLY_GUIDE.md#8-electronics-servo-on-a-btt-sb2209) has the wiring, ready-made `OPENER_OPEN`/`OPENER_CLOSE` macros and how to set the angles. Open is 166° from closed. Set both angles on the printer with `SET_SERVO SERVO=opener ANGLE=..`. You can switch the servo off between changes (`SET_SERVO SERVO=opener WIDTH=0`): the crank is over centre and holds itself closed. The full drop and pickup sequence is in `docs/ASSEMBLY.md`.
 
 ## Credits
 - [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts; 02b is the stock CW2 Guidler B from the Stealthburner release.

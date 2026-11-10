@@ -4,7 +4,7 @@ FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo P
 M3x55 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the trunnion cross hole and the spring"
 M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, stop nut 2.5 mm left of the trunnion, tension nut after the spring"
 M3 washer (ISO 7089),2,0,hardware,under the screw head and under the tension nut
-M3 heat-set insert (yours),2,0,hardware,in the two blind holes in the plate back for the servo bracket
+"M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",12,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 7, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
 M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
 M2x3 button head (ISO 7380) + M2 washer (DIN 125),1,0,hardware,"holds the trunnion in the crank, from the back; M2x4 is too long"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
@@ -12,7 +12,7 @@ M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the 
 Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
 Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
 M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
-M3 heat-set insert + M3x10 SHCS,2,0,hardware,duct legs -> receiver-frame wings (as v18)
+M3x10 SHCS,2,0,hardware,duct legs -> receiver-frame wings (into the duct inserts)
 M3x25 SHCS,0,0,hardware,not needed: the two rear CW2->SB-body screws at the upper-left of the plate are left out
 4010 fan 24 V (yours),0,1,hardware,heatsink fan
 M3x14 SHCS,0,4,hardware,4010 -> shroud (self-taps into Ø2.7 holes)
