@@ -1,4 +1,4 @@
-# Assembly guide (v30.2)
+# Assembly guide (v30.3)
 
 Step-by-step build of the head, the tools and the docks, with illustrations. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -99,7 +99,7 @@ Then:
 4. Bolt the duct legs under the frame wings with 2× M3×10, into the duct inserts.
 
 ## 7. Tools and docks
-1. **Tool:** put the 4010 shroud (11 for TZ-V6, 12 for Dragon HF) under the tool top. Bolt the heatsink up through both with 4× M2.5×10. Fix the 4010 fan with 4× M3×14; they self-tap.
+1. **Tool:** put the 4010 shroud (11 for TZ-V6, 12 for Dragon HF) under the tool top. Bolt the heatsink up through both with 4× M2.5×10. Fix the 4010 fan with 4× M3×14; they self-tap into the shroud's 4 Ø2.7 holes.
 2. **PTFE:** push the 4×2 PTFE 6 mm into the socket at the top of the guide lever.
 3. **Wires:** run the hotend loom up the left side of the shroud. Hold it to the wire column with 2 zip ties, with the tie heads on the front or outer face, never at the back.
 4. **Docks:** bolt each dock to the 2020 rail with 2× M5×10 and drop-in T-nuts, 63 mm apart.

@@ -88,8 +88,8 @@
    73.5,
    8.3
   ],
-  "bed_mm2": 2663,
-  "steep_overhang_mm2": 219,
+  "bed_mm2": 2626,
+  "steep_overhang_mm2": 225,
   "widest_flat_ceiling_mm": 4.7,
   "ceilings_over_limit": [],
   "verdict": "OK",
@@ -198,10 +198,11 @@
    41.8
   ],
   "bed_mm2": 651,
-  "steep_overhang_mm2": 53,
+  "steep_overhang_mm2": 354,
   "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "12_tool_shroud_4010_DragonHF.stl",
@@ -213,10 +214,11 @@
    42.6
   ],
   "bed_mm2": 660,
-  "steep_overhang_mm2": 58,
-  "widest_flat_ceiling_mm": 4.9,
+  "steep_overhang_mm2": 355,
+  "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30"
  },
  {
   "file": "13_dock_x_each_tool.stl",

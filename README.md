@@ -13,7 +13,7 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.2).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.3).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md).**
 
@@ -54,7 +54,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | `docs/ASSEMBLY_GUIDE.md` | Illustrated step-by-step assembly: every insert, magnet and dowel, the opener, SB2209 servo wiring and Klipper setup |
 | `docs/ASSEMBLY.md` | Assembly notes, tool-change sequence, audit notes |
 | `docs/index.html` | Interactive 3D viewer |
-| `audit/` | Printability, wall-thickness and load-case reports |
+| `audit/` | Printability, wall-thickness, screw-path and load-case reports |
 
 ## Printed parts
 | # | Part | Qty |

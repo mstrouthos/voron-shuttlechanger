@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.2)
+# Assembly, Klipper and audit notes (v30.3)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -47,6 +47,7 @@ Y safe must be at least 30 mm behind the dock position (23 mm of pin engagement)
 Always open the servo before the X shift into the dock.
 
 ## Structural audit
+- `screw_audit.json`: every screw's path through the printed parts, with the smallest clear radius in each part. Each part comes out as clearance, tapped/self-tapping, or blocked; none is blocked.
 - `struct_audit.json`: wall-thickness scan of every STL by inward ray casting. It flags regions under 1.2 mm.
 - `load_cases.json`: hand load cases. Allowables are 20 MPa along layers and 8 MPa across layers. All cases pass. The worst are the dock finger hit sideways (30 N, 6.7 MPa) and the tool-foot root (6.1 MPa).
 
@@ -86,6 +87,10 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.3** — screw-path audit (`audit/screw_audit.json`). All 34 screws were traced through every printed part they pass. Fixed:
+  - Motor plate: v29 had closed three stock holes with 0.4–0.6 mm skins at the back face (the first layers on the bed). These are the right LDO-36 motor screw, the screw clearance behind the lower front-face insert, and the back-face insert pocket for the CW2 body screw, which was sealed. All three are open again, as on the original Voron plate.
+  - Motor plate: small reliefs in the bottom edge, because the M3×6 receiver-screw heads hit it by 1 mm. The unused v29 dimple is filled.
+  - Both 4010 shrouds (11 and 12): the two upper fan-screw holes were missing. They are now Ø2.7 self-tapping holes, 4.7 mm deep, like the lower ones.
 - **v30.2** — one insert size everywhere:
   - All 12 insert holes are now Ø4.7, for the Voron M3×5×4 insert. The plate's 2 servo-bracket holes and the duct's 2 leg holes were Ø4.0.
   - The duct leg towers grew 0.1–0.15 mm so their walls stay at 1.2 mm or more.
