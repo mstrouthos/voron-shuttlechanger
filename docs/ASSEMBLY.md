@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.7)
+# Assembly, Klipper and audit notes (v30.8)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -10,7 +10,7 @@ All parts are in print orientation as single watertight bodies and need no suppo
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
-4. Trunnion: push its round end and Ø4 spigot into the crank's bore from the front. From the back of the crank, put an M2 washer on an **M2x3 button head** and screw it into the spigot until it is tight. The washer clamps the spigot end, not the crank, so the trunnion still turns freely and can't fall out. Don't use an M2x4: it would reach the rod hole.
+4. Trunnion: push its round end and Ø4.8 spigot into the crank's bore from the front. From the back of the crank, screw an **M3x4 button head** (ISO 7380, no washer) into the spigot until it is snug; it self-taps. The head clamps the spigot end, not the crank, so the trunnion still turns freely and can't fall out. It must be 4 mm long: the tip ends 0.4 mm above the pull rod, so an M3x5 would hit it.
 5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.75 with three relief slits; if it is still too tight, open it with a 4.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
@@ -88,6 +88,10 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.8** — the trunnion is held by an **M3×4 button head** instead of an M2×3 and an M2 washer. Reprint 03 and 04 again.
+  - Trunnion: spigot Ø4.8 (was Ø4.0), with a Ø2.5 self-tapping pilot that opens into the rod hole. An M3×4 tip ends 0.4 mm above the rod.
+  - Crank: web hole Ø4.95 and counterbore Ø6.2. The Ø5.7 head overlaps the web by 0.37 mm per side and sits on the spigot end, which stands 0.1 mm proud, so it never clamps the crank.
+  - The head is 1.65 mm tall and clears the plate recess by 0.35 mm over the whole crank travel. There is no room for a socket head.
 - **v30.7** — reprint 03 trunnion and 04 crank.
   - Trunnion: now prints standing on its square end instead of on a flat. The Ø4 spigot, the Ø6.9 journal and the M2 pilot now print as vertical circles, so they come out round. The rod cross hole is a truncated teardrop. Bed contact goes from 26 to 48 mm², and steep overhang from 29 to 9 mm². The journal is Ø6.9 (was Ø7.0), for 0.125 mm per side in the crank bore. The flat chamfers no longer leave zero-thickness slivers at the corners.
   - Crank: the hub is Ø8.6 (was Ø9.0), 0.4 mm per side in the Ø9.4 plate bore (was 0.2), so it turns freely. The spline relief slits are 0.2 mm shorter, which keeps a 0.8 mm skin outside them.

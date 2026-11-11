@@ -1,4 +1,4 @@
-# Assembly guide (v30.7)
+# Assembly guide (v30.8)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -17,7 +17,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 4 | Drive shaft + 50T gear (BMG kit) | 22 | M3×12 SHCS ×2: bracket → plate |
 | 5 | Drive gear + M3 set screw (BMG kit) | 23 | 04 Servo crank |
 | 6 | MR85 bearing, body side | 24 | 03 Trunnion |
-| 7 | 01 CW2 main body | 25 | M2×3 button head + M2 washer |
+| 7 | 01 CW2 main body | 25 | M3×4 button head |
 | 8 | M3×6 FHCS: anti-squish stop, inside the body | 26 | Pull rod: M3×55 SHCS, 3× M3 nyloc, 2× M3 washer, stock CW2 spring |
 | 9 | 02 Guidler A + mast | 27 | 08 Receiver frame |
 | 10 | 02b Guidler B | 28 | 07 Receiver |
@@ -61,7 +61,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 2 | M3×10 SHCS | motor plate → CNC Tap |
 | 1 | FS90 (or MG90S) micro servo, with its 2 M2 tab screws | opener |
 | 2 | M3×12 SHCS | servo bracket → plate |
-| 1 | M2×3 button head + M2 washer | trunnion → crank |
+| 1 | M3×4 button head (ISO 7380), **4 mm long, not 5** | trunnion → crank |
 | 1 | M3×55 SHCS | pull rod |
 | 3 | M3 nyloc nut | pull rod: push, stop and tension nuts |
 | 2 | Ø3×30 hardened dowel | receiver |
@@ -261,8 +261,10 @@ The stock BMG thumbscrew and the CW2 latch are not fitted. Keep the thumbscrew's
 ### 3.9 Crank and trunnion
 ![Opener: crank and trunnion](../images/assembly/opener_crank_trunnion.png)
 
-1. Push the 03 trunnion's round end and Ø4 spigot into the 04 crank from the front.
-2. From the back of the crank, fit an **M2 washer** and an **M2×3 button head** into the spigot and tighten it. It clamps the spigot end, not the crank, so the trunnion still turns freely. Don't use an M2×4: it would reach the rod hole.
+1. Push the 03 trunnion's round end and Ø4.8 spigot into the 04 crank from the front.
+2. From the back of the crank, screw an **M3×4 button head** (2 mm hex key, no washer) into the spigot until it is snug. It self-taps into the plastic. The head clamps the spigot end, which stands 0.1 mm proud of the crank, so the trunnion still turns freely and can't fall out.
+   - It must be **4 mm long**. The pilot hole opens into the rod hole: look into the rod hole from the side, and the screw tip must not show. An M3×5 would hit the pull rod.
+   - Don't overtighten: the spigot wall is about 1.1 mm thick. Stop as soon as the head is seated, then check that the trunnion turns freely.
 3. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
 4. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
 5. Push the crank onto the spline by hand. The socket is Ø4.75 with three relief slits; if it is too tight, open it with a 4.8 mm drill by hand.

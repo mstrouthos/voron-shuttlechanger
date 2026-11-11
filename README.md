@@ -13,7 +13,7 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.7).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.8).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks. The whole head is built on the bench and then bolted to the Tap in one piece.
 
@@ -83,7 +83,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 - FS90 or MG90S micro servo
 - hardened dowels: Ø3×30, Ø3×12, Ø3×15 (all Ø3)
 - M3×55 SHCS, 3 M3 nylocs and the stock CW2 spring for the pull rod
-- M2×3 button head + M2 washer to hold the trunnion in the crank
+- M3×4 button head (ISO 7380) to hold the trunnion in the crank
 - Ø6×2.65 magnets
 - 12× M3×5×4 heat-set inserts (Ø5 × 4 mm), all in Ø4.7 holes
 - stock CW2 drivetrain: Bondtech BMG gear kit, 2× MR85 bearings, LDO-36 motor

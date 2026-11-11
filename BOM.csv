@@ -15,7 +15,7 @@ M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, s
 M3 washer (ISO 7089),3,0,hardware,"pull rod: under the screw head and under the tension nut; CW2: under the M3x8 motor screw"
 "M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",12,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 7, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
 M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
-M2x3 button head (ISO 7380) + M2 washer (DIN 125),1,0,hardware,"holds the trunnion in the crank, from the back; M2x4 is too long"
+M3x4 button head (ISO 7380),1,0,hardware,"holds the trunnion in the crank, from the back; must be 4 mm long: an M3x5 would reach the pull rod"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
 M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)"
 Dowel pin Ø3x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
