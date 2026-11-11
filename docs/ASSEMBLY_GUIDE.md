@@ -1,4 +1,4 @@
-# Assembly guide (v30.10)
+# Assembly guide (v30.11)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -259,15 +259,12 @@ The stock BMG thumbscrew and the CW2 latch are not fitted. Keep the thumbscrew's
 ### 3.9 Crank and trunnion
 ![Opener: crank and trunnion](../images/assembly/opener_crank_trunnion.png)
 
-1. Look into the back of the 04 crank's trunnion bore: the web has **2 notches**, and the trunnion's spigot has **2 lugs** to match. They are 120° apart, not opposite, so they only line up one way.
-2. Hold the crank from the front with its arm pointing right. Turn the 03 trunnion so its rod hole stands nearly upright, with the top leaning slightly left (about 106° from level), and line the lugs up with the notches.
-3. Push the trunnion in from the front until it seats, then turn it **clockwise about 106°** (seen from the front) until the rod hole is level and the flats face left and right. The lugs are now behind the web, and the trunnion can't come out.
-   - Check that it turns freely and can't be pulled out. It only comes out at the insert angle. Once the pull rod is through it, it never gets near that angle: in use it only turns 0 to 148° clockwise relative to the crank.
-   - There is no screw: nothing sticks out of the back of the crank.
-4. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
-5. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
-6. Push the crank onto the spline by hand. The socket is Ø4.9, with a lead-in chamfer and three relief slits, so firm thumb pressure should be enough. If it still needs force, open it with a 5.0 mm drill turned by hand rather than pushing harder: the spline teeth only need to bite lightly, because the peak load is about 25 N·mm.
-7. Check that the trunnion's flats still face left and right.
+1. Push the 03 trunnion's round boss right through the 04 crank's Ø7.15 bore from the front, with its flats facing left and right. The boss end sits just inside the back face. A dab of grease helps; it should turn freely with no tight spots.
+2. Nothing holds it in yet, so keep a finger on it, or let the grease hold it, until the pull rod is through (section 3.10). After that the rod keeps it in: even at the worst tilt the rod can take in the mast slot, the trunnion slides forward at most 2.2 mm, and 1.8 of the 4 mm boss stays in the crank. No screw is needed.
+3. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
+4. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
+5. Push the crank onto the spline by hand. The socket is Ø4.9, with a lead-in chamfer and three relief slits, so firm thumb pressure should be enough. If it still needs force, open it with a 5.0 mm drill turned by hand rather than pushing harder: the spline teeth only need to bite lightly, because the peak load is about 25 N·mm.
+6. Check that the trunnion's flats still face left and right.
 
 ### 3.10 Pull rod and tension
 ![Opener: pull rod](../images/assembly/opener_pull_rod.png)

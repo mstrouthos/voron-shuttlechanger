@@ -151,9 +151,9 @@
  },
  {
   "part": "03 trunnion",
-  "case": "pivot bearing in the crank (Ø6.9 x 1.4 journal + Ø4.8 spigot x 1.2 web)",
+  "case": "pivot bearing in the crank (Ø6.9 boss x 4.0 in a Ø7.15 through bore)",
   "load": "13.5 N",
-  "stress_MPa": 1.1,
+  "stress_MPa": 0.5,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -161,13 +161,13 @@
  },
  {
   "part": "03 trunnion",
-  "case": "bayonet lug shear if the rod yaws forward",
-  "load": "10 N",
-  "stress_MPa": 2.7,
+  "case": "retention: boss engagement after the worst rod tilt in the mast slot",
+  "load": "2.2 mm forward slide",
+  "stress_MPa": 0.0,
   "layers": "along",
-  "allow_MPa": 20.0,
+  "allow_MPa": 0.0,
   "ok": true,
-  "note": "2 lugs 70° x 1.5 thick, reaching 1.0 mm past the Ø4.95 web hole; bending at the root (2.9 x 1.5 section, 0.6 mm lever)"
+  "note": "rod tilt in the 3.4 mm mast slot (3.3°) plus hole clearance lets the trunnion slide 2.2 mm forward at most; 1.8 of the 4.0 mm boss stays in the bore"
  },
  {
   "part": "04 crank",
@@ -183,11 +183,11 @@
   "part": "04 crank",
   "case": "trunnion bore bearing, closed",
   "load": "13.5 N",
-  "stress_MPa": 0.7,
+  "stress_MPa": 0.5,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø7.15 x 1.2 + Ø4.95 web x 1.2"
+  "note": "Ø7.15 x 4.1 through bore"
  },
  {
   "part": "04 crank",

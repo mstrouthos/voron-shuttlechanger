@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.10)
+# Assembly, Klipper and audit notes (v30.11)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -10,7 +10,7 @@ All parts are in print orientation as single watertight bodies and need no suppo
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
-4. Trunnion (bayonet, no screw): with the crank's arm pointing right, hold the trunnion with its rod hole nearly upright (106° counterclockwise from level, seen from the front) so its 2 lugs line up with the 2 notches in the crank web. Push it in from the front, then turn it clockwise 106° until the rod hole is level. The lugs lock behind the web. In use the trunnion turns 0 to 148° clockwise relative to the crank, so it never comes back to the insert angle (the model shows it only comes free between +102° and +110°).
+4. Trunnion: push its Ø6.9 boss right through the crank's Ø7.15 bore from the front, flats facing left and right. There is no screw: once the pull rod is through it, the rod's tilt in the mast slot lets it slide forward at most 2.2 mm, and 1.8 of the 4 mm boss stays in the crank.
 5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.9 with a lead-in chamfer and three relief slits. If it is still too tight, open it with a 5.0 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
@@ -88,6 +88,12 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.11** — the trunnion joint is redesigned for printing. Reprint 03 and 04.
+  - The screw (v30.8) and the bayonet (v30.9 and v30.10) both needed tiny features: a thin spigot, 1 mm lugs, notches and stepped counterbores. Those don't print reliably at this size.
+  - Trunnion: now just the 7×7 block and a plain **Ø6.9 boss, 4.3 mm long**, printed standing on the block. There is nothing thin, no lugs and no pilot hole.
+  - Crank: a plain **Ø7.15 through bore**, 4.1 long, with a lead-in at the front. The web, notches and counterbore are gone.
+  - Retention: once the pull rod is fitted, the trunnion can slide forward at most 2.2 mm (the rod tilts up to 3.3° in the 3.4 mm mast slot, plus hole clearance). With 4.0 mm engaged, 1.8 mm always stays in the bore. The bearing is also 3× longer than before, so the trunnion wobbles much less.
+  - Spline socket unchanged from v30.10 (Ø4.9 with a lead-in chamfer). Full-sweep collision check unchanged.
 - **v30.10** — stronger bayonet and a looser spline. Reprint 03 and 04.
   - Trunnion: the lugs are now 70° wide (was 50°), reach Ø6.9 (was Ø6.0) and are 1.5 mm thick (was 1.25). They overlap the crank web by 1.0 mm instead of 0.5, so normal print tolerance can't let them slip past. Root bending at 10 N is about 2.7 MPa.
   - Crank: notches 80° wide, counterbore Ø7.4. The spline socket goes from Ø4.75 to **Ø4.9**, with a 0.6 mm lead-in chamfer: the Ø4.75 socket was far too tight to push onto the servo.

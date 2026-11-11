@@ -57,7 +57,7 @@
    10.6
   ],
   "bed_mm2": 48,
-  "steep_overhang_mm2": 16,
+  "steep_overhang_mm2": 9,
   "widest_flat_ceiling_mm": 1.2,
   "ceilings_over_limit": [],
   "verdict": "OK",
@@ -73,8 +73,8 @@
    10.6
   ],
   "bed_mm2": 154,
-  "steep_overhang_mm2": 32,
-  "widest_flat_ceiling_mm": 1.1,
+  "steep_overhang_mm2": 20,
+  "widest_flat_ceiling_mm": 0.9,
   "ceilings_over_limit": [],
   "verdict": "OK",
   "scan": "v30"
