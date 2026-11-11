@@ -7,7 +7,7 @@ M3x16 SHCS,1,0,stock CW2,joins Guidler A and Guidler B
 M3x25 SHCS,3,0,stock CW2,2x main body -> plate inserts; 1x guidler pivot (not tightened). The CW2 latch screw is not used
 M3x30 SHCS,1,0,stock CW2,"motor, top hole: from the front through the body and the plate"
 M3x8 SHCS,1,0,stock CW2,"motor, slotted hole (with an M3 washer), through the front access hole"
-M3x10 SHCS,2,0,stock CW2,"motor plate -> CNC Tap, lower counterbored holes; fit before the main body"
+M3x10 SHCS,2,0,stock CW2,"motor plate -> CNC Tap, lower counterbored holes; drop into the plate before the main body, tighten through the body front with a 2.5 mm hex key once on the Tap"
 FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. Peak load is about 25 N·mm (an FS90 makes about 150). MG90S also fits
 "Compression spring, BMG idler spring (from the BMG thumbscrew set; the thumbscrew is not used)",1,0,hardware,on the pull rod between the trunnion's right flat and the tension washer (about 10.8 mm long when closed)
 M3x55 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the trunnion cross hole and the spring"
