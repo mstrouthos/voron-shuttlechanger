@@ -1,9 +1,18 @@
 item,per_head,per_tool,category,note
+"Bondtech BMG gear kit (drive shaft with 50T gear, drive gear with M3 set screw, idler gear with bearings, Ø3x20 idler shaft)",1,0,stock CW2,"CW2 drivetrain, as for a stock Stealthburner CW2"
+MR85 bearing (Ø8 x Ø5 x 2.5),2,0,stock CW2,drive shaft: 1 in the motor plate and 1 in the main body
+LDO-36STH20 round NEMA14 motor,1,0,stock CW2,extruder motor
+M3x6 FHCS (ISO 10642),1,0,stock CW2,anti-squish stop in the main body
+M3x16 SHCS,1,0,stock CW2,joins Guidler A and Guidler B
+M3x25 SHCS,3,0,stock CW2,2x main body -> plate inserts; 1x guidler pivot (not tightened). The CW2 latch screw is not used
+M3x30 SHCS,1,0,stock CW2,"motor, top hole: from the front through the body and the plate"
+M3x8 SHCS,1,0,stock CW2,"motor, slotted hole (with an M3 washer), through the front access hole"
+M3x10 SHCS,2,0,stock CW2,"motor plate -> CNC Tap, lower counterbored holes; fit before the main body"
 FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. Peak load is about 25 N·mm (an FS90 makes about 150). MG90S also fits
-"Compression spring, stock CW2/BMG idler spring",1,0,hardware,on the pull rod between the trunnion's right flat and the tension washer (about 10.8 mm long when closed)
+"Compression spring, BMG idler spring (from the BMG thumbscrew set; the thumbscrew is not used)",1,0,hardware,on the pull rod between the trunnion's right flat and the tension washer (about 10.8 mm long when closed)
 M3x55 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the trunnion cross hole and the spring"
 M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, stop nut 2.5 mm left of the trunnion, tension nut after the spring"
-M3 washer (ISO 7089),2,0,hardware,under the screw head and under the tension nut
+M3 washer (ISO 7089),3,0,hardware,"pull rod: under the screw head and under the tension nut; CW2: under the M3x8 motor screw"
 "M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",12,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 7, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
 M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
 M2x3 button head (ISO 7380) + M2 washer (DIN 125),1,0,hardware,"holds the trunnion in the crank, from the back; M2x4 is too long"
@@ -13,7 +22,6 @@ Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed in
 Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
 M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
 M3x10 SHCS,2,0,hardware,duct legs -> receiver-frame wings (into the duct inserts)
-M3x25 SHCS,0,0,hardware,not needed: the two rear CW2->SB-body screws at the upper-left of the plate are left out
 4010 fan 24 V (yours),0,1,hardware,heatsink fan
 M3x14 SHCS,0,4,hardware,4010 -> shroud (self-taps into Ø2.7 holes)
 M2.5x10 SHCS,0,4,hardware,heatsink -> tool top through the 3 mm shroud lip (8 mm is now too short)

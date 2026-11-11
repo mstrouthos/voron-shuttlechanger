@@ -87,6 +87,7 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.4** — complete assembly guide. Exploded views of the head and the tool with numbered parts tables, a full hardware list including the stock CW2 drivetrain (BMG gear kit, 2 MR85, LDO-36) and every screw size, and illustrated steps for the CW2 build, the receiver/frame/duct mount, the tools and the docks. The BOM now lists the stock CW2 hardware. No part geometry changed.
 - **v30.3** — screw-path audit (`audit/screw_audit.json`). All 34 screws were traced through every printed part they pass. Fixed:
   - Motor plate: v29 had closed three stock holes with 0.4–0.6 mm skins at the back face (the first layers on the bed). These are the right LDO-36 motor screw, the screw clearance behind the lower front-face insert, and the back-face insert pocket for the CW2 body screw, which was sealed. All three are open again, as on the original Voron plate.
   - Motor plate: small reliefs in the bottom edge, because the M3×6 receiver-screw heads hit it by 1 mm. The unused v29 dimple is filled.

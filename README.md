@@ -13,9 +13,11 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.3).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.4).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
-**Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md).**
+**Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks.
+
+![Exploded view of the head](images/assembly/exploded_head.png)
 
 ## Interactive 3D viewer
 `docs/index.html` is a self-contained three.js viewer of the head, tool and dock. It shows all the hardware and has:
@@ -51,7 +53,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | `stl/` | Print-ready STLs for every printed part, including the one stock CW2 part (02b), already in print orientation, no supports needed |
 | `step/` | STEP (AP214) versions of every part, converted from the meshes: faceted solids, good for measuring and remixing |
 | `BOM.csv` | Full bill of materials (per head and per tool) |
-| `docs/ASSEMBLY_GUIDE.md` | Illustrated step-by-step assembly: every insert, magnet and dowel, the opener, SB2209 servo wiring and Klipper setup |
+| `docs/ASSEMBLY_GUIDE.md` | Complete illustrated assembly: exploded views, full hardware list (stock CW2 included), every insert, bearing, gear, motor and screw, the opener, SB2209 servo wiring and Klipper setup |
 | `docs/ASSEMBLY.md` | Assembly notes, tool-change sequence, audit notes |
 | `docs/index.html` | Interactive 3D viewer |
 | `audit/` | Printability, wall-thickness, screw-path and load-case reports |
@@ -84,7 +86,8 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 - M2×3 button head + M2 washer to hold the trunnion in the crank
 - Ø6×2.65 magnets
 - 12× M3×5×4 heat-set inserts (Ø5 × 4 mm), all in Ø4.7 holes
-- M3 and M5 screws (exact sizes and counts are in `BOM.csv`)
+- stock CW2 drivetrain: Bondtech BMG gear kit, 2× MR85 bearings, LDO-36 motor
+- M3 and M5 screws (exact sizes and counts are in `BOM.csv` and the assembly guide)
 
 ## Klipper
 ```ini
