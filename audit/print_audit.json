@@ -54,14 +54,14 @@
   "size": [
    7.0,
    7.0,
-   9.1
+   10.3
   ],
   "bed_mm2": 48,
-  "steep_overhang_mm2": 6,
+  "steep_overhang_mm2": 11,
   "widest_flat_ceiling_mm": 1.2,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30.8"
+  "scan": "v30"
  },
  {
   "file": "04_opener_servo_crank.stl",
@@ -73,11 +73,11 @@
    10.6
   ],
   "bed_mm2": 154,
-  "steep_overhang_mm2": 39,
+  "steep_overhang_mm2": 35,
   "widest_flat_ceiling_mm": 1.1,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30.8"
+  "scan": "v30"
  },
  {
   "file": "05_CW2_motor_plate_opener.stl",

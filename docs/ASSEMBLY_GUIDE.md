@@ -1,4 +1,4 @@
-# Assembly guide (v30.8)
+# Assembly guide (v30.9)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -11,24 +11,23 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 
 | # | Part | # | Part |
 |---|---|---|---|
-| 1 | CNC Tap V2 (already on the printer) | 19 | LDO-36 motor (round NEMA14) |
-| 2 | 05 Motor plate | 20 | 06 Servo bracket |
-| 3 | MR85 bearing, plate side | 21 | FS90 servo, with its 2 M2 tab screws |
-| 4 | Drive shaft + 50T gear (BMG kit) | 22 | M3×12 SHCS ×2: bracket → plate |
-| 5 | Drive gear + M3 set screw (BMG kit) | 23 | 04 Servo crank |
-| 6 | MR85 bearing, body side | 24 | 03 Trunnion |
-| 7 | 01 CW2 main body | 25 | M3×4 button head |
-| 8 | M3×6 FHCS: anti-squish stop, inside the body | 26 | Pull rod: M3×55 SHCS, 3× M3 nyloc, 2× M3 washer, stock CW2 spring |
-| 9 | 02 Guidler A + mast | 27 | 08 Receiver frame |
-| 10 | 02b Guidler B | 28 | 07 Receiver |
-| 11 | BMG idler gear (with its bearings) | 29 | Ø3×30 dowel ×2 |
-| 12 | Ø3×20 idler shaft | 30 | Ø6×2.65 magnet ×4 |
-| 13 | M3×16 SHCS: Guidler A + B | 31 | M3×6 SHCS ×2: receiver → frame |
-| 14 | M3×25 SHCS: guidler pivot | 32 | M3×20 SHCS ×2: frame → Tap |
-| 15 | M3×25 SHCS ×2: body → plate | 33 | M3×10 SHCS ×2: frame posts → body |
-| 16 | M3×30 SHCS: motor, top | 34 | 09 Duct + fan mount |
-| 17 | M3×8 SHCS + M3 washer: motor, slotted hole | 35 | M3×10 SHCS ×2: duct → frame |
-| 18 | M3×10 SHCS ×2: plate → Tap | | |
+| 1 | CNC Tap V2 (already on the printer) | 18 | M3×10 SHCS ×2: plate → Tap |
+| 2 | 05 Motor plate | 19 | LDO-36 motor (round NEMA14) |
+| 3 | MR85 bearing, plate side | 20 | 06 Servo bracket |
+| 4 | Drive shaft + 50T gear (BMG kit) | 21 | FS90 servo, with its 2 M2 tab screws |
+| 5 | Drive gear + M3 set screw (BMG kit) | 22 | M3×12 SHCS ×2: bracket → plate |
+| 6 | MR85 bearing, body side | 23 | 04 Servo crank |
+| 7 | 01 CW2 main body | 24 | 03 Trunnion |
+| 8 | M3×6 FHCS: anti-squish stop, inside the body | 25 | Pull rod: M3×55 SHCS, 3× M3 nyloc, 2× M3 washer, stock CW2 spring |
+| 9 | 02 Guidler A + mast | 26 | 08 Receiver frame |
+| 10 | 02b Guidler B | 27 | 07 Receiver |
+| 11 | BMG idler gear (with its bearings) | 28 | Ø3×30 dowel ×2 |
+| 12 | Ø3×20 idler shaft | 29 | Ø6×2.65 magnet ×4 |
+| 13 | M3×16 SHCS: Guidler A + B | 30 | M3×6 SHCS ×2: receiver → frame |
+| 14 | M3×25 SHCS: guidler pivot | 31 | M3×20 SHCS ×2: frame → Tap |
+| 15 | M3×25 SHCS ×2: body → plate | 32 | M3×10 SHCS ×2: frame posts → body |
+| 16 | M3×30 SHCS: motor, top | 33 | 09 Duct + fan mount |
+| 17 | M3×8 SHCS + M3 washer: motor, slotted hole | 34 | M3×10 SHCS ×2: duct → frame |
 
 ### Tool
 ![Exploded view: tool](../images/assembly/exploded_tool.png)
@@ -61,7 +60,6 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 2 | M3×10 SHCS | motor plate → CNC Tap |
 | 1 | FS90 (or MG90S) micro servo, with its 2 M2 tab screws | opener |
 | 2 | M3×12 SHCS | servo bracket → plate |
-| 1 | M3×4 button head (ISO 7380), **4 mm long, not 5** | trunnion → crank |
 | 1 | M3×55 SHCS | pull rod |
 | 3 | M3 nyloc nut | pull rod: push, stop and tension nuts |
 | 2 | Ø3×30 hardened dowel | receiver |
@@ -261,14 +259,15 @@ The stock BMG thumbscrew and the CW2 latch are not fitted. Keep the thumbscrew's
 ### 3.9 Crank and trunnion
 ![Opener: crank and trunnion](../images/assembly/opener_crank_trunnion.png)
 
-1. Push the 03 trunnion's round end and Ø4.8 spigot into the 04 crank from the front.
-2. From the back of the crank, screw an **M3×4 button head** (2 mm hex key, no washer) into the spigot until it is snug. It self-taps into the plastic. The head clamps the spigot end, which stands 0.1 mm proud of the crank, so the trunnion still turns freely and can't fall out.
-   - It must be **4 mm long**. The pilot hole opens into the rod hole: look into the rod hole from the side, and the screw tip must not show. An M3×5 would hit the pull rod.
-   - Don't overtighten: the spigot wall is about 1.1 mm thick. Stop as soon as the head is seated, then check that the trunnion turns freely.
-3. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
-4. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
-5. Push the crank onto the spline by hand. The socket is Ø4.75 with three relief slits; if it is too tight, open it with a 4.8 mm drill by hand.
-6. Turn the trunnion so its flats face left and right.
+1. Look into the back of the 04 crank's trunnion bore: the web has **2 notches**, and the trunnion's spigot has **2 lugs** to match. They are 120° apart, not opposite, so they only line up one way.
+2. Hold the crank from the front with its arm pointing right. Turn the 03 trunnion so its rod hole stands nearly upright, with the top leaning slightly left (about 106° from level), and line the lugs up with the notches.
+3. Push the trunnion in from the front until it seats, then turn it **clockwise about 106°** (seen from the front) until the rod hole is level and the flats face left and right. The lugs are now behind the web, and the trunnion can't come out.
+   - Check that it turns freely and can't be pulled out. It only comes out at the insert angle. Once the pull rod is through it, it never gets near that angle: in use it only turns 0 to 148° clockwise relative to the crank.
+   - There is no screw: nothing sticks out of the back of the crank.
+4. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
+5. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
+6. Push the crank onto the spline by hand. The socket is Ø4.75 with three relief slits; if it is too tight, open it with a 4.8 mm drill by hand.
+7. Check that the trunnion's flats still face left and right.
 
 ### 3.10 Pull rod and tension
 ![Opener: pull rod](../images/assembly/opener_pull_rod.png)

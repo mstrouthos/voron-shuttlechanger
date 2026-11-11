@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.8)
+# Assembly, Klipper and audit notes (v30.9)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -10,7 +10,7 @@ All parts are in print orientation as single watertight bodies and need no suppo
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
-4. Trunnion: push its round end and Ø4.8 spigot into the crank's bore from the front. From the back of the crank, screw an **M3x4 button head** (ISO 7380, no washer) into the spigot until it is snug; it self-taps. The head clamps the spigot end, not the crank, so the trunnion still turns freely and can't fall out. It must be 4 mm long: the tip ends 0.4 mm above the pull rod, so an M3x5 would hit it.
+4. Trunnion (bayonet, no screw): with the crank's arm pointing right, hold the trunnion with its rod hole nearly upright (106° counterclockwise from level, seen from the front) so its 2 lugs line up with the 2 notches in the crank web. Push it in from the front, then turn it clockwise 106° until the rod hole is level. The lugs lock behind the web. In use the trunnion turns 0 to 148° clockwise relative to the crank, so it never comes back to the insert angle (the model shows it only comes free between +102° and +110°).
 5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.75 with three relief slits; if it is still too tight, open it with a 4.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
@@ -88,6 +88,10 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.9** — the trunnion is held by a **bayonet** instead of a screw. The M3×4 didn't grip in the thin spigot, and the trunnion wobbled. Reprint 03 and 04 again. No hardware is needed.
+  - Trunnion: the Ø4.8 spigot is now 2.7 mm long, with 2 lugs (50° wide, out to Ø6.0, 1.25 thick) 120° apart. The screw pilot is gone, so the rod hole is solid all round.
+  - Crank: the web hole has 2 matching 60° notches, and the counterbore is Ø6.4, so the lugs turn behind the 1.2 mm web. Axial play is 0.15 mm in total (it was set by the screw head before).
+  - The insert angle (+106°) sits in the middle of the 212° the opener never uses, so there is about 50° of margin on each side. Nothing sticks out of the back of the crank, so the 0.35 mm head-to-plate gap of v30.8 is gone. The full-sweep collision check is unchanged.
 - **v30.8** — the trunnion is held by an **M3×4 button head** instead of an M2×3 and an M2 washer. Reprint 03 and 04 again.
   - Trunnion: spigot Ø4.8 (was Ø4.0), with a Ø2.5 self-tapping pilot that opens into the rod hole. An M3×4 tip ends 0.4 mm above the rod.
   - Crank: web hole Ø4.95 and counterbore Ø6.2. The Ø5.7 head overlaps the web by 0.37 mm per side and sits on the spigot end, which stands 0.1 mm proud, so it never clamps the crank.

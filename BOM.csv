@@ -15,7 +15,6 @@ M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, s
 M3 washer (ISO 7089),3,0,hardware,"pull rod: under the screw head and under the tension nut; CW2: under the M3x8 motor screw"
 "M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",12,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 7, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
 M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
-M3x4 button head (ISO 7380),1,0,hardware,"holds the trunnion in the crank, from the back; must be 4 mm long: an M3x5 would reach the pull rod"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
 M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)"
 Dowel pin Ø3x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
@@ -36,7 +35,7 @@ Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool t
 01 CW2 main body,1,0,printed,"stock Voron + front slot; front holes for the frame-post screws, full right insert pocket"
 02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock"
 02b Guidler B (stock CW2),1,0,printed,"unmodified Voron part, as printed for a stock CW2"
-03 Opener trunnion,1,0,printed,"PC-CF/ASA, on a flat"
+03 Opener trunnion,1,0,printed,"PC-CF/ASA, standing on its square end; bayonet lugs twist-lock it into the crank, no screw"
 04 Opener servo crank,1,0,printed,"PC-CF, front face down; press onto the spline with the stop tab in the plate pocket"
 05 Motor plate (crank bore and stop pocket),1,0,printed,back face down
 06 Servo bracket,1,0,printed,back face down
