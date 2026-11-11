@@ -1,4 +1,4 @@
-# Assembly guide (v30.4)
+# Assembly guide (v30.5)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -21,7 +21,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 8 | M3×6 FHCS: anti-squish stop, inside the body | 26 | Pull rod: M3×55 SHCS, 3× M3 nyloc, 2× M3 washer, stock CW2 spring |
 | 9 | 02 Guidler A + mast | 27 | 08 Receiver frame |
 | 10 | 02b Guidler B | 28 | 07 Receiver |
-| 11 | BMG idler gear (with its bearings) | 29 | Ø4×30 dowel ×2 |
+| 11 | BMG idler gear (with its bearings) | 29 | Ø3×30 dowel ×2 |
 | 12 | Ø3×20 idler shaft | 30 | Ø6×2.65 magnet ×4 |
 | 13 | M3×16 SHCS: Guidler A + B | 31 | M3×6 SHCS ×2: receiver → frame |
 | 14 | M3×25 SHCS: guidler pivot | 32 | M3×20 SHCS ×2: frame → Tap |
@@ -64,7 +64,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 1 | M2×3 button head + M2 washer | trunnion → crank |
 | 1 | M3×55 SHCS | pull rod |
 | 3 | M3 nyloc nut | pull rod: push, stop and tension nuts |
-| 2 | Ø4×30 hardened dowel | receiver |
+| 2 | Ø3×30 hardened dowel | receiver |
 | 4 | Ø6×2.65 magnet | receiver |
 | 2 | M3×6 SHCS | receiver → receiver frame |
 | 2 | M3×20 SHCS | receiver frame → CNC Tap |
@@ -125,7 +125,7 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long.
 ### 1.4 Receiver: dowels and magnets
 ![07 Receiver](../images/assembly/inserts_07_receiver.png)
 
-- **Dowels:** press 2 Ø4×30 dowels in from the back until **23 mm** stand out at the front.
+- **Dowels:** press 2 Ø3×30 dowels in from the back until **23 mm** stand out at the front.
 - **Magnets:** fit 4 Ø6×2.65 magnets from the front, 2 stacked in each pocket. Mark their polarity: the tool magnets must attract them.
 
 ### 1.5 Tool top, for each tool

@@ -120,11 +120,12 @@
    11.6,
    7.6
   ],
-  "bed_mm2": 264,
-  "steep_overhang_mm2": 14,
-  "widest_flat_ceiling_mm": 6.0,
+  "bed_mm2": 275,
+  "steep_overhang_mm2": 109,
+  "widest_flat_ceiling_mm": 6.1,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30.5"
  },
  {
   "file": "08_receiver_frame.stl",
@@ -168,10 +169,11 @@
    28.4
   ],
   "bed_mm2": 973,
-  "steep_overhang_mm2": 32,
-  "widest_flat_ceiling_mm": 2.5,
+  "steep_overhang_mm2": 260,
+  "widest_flat_ceiling_mm": 2.2,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v30.5"
  },
  {
   "file": "10b_tool_filament_guide_lever_x_each_tool.stl",

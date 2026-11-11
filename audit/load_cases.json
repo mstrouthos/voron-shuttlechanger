@@ -43,21 +43,21 @@
   "part": "10 tool top",
   "case": "nozzle hit sideways: pin-bore bearing",
   "load": "30 N",
-  "stress_MPa": 0.8,
+  "stress_MPa": 1.1,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø4 steel pins carry the bending"
+  "note": "Ø3 steel pins carry the bending (σ ≈ 65 MPa in each pin at 15 N, hardened steel)"
  },
  {
   "part": "10 tool top",
   "case": "nozzle hit front/back: bore-end bearing",
   "load": "30 N",
-  "stress_MPa": 5.7,
+  "stress_MPa": 7.6,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "couple over ~15 mm of engagement"
+  "note": "couple over ~15 mm of engagement, Ø3 pins"
  },
  {
   "part": "10 tool top",

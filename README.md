@@ -13,7 +13,7 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.4).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v30.5).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks.
 
@@ -33,7 +33,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | ![closed](images/opener_closed.png) | ![open](images/opener_open.png) |
 
 ## How it works
-- **Tool mount:** the head carries 2 Ø4×30 dowels and 4 Ø6×2.65 magnets. Each tool top has matching bores and 2 magnets.
+- **Tool mount:** the head carries 2 Ø3×30 dowels and 4 Ø6×2.65 magnets. Each tool top has matching bores and 2 magnets.
 - **Filament path:** the filament runs through a printed Ø3.0 bore in the tool top and a tilting guide lever, up to the drive gears.
 - **Dock:** the tool slides 9 mm along X onto 2 Ø3 steel pins on the dock, which hold it while the head backs away in Y. The same shift tilts the guide lever so the filament clears the gears. Docks sit on a 2020 rail at a 63 mm pitch.
 - **Opener:** everything sits in the gap between the CW2 body and the motor plate, above the guidler latch.
@@ -81,7 +81,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 
 **Key hardware:**
 - FS90 or MG90S micro servo
-- hardened dowels: Ø4×30, Ø3×12, Ø3×15
+- hardened dowels: Ø3×30, Ø3×12, Ø3×15 (all Ø3)
 - M3×55 SHCS, 3 M3 nylocs and the stock CW2 spring for the pull rod
 - M2×3 button head + M2 washer to hold the trunnion in the crank
 - Ø6×2.65 magnets

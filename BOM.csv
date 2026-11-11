@@ -18,7 +18,7 @@ M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
 M2x3 button head (ISO 7380) + M2 washer (DIN 125),1,0,hardware,"holds the trunnion in the crank, from the back; M2x4 is too long"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
 M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)"
-Dowel pin Ø4x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
+Dowel pin Ø3x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
 Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
 M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
 M3x10 SHCS,2,0,hardware,duct legs -> receiver-frame wings (into the duct inserts)
