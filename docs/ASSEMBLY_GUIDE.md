@@ -1,4 +1,4 @@
-# Assembly guide (v30.6)
+# Assembly guide (v30.7)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -97,7 +97,7 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long.
 
 **Tools:** soldering iron with an M3 insert tip, 1.5, 2 and 2.5 mm hex keys (the 2.5 mm one at least 70 mm long, to reach the plate screws through the body), 5.5 mm nut driver, small vice or arbor press for the dowels and bearings, medium-strength thread locker, light grease for the idler gear.
 
-**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print the crank, trunnion, receiver and tool top in PC-CF if you can.
+**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print the crank, trunnion, receiver and tool top in PC-CF if you can. The trunnion is tiny and prints standing on its square end: print 2–3 at once, or set a minimum layer time of about 8 s, so each layer can cool.
 
 ---
 

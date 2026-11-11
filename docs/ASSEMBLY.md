@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.6)
+# Assembly, Klipper and audit notes (v30.7)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -88,6 +88,9 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.7** — reprint 03 trunnion and 04 crank.
+  - Trunnion: now prints standing on its square end instead of on a flat. The Ø4 spigot, the Ø6.9 journal and the M2 pilot now print as vertical circles, so they come out round. The rod cross hole is a truncated teardrop. Bed contact goes from 26 to 48 mm², and steep overhang from 29 to 9 mm². The journal is Ø6.9 (was Ø7.0), for 0.125 mm per side in the crank bore. The flat chamfers no longer leave zero-thickness slivers at the corners.
+  - Crank: the hub is Ø8.6 (was Ø9.0), 0.4 mm per side in the Ø9.4 plate bore (was 0.2), so it turns freely. The spline relief slits are 0.2 mm shorter, which keeps a 0.8 mm skin outside them.
 - **v30.6** — assembly order: the whole head is now built on the bench and bolted to the Tap in one piece. The 2 plate-to-Tap M3×10s go into the plate before the CW2 body and are tightened through the body's front holes with a 2.5 mm hex key (checked: Ø3.6 and Ø5.6 clear paths, nothing in the way). The guide now wires the servo first, so the crank can be fitted on the bench, then builds the head, mounts it, adds the tools and docks, and ends with setup. No part geometry changed.
 - **v30.5** — tool locating pins changed from Ø4×30 to **Ø3×30** hardened dowels, so the whole build uses one dowel diameter. Receiver (07): press bores Ø3.94 → Ø2.94. Tool top (10): slip bores Ø4.08 → Ø3.08 teardrops, with a new lead-in chamfer at the back face. Ø5 was checked and rejected: the bores sit 3.5 mm from the side walls of both parts, so a Ø5 bore would leave walls under 1 mm. With Ø3 the walls grow to about 2 mm. Reprint 07 and 10 (one 10 per tool); nothing else changes.
 - **v30.4** — complete assembly guide. Exploded views of the head and the tool with numbered parts tables, a full hardware list including the stock CW2 drivetrain (BMG gear kit, 2 MR85, LDO-36) and every screw size, and illustrated steps for the CW2 build, the receiver/frame/duct mount, the tools and the docks. The BOM now lists the stock CW2 hardware. No part geometry changed.

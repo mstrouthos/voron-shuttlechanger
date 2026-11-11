@@ -52,16 +52,16 @@
   "bodies": 1,
   "watertight": true,
   "size": [
-   9.1,
    7.0,
-   7.0
+   7.0,
+   9.1
   ],
-  "bed_mm2": 26,
-  "steep_overhang_mm2": 29,
-  "widest_flat_ceiling_mm": 0.3,
+  "bed_mm2": 48,
+  "steep_overhang_mm2": 9,
+  "widest_flat_ceiling_mm": 1.2,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v30.7"
  },
  {
   "file": "04_opener_servo_crank.stl",
@@ -77,7 +77,7 @@
   "widest_flat_ceiling_mm": 1.5,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v30.7"
  },
  {
   "file": "05_CW2_motor_plate_opener.stl",
