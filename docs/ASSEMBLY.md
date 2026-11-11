@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v30.9)
+# Assembly, Klipper and audit notes (v30.10)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -11,7 +11,7 @@ All parts are in print orientation as single watertight bodies and need no suppo
 2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
 4. Trunnion (bayonet, no screw): with the crank's arm pointing right, hold the trunnion with its rod hole nearly upright (106° counterclockwise from level, seen from the front) so its 2 lugs line up with the 2 notches in the crank web. Push it in from the front, then turn it clockwise 106° until the rod hole is level. The lugs lock behind the web. In use the trunnion turns 0 to 148° clockwise relative to the crank, so it never comes back to the insert angle (the model shows it only comes free between +102° and +110°).
-5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.75 with three relief slits; if it is still too tight, open it with a 4.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
+5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.9 with a lead-in chamfer and three relief slits. If it is still too tight, open it with a 5.0 mm drill by hand.8 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
 8. Tension: turn the tension nyloc. Tighter = more grip. The reference is about 10.8 mm of spring between the trunnion and the washer, about 13.5 N at the rod. That gives the same idler force as v29's 20 N at the old screw, because the rod pulls 52 mm from the guidler pivot instead of 35.
@@ -88,6 +88,10 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v30.10** — stronger bayonet and a looser spline. Reprint 03 and 04.
+  - Trunnion: the lugs are now 70° wide (was 50°), reach Ø6.9 (was Ø6.0) and are 1.5 mm thick (was 1.25). They overlap the crank web by 1.0 mm instead of 0.5, so normal print tolerance can't let them slip past. Root bending at 10 N is about 2.7 MPa.
+  - Crank: notches 80° wide, counterbore Ø7.4. The spline socket goes from Ø4.75 to **Ø4.9**, with a 0.6 mm lead-in chamfer: the Ø4.75 socket was far too tight to push onto the servo.
+  - Released only between +102° and +110°, as before; the full-sweep collision check is unchanged.
 - **v30.9** — the trunnion is held by a **bayonet** instead of a screw. The M3×4 didn't grip in the thin spigot, and the trunnion wobbled. Reprint 03 and 04 again. No hardware is needed.
   - Trunnion: the Ø4.8 spigot is now 2.7 mm long, with 2 lugs (50° wide, out to Ø6.0, 1.25 thick) 120° apart. The screw pilot is gone, so the rod hole is solid all round.
   - Crank: the web hole has 2 matching 60° notches, and the counterbore is Ø6.4, so the lugs turn behind the 1.2 mm web. Axial play is 0.15 mm in total (it was set by the screw head before).

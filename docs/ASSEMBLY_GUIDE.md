@@ -1,4 +1,4 @@
-# Assembly guide (v30.9)
+# Assembly guide (v30.10)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -266,7 +266,7 @@ The stock BMG thumbscrew and the CW2 latch are not fitted. Keep the thumbscrew's
    - There is no screw: nothing sticks out of the back of the crank.
 4. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
 5. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.
-6. Push the crank onto the spline by hand. The socket is Ø4.75 with three relief slits; if it is too tight, open it with a 4.8 mm drill by hand.
+6. Push the crank onto the spline by hand. The socket is Ø4.9, with a lead-in chamfer and three relief slits, so firm thumb pressure should be enough. If it still needs force, open it with a 5.0 mm drill turned by hand rather than pushing harder: the spline teeth only need to bite lightly, because the peak load is about 25 N·mm.
 7. Check that the trunnion's flats still face left and right.
 
 ### 3.10 Pull rod and tension

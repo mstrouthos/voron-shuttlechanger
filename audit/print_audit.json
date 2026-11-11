@@ -54,10 +54,10 @@
   "size": [
    7.0,
    7.0,
-   10.3
+   10.6
   ],
   "bed_mm2": 48,
-  "steep_overhang_mm2": 11,
+  "steep_overhang_mm2": 16,
   "widest_flat_ceiling_mm": 1.2,
   "ceilings_over_limit": [],
   "verdict": "OK",
@@ -73,7 +73,7 @@
    10.6
   ],
   "bed_mm2": 154,
-  "steep_overhang_mm2": 35,
+  "steep_overhang_mm2": 32,
   "widest_flat_ceiling_mm": 1.1,
   "ceilings_over_limit": [],
   "verdict": "OK",

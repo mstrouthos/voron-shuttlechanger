@@ -163,11 +163,11 @@
   "part": "03 trunnion",
   "case": "bayonet lug shear if the rod yaws forward",
   "load": "10 N",
-  "stress_MPa": 1.9,
+  "stress_MPa": 2.7,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "2 lugs 50° x 1.25 thick at r 2.4 (5.2 mm² root); they lock behind the 1.2 mm crank web"
+  "note": "2 lugs 70° x 1.5 thick, reaching 1.0 mm past the Ø4.95 web hole; bending at the root (2.9 x 1.5 section, 0.6 mm lever)"
  },
  {
   "part": "04 crank",
@@ -197,7 +197,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø4.75 socket with 3 relief slits; trapped by the trunnion and pull rod"
+  "note": "Ø4.9 socket with a 0.6 lead-in chamfer and 3 relief slits; trapped by the trunnion and pull rod"
  },
  {
   "part": "05 plate",
