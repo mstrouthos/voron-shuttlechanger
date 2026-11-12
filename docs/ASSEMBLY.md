@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v32.2)
+# Assembly, Klipper and audit notes (v32.3)
 
 For the illustrated, step-by-step build (inserts, opener, dock shafts and set-up), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -77,9 +77,13 @@ Accepted (not on a load path):
 - the 1.2 shroud lip, clamped between the heatsink and the tool top
 - the receiver frame's 0.8–1.0 webs, squeezed between the motor plate and the Tap
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
-- the 1.7 mm strip of the plate's spring anchor in front of the rod slot (11 mm tall, backed by the ridge; the washer bears on it and on the 4.7 mm strip behind the slot)
+- the 1.7 mm strip of the plate's spring anchor in front of the rod slot (11 mm tall and 6 mm deep; the washer bears on it and on the 4.7 mm strip behind the slot)
 
 ## Version history
+- **v32.3** — the cam is blended into the Guidler A mast. Reprint 02 and 05.
+  - **Guidler A (02):** the cam sat on the narrower mast block with a sharp inside corner on the side that is pulled when the shaft pushes. There is now a 45° gusset under the cam on that side, and another under its forward overhang. The joint is 12.3 mm wide instead of 6.5.
+  - **Motor plate (05):** the spring anchor loses its top gusset, which was in the way, and its wall grows from 2.5 to 4.5 mm instead (4.0 of 8 MPa at the root). The rod slot is 6 mm tall, a 6 mm bridge when printed.
+  - **Checks:** opener sweep, tool-change sweep, layer check and load cases redone. Not printed.
 - **v32.2** — shorter shaft: **Ø5 × 60 mm** instead of 100, reaching 40 mm behind the rail instead of 80. Reprint 02. The shaft post (14) is unchanged in shape; slide it to the new position.
   - **Guidler A (02):** the ring is replaced by a cam with a hold face and a 40° ramp in front of it. The shaft's rounded tip rides the ramp as the head moves in Y, so the idler opens and closes during the approach and back-out, as with the v32.0 trip arm. The ramp is on the guidler because a round shaft can't carry one.
   - **Moves:** back to the simple sequence with a 9 mm approach offset and no extra sideways shifts. Y safe is 35 mm again.

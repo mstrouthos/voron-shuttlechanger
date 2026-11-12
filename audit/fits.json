@@ -17,9 +17,9 @@
    "kind": "sliding",
    "feature": "Ø3 rod",
    "hole_before": null,
-   "hole_now": "3.4 x 5.1 slot",
+   "hole_now": "3.4 x 6.0 slot",
    "clearance_per_side": 0.2,
-   "note": "1.0 mm of height each way for the rod's 12° swing; the washer rocks on the R5 ridge"
+   "note": "1.5 mm of height each way for the rod's 12° swing through the 6 mm anchor; the washer rocks on the R5 ridge"
   },
   {
    "fit": "Spring on pull rod",
