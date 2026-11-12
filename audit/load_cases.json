@@ -112,121 +112,151 @@
  {
   "part": "02 Guidler A mast",
   "case": "column root bending, closed spring load at the rod (root z 104)",
-  "load": "13.5 N",
-  "stress_MPa": 5.5,
+  "load": "13.6 N",
+  "stress_MPa": 2.7,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "5.6 x 9.7 section, 20.8 mm lever"
+  "note": "8.1 x 9.7 section, 20.8 mm lever"
  },
  {
   "part": "02 Guidler A mast",
-  "case": "column root bending, servo stall pushing a jammed guidler (rod force 21 N)",
-  "load": "21 N",
-  "stress_MPa": 8.6,
+  "case": "finger bending between the rod and the trip bar, idler fully open",
+  "load": "21.8 N",
+  "stress_MPa": 3.0,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "150 N mm / 7 mm crank"
+  "note": "6.5 x 9.7 section; the bar pushes 9.5 mm above the rod, the rod pulls the other way"
  },
  {
   "part": "02 Guidler A mast",
-  "case": "screw-head washer bearing on the mast's left face",
-  "load": "13.5 N",
-  "stress_MPa": 0.4,
+  "case": "jammed guidler: the gantry pushes the finger into the bar until it stalls (root z 104)",
+  "load": "60 N",
+  "stress_MPa": 17.1,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø7 washer"
+  "note": "60 N is an assumed stall force; 8.1 x 9.7 column, 30.3 mm lever"
  },
  {
-  "part": "03 trunnion",
-  "case": "rod cross-hole bearing",
-  "load": "13.5 N",
-  "stress_MPa": 0.8,
+  "part": "02 Guidler A mast",
+  "case": "finger tip knocked sideways (X) at z 147.5, root z 104",
+  "load": "30 N",
+  "stress_MPa": 12.3,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "crash load on the most exposed point of the head"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "finger tip knocked front to back (Y) at z 147.5, root z 104",
+  "load": "30 N",
+  "stress_MPa": 10.3,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "9.7 deep section"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "screw-head washer bearing on the mast left face, idler open",
+  "load": "25.8 N",
+  "stress_MPa": 0.9,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "Ø7 washer round the 3.4 mm slot"
+ },
+ {
+  "part": "05 plate",
+  "case": "spring anchor root bending at the plate face, idler open",
+  "load": "25.8 N",
+  "stress_MPa": 3.0,
   "layers": "across",
   "allow_MPa": 8.0,
   "ok": true,
-  "note": "Ø3 rod over the 5.5 mm flats"
+  "note": "wall + top gusset, I = 306 mm4; load on the ridge 6.4 mm in front of the plate"
  },
  {
-  "part": "03 trunnion",
-  "case": "pivot bearing in the crank (Ø6.9 boss x 4.0 in a Ø7.3 through bore)",
-  "load": "13.5 N",
-  "stress_MPa": 0.5,
+  "part": "05 plate",
+  "case": "spring anchor: washer bearing on the ridge",
+  "load": "25.8 N",
+  "stress_MPa": 5.1,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "two 1.7 mm strips beside the slot, about 1.5 mm of flattened ridge"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "tower root bending, idler open (bar load at z 134, foot top at z 76)",
+  "load": "21.8 N",
+  "stress_MPa": 0.7,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "printed standing: the journal and spigot are vertical cylinders, loaded in the layer plane"
+  "note": "24 x 20 tower; printed on its left face so the load runs in the layer plane"
  },
  {
-  "part": "03 trunnion",
-  "case": "retention: boss engagement after the worst rod tilt in the mast slot",
-  "load": "2.2 mm forward slide",
+  "part": "14 trip arm",
+  "case": "bar bending at the tower, load at the far end of the flat (48 mm out)",
+  "load": "21.8 N",
+  "stress_MPa": 3.5,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "16 x 7 bar"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "tower torsion from the offset bar load",
+  "load": "21.8 N",
+  "stress_MPa": 0.6,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "shear, 24 x 20 section"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "foot bending beside the tower (ribs ignored)",
+  "load": "21.8 N",
+  "stress_MPa": 10.6,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "20 x 6 foot; the two 3.5 mm ribs add to this"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "bar tip knocked sideways (X), 67 mm from the tower",
+  "load": "30 N",
+  "stress_MPa": 6.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "crash load"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "bar tip pushed down (Z), 67 mm from the tower",
+  "load": "20 N",
+  "stress_MPa": 10.3,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "handling load"
+ },
+ {
+  "part": "14 trip arm",
+  "case": "deflection at the finger under the full opening load",
+  "load": "21.8 N",
   "stress_MPa": null,
   "layers": "along",
   "allow_MPa": null,
   "ok": true,
-  "note": "rod tilt in the 3.4 mm mast slot (3.3°) plus hole clearance lets the trunnion slide 2.2 mm forward at most; 1.8 of the 4.0 mm boss stays in the bore"
- },
- {
-  "part": "04 crank",
-  "case": "stop tab at servo stall into the plate stop",
-  "load": "28 N",
-  "stress_MPa": 11.2,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "150 N mm at r 5.3; tab 3 x 2.5"
- },
- {
-  "part": "04 crank",
-  "case": "trunnion bore bearing, closed",
-  "load": "13.5 N",
-  "stress_MPa": 0.5,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "Ø7.3 x 4.1 through bore"
- },
- {
-  "part": "04 crank",
-  "case": "spline shear (25T MG90S / 21T FS90, 2.6 engaged)",
-  "load": "0.15 N m",
-  "stress_MPa": 3.4,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "Ø4.9 socket with a 0.6 lead-in chamfer and 3 relief slits; trapped by the trunnion and pull rod"
- },
- {
-  "part": "05 plate",
-  "case": "stop-pocket end wall at servo stall",
-  "load": "28 N",
-  "stress_MPa": 3.9,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2.4 deep x 3 wide contact"
- },
- {
-  "part": "05 plate",
-  "case": "crank hub bushing, closed spring load",
-  "load": "13.5 N",
-  "stress_MPa": 0.2,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "Ø9.4 x 7.8 bore"
- },
- {
-  "part": "06 bracket",
-  "case": "servo reaction at the tab screws (stall)",
-  "load": "5.4 N",
-  "stress_MPa": 0.6,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "150 N mm over 27.8 mm tab pitch; posts 8 deep"
+  "note": "about 0.4 mm (bar 0.17, tower twist 0.16, tower bend 0.03 at E = 2 GPa): 3 % of the 12.7 mm travel; slide the arm along the rail to trim it"
  }
 ]

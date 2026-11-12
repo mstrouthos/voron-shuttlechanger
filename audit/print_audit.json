@@ -16,20 +16,20 @@
   "scan": "v30"
  },
  {
-  "file": "02_CW2_guidler_A_mast.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
-   28.5,
-   61.6,
+   31.0,
+   78.1,
    16.2
   ],
-  "bed_mm2": 513,
-  "steep_overhang_mm2": 163,
-  "widest_flat_ceiling_mm": 5.7,
+  "bed_mm2": 680,
+  "steep_overhang_mm2": 141,
+  "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "file": "02_CW2_guidler_A_mast.stl",
+  "scan": "v32"
  },
  {
   "file": "02b_CW2_guidler_B_stock.stl",
@@ -48,68 +48,20 @@
   "scan": "v30"
  },
  {
-  "file": "03_opener_trunnion.stl",
-  "bodies": 1,
-  "watertight": true,
-  "size": [
-   7.0,
-   7.0,
-   10.6
-  ],
-  "bed_mm2": 48,
-  "steep_overhang_mm2": 9,
-  "widest_flat_ceiling_mm": 1.2,
-  "ceilings_over_limit": [],
-  "verdict": "OK",
-  "scan": "v30"
- },
- {
-  "file": "04_opener_servo_crank.stl",
-  "bodies": 1,
-  "watertight": true,
-  "size": [
-   19.2,
-   13.8,
-   10.6
-  ],
-  "bed_mm2": 152,
-  "steep_overhang_mm2": 2,
-  "widest_flat_ceiling_mm": 0.9,
-  "ceilings_over_limit": [],
-  "verdict": "OK",
-  "scan": "v31"
- },
- {
-  "file": "05_CW2_motor_plate_opener.stl",
   "bodies": 1,
   "watertight": true,
   "size": [
    54.1,
-   73.5,
-   8.3
+   71.0,
+   17.6
   ],
-  "bed_mm2": 2626,
-  "steep_overhang_mm2": 225,
-  "widest_flat_ceiling_mm": 4.7,
+  "bed_mm2": 2628,
+  "steep_overhang_mm2": 199,
+  "widest_flat_ceiling_mm": 4.0,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
- },
- {
-  "file": "06_servo_bracket.stl",
-  "bodies": 1,
-  "watertight": true,
-  "size": [
-   45.0,
-   16.1,
-   8.0
-  ],
-  "bed_mm2": 381,
-  "steep_overhang_mm2": 5,
-  "widest_flat_ceiling_mm": 1.8,
-  "ceilings_over_limit": [],
-  "verdict": "OK",
-  "scan": "v30"
+  "file": "05_CW2_motor_plate_opener.stl",
+  "scan": "v32"
  },
  {
   "file": "07_receiver_pins_magnets.stl",
@@ -238,5 +190,21 @@
   "ceilings_over_limit": [],
   "verdict": "OK",
   "scan": "v31"
+ },
+ {
+  "bodies": 1,
+  "watertight": true,
+  "size": [
+   70.3,
+   87.4,
+   56.0
+  ],
+  "bed_mm2": 1625,
+  "steep_overhang_mm2": 414,
+  "widest_flat_ceiling_mm": 0,
+  "ceilings_over_limit": [],
+  "verdict": "OK",
+  "file": "14_dock_trip_arm_x_each_tool.stl",
+  "scan": "v32"
  }
 ]

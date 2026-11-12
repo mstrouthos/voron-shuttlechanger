@@ -2,54 +2,64 @@
  "note": "Nominal model diameters in mm. FDM holes print roughly 0.1 to 0.2 mm under size, so sliding and pivot fits are given at least 0.15 per side, press fits are on size, and self-tapping holes are under size.",
  "fits": [
   {
-   "fit": "Trunnion boss in crank",
-   "parts": "03 / 04",
-   "kind": "pivot",
-   "feature": "Ø6.9 boss",
-   "hole_before": 7.15,
-   "hole_now": 7.3,
-   "clearance_per_side": 0.2,
-   "note": "was 0.125 per side: a printed bore that small closes up and binds"
-  },
-  {
-   "fit": "Crank hub in plate bore",
-   "parts": "04 / 05",
-   "kind": "pivot",
-   "feature": "Ø8.6 hub",
-   "hole_before": 9.4,
-   "hole_now": 9.4,
-   "clearance_per_side": 0.4,
-   "note": "unchanged"
-  },
-  {
-   "fit": "Crank on servo spline",
-   "parts": "04 / servo",
-   "kind": "press",
-   "feature": "Ø4.8 spline",
-   "hole_before": 4.9,
-   "hole_now": 4.9,
-   "clearance_per_side": 0.05,
-   "note": "unchanged since v30.10; lead-in chamfer and relief slits"
-  },
-  {
-   "fit": "Pull rod in trunnion",
-   "parts": "03 / M3x55",
-   "kind": "slide",
-   "feature": "Ø3 rod",
-   "hole_before": 3.4,
-   "hole_now": 3.4,
-   "clearance_per_side": 0.2,
-   "note": "unchanged"
-  },
-  {
    "fit": "Pull rod in mast slot",
-   "parts": "02 / M3x55",
-   "kind": "slide",
+   "parts": "02 / M3x60",
+   "kind": "sliding",
    "feature": "Ø3 rod",
-   "hole_before": 3.4,
-   "hole_now": 3.4,
+   "hole_before": null,
+   "hole_now": "3.4 x 4.6 slot",
    "clearance_per_side": 0.2,
-   "note": "unchanged"
+   "note": "slot shortened from 9.2 to 4.6 mm: the rod now turns with the mast (1.5° of relative tilt)"
+  },
+  {
+   "fit": "Pull rod in plate anchor",
+   "parts": "05 / M3x60",
+   "kind": "sliding",
+   "feature": "Ø3 rod",
+   "hole_before": null,
+   "hole_now": "3.4 x 5.1 slot",
+   "clearance_per_side": 0.2,
+   "note": "1.0 mm of height each way for the rod's 12° swing; the washer rocks on the R5 ridge"
+  },
+  {
+   "fit": "Spring on pull rod",
+   "parts": "M3x60 / spring",
+   "kind": "sliding",
+   "feature": "Ø3 rod",
+   "hole_before": null,
+   "hole_now": "Ø4.6 spring bore",
+   "clearance_per_side": 0.8,
+   "note": "0.7 x 6 x 40 spring; 28.5 mm long closed, 18.2 mm fully open, solid at about 10 mm"
+  },
+  {
+   "fit": "Finger under the trip bar",
+   "parts": "02 / 14",
+   "kind": "running",
+   "feature": "finger top z 147.5 closed, 141.9 open",
+   "hole_before": null,
+   "hole_now": "bar z 133.3 to 140.3",
+   "clearance_per_side": null,
+   "note": "the finger overlaps the full 7 mm of bar height in both states"
+  },
+  {
+   "fit": "Trip bar over the head",
+   "parts": "05 / 14",
+   "kind": "running",
+   "feature": "plate top z 132.0, body top z 130.2",
+   "hole_before": null,
+   "hole_now": "bar underside z 133.3",
+   "clearance_per_side": 1.3,
+   "note": "vertical clearance; needs the rail within about 1 mm of its nominal height"
+  },
+  {
+   "fit": "Trip arm screws",
+   "parts": "14 / M5x10",
+   "kind": "clearance",
+   "feature": "Ø5 screw",
+   "hole_before": null,
+   "hole_now": "Ø5.5 hole, Ø9.5 counterbore",
+   "clearance_per_side": 0.25,
+   "note": "4 mm seat, 6 mm of thread for the T-nut"
   },
   {
    "fit": "Head pins in receiver",
@@ -189,16 +199,6 @@
    "hole_before": 2.46,
    "hole_now": 2.46,
    "clearance_per_side": -0.27,
-   "note": "unchanged"
-  },
-  {
-   "fit": "Servo tab screws in bracket",
-   "parts": "06 / M2",
-   "kind": "self-tap",
-   "feature": "M2",
-   "hole_before": 1.8,
-   "hole_now": 1.8,
-   "clearance_per_side": -0.1,
    "note": "unchanged"
   },
   {

@@ -8,15 +8,13 @@ M3x25 SHCS,3,0,stock CW2,2x main body -> plate inserts; 1x guidler pivot (not ti
 M3x30 SHCS,1,0,stock CW2,"motor, top hole: from the front through the body and the plate"
 M3x8 SHCS,1,0,stock CW2,"motor, slotted hole (with an M3 washer), through the front access hole"
 M3x10 SHCS,2,0,stock CW2,"motor plate -> CNC Tap, lower counterbored holes; drop into the plate before the main body, tighten through the body front with a 2.5 mm hex key once on the Tap"
-FS90 micro servo (yours) incl. 2x M2 tab screws,1,0,hardware,opener; 5 V servo PWM pin. Peak load is about 25 N·mm (an FS90 makes about 150). MG90S also fits
-"Compression spring, BMG idler spring (from the BMG thumbscrew set; the thumbscrew is not used)",1,0,hardware,on the pull rod between the trunnion's right flat and the tension washer (about 10.8 mm long when closed)
-M3x55 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the trunnion cross hole and the spring"
-M3 nyloc nut (ISO 10511),3,0,hardware,"push nut against the mast's right face, stop nut 2.5 mm left of the trunnion, tension nut after the spring"
-M3 washer (ISO 7089),3,0,hardware,"pull rod: under the screw head and under the tension nut; CW2: under the M3x8 motor screw"
-"M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",12,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 7, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
-M3x12 SHCS,2,0,hardware,servo bracket -> plate inserts (from the back)
+Compression spring 0.7 mm wire x 6 mm OD x 40 mm long (about 1.2 N/mm; 1.0 to 1.4 works),1,0,hardware,"on the pull rod between the plate anchor and the tension nyloc, a washer at each end; about 28.5 mm long when set. Replaces the short BMG thumbscrew spring, which cannot take the travel"
+M3x60 SHCS (ISO 4762),1,0,hardware,"pull rod: head on the left of the Guidler A mast, through the mast slot, the plate anchor slot and the spring"
+M3 nyloc nut (ISO 10511),1,0,hardware,tension nut after the spring
+M3 washer (ISO 7089),4,0,hardware,pull rod: under the screw head and at each end of the spring; CW2: under the M3x8 motor screw
+"M3 heat-set insert, M3x5x4 (Ø5 OD x 4 mm long)",10,0,hardware,"every insert in the build, all in Ø4.7 holes: CW2 body 3, motor plate 5, duct legs 2 (the 8 stock CW2 ones included). See docs/ASSEMBLY_GUIDE.md"
 M3x6 SHCS,2,0,hardware,"receiver frame -> receiver, self-taps into Ø2.5 holes"
-M3x10 SHCS,2,0,hardware,"receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)"
+M3x10 SHCS,2,0,hardware,receiver-frame posts -> CW2 front inserts (through the new front holes; inserts pressed in from the back as stock)
 Dowel pin Ø3x30 hardened (DIN 6325),2,0,hardware,tool locating pins: pressed into 07 through-holes until 23 mm stick out at the front
 Magnet Ø6x2.65 (yours),4,2,hardware,head: 2 stacked per pocket; tool: 1 per pocket (its pocket floor sits 1 mm from the hotend-screw counterbores). Check polarity
 M3x20 SHCS,2,0,hardware,receiver frame -> CNC Tap upper SB holes (as v18)
@@ -28,21 +26,19 @@ M2.5x10 SHCS,0,4,hardware,heatsink -> tool top through the 3 mm shroud lip (8 mm
 Dowel pin Ø3x12 hardened,0,1,hardware,"guide lever pivot, pressed into the tool top"
 Hotend loom 2x22 AWG + 4x26 AWG,0,1,hardware,as v18
 Zip tie ≤3.6 mm wide,0,2,hardware,loom -> wire column on the tool top
-M5x10 SHCS + 2020 drop-in T-nut,0,2,hardware,dock -> rail (counterbores sized for SHCS heads)
+M5x10 SHCS + 2020 drop-in T-nut,0,4,hardware,2 for the dock (rail slot facing the head) and 2 for the trip arm (top slot)
 Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into the dock face, 7 mm stick out; the tool slides onto them in the +X shift"
-"2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, mounted 10 mm higher than in v18 (slot centre at head z 60)"
+"2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, slot centre at head z 60, top face at z 70; needs a free top slot for the trip arms"
 Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
 01 CW2 main body,1,0,printed,"stock Voron + front slot; front holes for the frame-post screws, full right insert pocket"
-02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod (the v29 Ø4.4 arm hole is unused); flat like stock"
+02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod, ending in a tall finger that the dock trip arm pushes (the v29 Ø4.4 arm hole is unused); flat like stock"
 02b Guidler B (stock CW2),1,0,printed,"unmodified Voron part, as printed for a stock CW2"
-03 Opener trunnion,1,0,printed,"PC-CF/ASA, standing on its square end; plain boss through the crank, no screw"
-04 Opener servo crank,1,0,printed,"PC-CF, front face down; press onto the spline with the stop tab in the plate pocket"
-05 Motor plate (crank bore and stop pocket),1,0,printed,back face down
-06 Servo bracket,1,0,printed,back face down
+05 Motor plate (spring anchor),1,0,printed,back face down; the anchor for the pull-rod spring stands up from the front face
 07 Receiver (pins + magnets),1,0,printed,"PC-CF, front face down"
-08 Receiver frame (thicker posts with front buttress),1,0,printed,"flange face down; left post hole lined up with the CW2 insert"
+08 Receiver frame (thicker posts with front buttress),1,0,printed,flange face down; left post hole lined up with the CW2 insert
 09 Duct + fan mount (v18 + thicker insert towers),1,0,printed,
 10 Tool top,0,1,printed,"PC-CF/ASA, underside down"
 10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported; 65 mm tall, use a 5 mm brim"
 11 Shroud 4010 TZ-V6 or 12 Shroud 4010 Dragon HF,0,1,printed,lip face down
 13 Dock,0,1,printed,"PETG/ASA, upright as exported; press in the 2 Ø3 pins (Ø3.0 bores)"
+14 Dock trip arm,0,1,printed,"PETG/ASA, left face down (the long flat face); bolts to the top slot of the dock rail and opens the idler at the dock"

@@ -14,6 +14,20 @@ def geoms(g):
     return [x for x in getattr(g,'geoms',[]) if x.geom_type=='Polygon']
 def slices(m):
     z0,z1=m.bounds[:,2]; hs=np.arange(LH/2,z1-z0,LH)
+    try:                                   # manifold3d slices are exact; trimesh sections drop loops on some meshes
+        import manifold3d as mf
+        M=mf.Manifold(mf.Mesh(vert_properties=np.asarray(m.vertices,np.float32),tri_verts=np.asarray(m.faces,np.uint32)))
+        assert M.status()==mf.Error.NoError
+        out=[]
+        for h in hs:
+            pos,neg=[],[]
+            for c in M.slice(float(z0+h)).to_polygons():
+                if len(c)<3: continue
+                p=Polygon(c); (pos if p.exterior.is_ccw else neg).append(p.buffer(0))
+            out.append(unary_union(pos).difference(unary_union(neg)) if pos else Polygon())
+        return hs,out
+    except Exception:
+        pass
     secs=m.section_multiplane([0,0,z0],[0,0,1],hs)
     out=[]
     for s in secs:

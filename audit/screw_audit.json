@@ -516,110 +516,6 @@
   "ok": true
  },
  {
-  "screw": "M3x12 servo bracket",
-  "axis": "y",
-  "centre": [
-   -17.8,
-   123.5
-  ],
-  "span": [
-   18.2,
-   33.2
-  ],
-  "thread": "M3",
-  "path": [
-   {
-    "part": "06 bracket",
-    "along": "y",
-    "span": [
-     22.2,
-     30.2
-    ],
-    "min_free_radius": 1.7,
-    "status": "clearance"
-   }
-  ],
-  "ok": true
- },
- {
-  "screw": "M3x12 servo bracket",
-  "axis": "y",
-  "centre": [
-   20.6,
-   123.5
-  ],
-  "span": [
-   18.2,
-   33.2
-  ],
-  "thread": "M3",
-  "path": [
-   {
-    "part": "06 bracket",
-    "along": "y",
-    "span": [
-     22.2,
-     30.2
-    ],
-    "min_free_radius": 1.7,
-    "status": "clearance"
-   }
-  ],
-  "ok": true
- },
- {
-  "screw": "M2 servo tab",
-  "axis": "y",
-  "centre": [
-   -12.4,
-   125.5
-  ],
-  "span": [
-   24.0,
-   34.1
-  ],
-  "thread": "M2",
-  "path": [
-   {
-    "part": "06 bracket",
-    "along": "y",
-    "span": [
-     24.0,
-     30.2
-    ],
-    "min_free_radius": 0.9,
-    "status": "tapped or self-tapping"
-   }
-  ],
-  "ok": true
- },
- {
-  "screw": "M2 servo tab",
-  "axis": "y",
-  "centre": [
-   15.4,
-   125.5
-  ],
-  "span": [
-   24.0,
-   34.1
-  ],
-  "thread": "M2",
-  "path": [
-   {
-    "part": "06 bracket",
-    "along": "y",
-    "span": [
-     24.0,
-     30.2
-    ],
-    "min_free_radius": 0.9,
-    "status": "tapped or self-tapping"
-   }
-  ],
-  "ok": true
- },
- {
   "screw": "M2.5x10 heatsink",
   "axis": "z",
   "centre": [
@@ -1056,6 +952,58 @@
     "span": [
      -34.0,
      -30.5
+    ],
+    "min_free_radius": 2.75,
+    "status": "clearance"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "screw": "M5x10 trip arm",
+  "axis": "z",
+  "centre": [
+   -5.17,
+   -44.0
+  ],
+  "span": [
+   64.0,
+   79.0
+  ],
+  "thread": "M5",
+  "path": [
+   {
+    "part": "14 trip arm",
+    "along": "z",
+    "span": [
+     70.0,
+     74.0
+    ],
+    "min_free_radius": 2.75,
+    "status": "clearance"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "screw": "M5x10 trip arm",
+  "axis": "z",
+  "centre": [
+   10.83,
+   -44.0
+  ],
+  "span": [
+   64.0,
+   79.0
+  ],
+  "thread": "M5",
+  "path": [
+   {
+    "part": "14 trip arm",
+    "along": "z",
+    "span": [
+     70.0,
+     74.0
     ],
     "min_free_radius": 2.75,
     "status": "clearance"
