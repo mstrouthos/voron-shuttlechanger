@@ -1,16 +1,16 @@
-# Assembly, Klipper and audit notes (v30.11)
+# Assembly, Klipper and audit notes (v31.0)
 
 For the illustrated, step-by-step build (inserts, opener, SB2209 wiring and Klipper setup), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
 Stock CW2 + LDO-36 · servo crank and pull rod (sets the idler tension and opens it) · tool on 2 Ø3 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
 
-All parts are in print orientation as single watertight bodies and need no supports (`print_audit.json`). The body is stock Voron geometry and keeps Voron's own bridges.
+All parts are in print orientation as single watertight bodies and need no supports (`print_audit.json`). `layer_audit.json` checks this layer by layer, the way a slicer would: nothing starts in mid-air, bridges stay under 10 mm and one-sided lips under 3 mm. `fits.json` lists every pin, pivot, press and screw fit with its clearance. The body is stock Voron geometry and keeps Voron's own bridges.
 
 ## Setup
 1. Guidler A + mast: prints flat like the stock part, mast included, no supports. The mast rises on the left of the CW2 body-to-plate screw and ends in a block with a slot for the pull rod. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press the 7 M3×5×4 inserts in (see the guide): 2 in the back face at the top for the servo bracket, plus the 5 stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29).
 3. Servo: fit it into the bracket with its own 2 M2 tab screws, from the back. Bolt the bracket to the plate back with 2x **M3x12** into the inserts. The spline now sits inside the plate bore.
-4. Trunnion: push its Ø6.9 boss right through the crank's Ø7.15 bore from the front, flats facing left and right. There is no screw: once the pull rod is through it, the rod's tilt in the mast slot lets it slide forward at most 2.2 mm, and 1.8 of the 4 mm boss stays in the crank.
+4. Trunnion: push its Ø6.9 boss right through the crank's Ø7.3 bore from the front, flats facing left and right. There is no screw: once the pull rod is through it, the rod's tilt in the mast slot lets it slide forward at most 2.2 mm, and 1.8 of the 4 mm boss stays in the crank.
 5. Crank: power the servo (plug it into the SB2209 with the head beside the printer, or use a servo tester) and send it to the closed angle (see Klipper). From the front, put the crank's hub into the plate bore with the stop tab in its pocket and resting on the pocket's closed end. In that position the trunnion points right, 6° below horizontal. Push it onto the spline with firm hand pressure. The socket is Ø4.9 with a lead-in chamfer and three relief slits. If it is still too tight, open it with a 5.0 mm drill by hand. There is no horn screw: the trunnion and the rod trap the crank, and its stop tab keeps it in the plate. Turn the trunnion so its flats face left and right.
 6. Pull rod, from the left: M3x55 + washer through the mast slot. Then the push nyloc: run it up to the mast's right face and back it off to about 0.2 mm of play. Then the stop nyloc, the trunnion's cross hole, the stock spring, a washer and the tension nyloc.
 7. Stop nut: with the crank closed, set a **2.5 mm gap** between the stop nyloc and the trunnion's left flat. That is how far the spring unloads before the idler starts to open.
@@ -88,6 +88,18 @@ Accepted (not on a load path):
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
 
 ## Version history
+- **v31.0** — full audit of every part, with two new checks, and the fixes it led to. Reprint 04, 07, 08, 10, 10b, 11 or 12, and 13.
+  - **New check, layer by layer** (`audit/layer_audit.json`): the old print audit only failed wide flat ceilings, so it passed features that start in mid-air. The new one slices each STL at 0.2 mm and classifies everything with nothing under it as an island, a bridge or a one-sided lip.
+  - **New check, fits** (`audit/fits.json`): every pin, pivot, press and screw fit, measured from the models. Sliding and pivot fits now have at least 0.15 mm per side; several had 0.04 to 0.07, which binds once printed.
+  - **Shrouds 11 and 12** failed the layer check: the 40 mm fan wall and the two funnel wings started in mid-air beside the lip, and the floor behind the heatsink was a 22 mm bridge. The wall and wings now start on the bed, and the floor has 45° gussets with an 8 mm flat. The parts fit the same way.
+  - **Tool top 10:** head-pin bores Ø3.08 → Ø3.3; dock-pin bores Ø3.14 → Ø3.4 with teardrop roofs and a wider lead-in; lever-pivot press bore Ø2.88 → Ø3.0.
+  - **Guide lever 10b:** pivot bore Ø3.14 → Ø3.3; PTFE socket Ø4.03 → Ø4.15; the foot is relieved round two M2.5 screw heads it overlapped by 0.15 mm.
+  - **Receiver 07 and dock 13:** dowel press bores Ø2.94 / Ø2.88 → Ø3.0.
+  - **Receiver frame 08:** receiver-screw holes Ø3.06 → Ø3.4 with Ø6.0 head recesses; the head pockets for the two M3×20 Tap screws are Ø6.1 (the left one was 0.28 mm narrower than the head).
+  - **Crank 04:** trunnion bore Ø7.15 → Ø7.3 (0.2 mm per side).
+  - **Tool-change collision sweep** (new): approach, the 9 mm shift onto the dock pins and the back-out, in 0.5 mm steps. Clean, apart from the dock pushing the lever, which is how it works.
+  - **Viewer:** a leftover screw head inside the plate beside the crank is removed.
+  - **Not changed:** the body's bridges and lips are in every earlier body and are stock CW2 features. Guidler A's rod-slot roof is a 9.2 mm bridge. The duct's outlet lips taper to a feather that lies on the bed. Guidler A touches the plate's pivot boss by 0.1 mm in the model, as the stock part does.
 - **v30.11** — the trunnion joint is redesigned for printing. Reprint 03 and 04.
   - The screw (v30.8) and the bayonet (v30.9 and v30.10) both needed tiny features: a thin spigot, 1 mm lugs, notches and stepped counterbores. Those don't print reliably at this size.
   - Trunnion: now just the 7×7 block and a plain **Ø6.9 boss, 4.3 mm long**, printed standing on the block. There is nothing thin, no lugs and no pilot hole.

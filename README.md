@@ -13,7 +13,7 @@ The tension is set by turning one nut. When closed, the crank sits just past dea
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v30.11).** The design passes automated collision, printability, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v31.0).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks. The whole head is built on the bench and then bolted to the Tap in one piece.
 
@@ -56,7 +56,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | `docs/ASSEMBLY_GUIDE.md` | Complete illustrated assembly: exploded views, full hardware list (stock CW2 included), every insert, bearing, gear, motor and screw, the opener, SB2209 servo wiring and Klipper setup |
 | `docs/ASSEMBLY.md` | Assembly notes, tool-change sequence, audit notes |
 | `docs/index.html` | Interactive 3D viewer |
-| `audit/` | Printability, wall-thickness, screw-path and load-case reports |
+| `audit/` | Printability (per-face and layer-by-layer), fit-clearance, wall-thickness, screw-path and load-case reports |
 
 ## Printed parts
 | # | Part | Qty |

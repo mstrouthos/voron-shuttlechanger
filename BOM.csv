@@ -43,6 +43,6 @@ Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool t
 08 Receiver frame (thicker posts with front buttress),1,0,printed,"flange face down; left post hole lined up with the CW2 insert"
 09 Duct + fan mount (v18 + thicker insert towers),1,0,printed,
 10 Tool top,0,1,printed,"PC-CF/ASA, underside down"
-10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported, brim recommended"
+10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported; 65 mm tall, use a 5 mm brim"
 11 Shroud 4010 TZ-V6 or 12 Shroud 4010 Dragon HF,0,1,printed,lip face down
-13 Dock,0,1,printed,"PETG/ASA, upright as exported; press in the 2 Ø3 pins"
+13 Dock,0,1,printed,"PETG/ASA, upright as exported; press in the 2 Ø3 pins (Ø3.0 bores)"

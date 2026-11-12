@@ -72,12 +72,12 @@
    13.8,
    10.6
   ],
-  "bed_mm2": 154,
-  "steep_overhang_mm2": 20,
+  "bed_mm2": 152,
+  "steep_overhang_mm2": 2,
   "widest_flat_ceiling_mm": 0.9,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v31"
  },
  {
   "file": "05_CW2_motor_plate_opener.stl",
@@ -120,12 +120,12 @@
    11.6,
    7.6
   ],
-  "bed_mm2": 275,
+  "bed_mm2": 274,
   "steep_overhang_mm2": 109,
   "widest_flat_ceiling_mm": 6.1,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30.5"
+  "scan": "v31"
  },
  {
   "file": "08_receiver_frame.stl",
@@ -136,12 +136,12 @@
    39.9,
    23.4
   ],
-  "bed_mm2": 1658,
-  "steep_overhang_mm2": 84,
+  "bed_mm2": 1657,
+  "steep_overhang_mm2": 98,
   "widest_flat_ceiling_mm": 0,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v31"
  },
  {
   "file": "09_duct_and_fan_mount.stl",
@@ -173,7 +173,7 @@
   "widest_flat_ceiling_mm": 2.2,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30.5"
+  "scan": "v31"
  },
  {
   "file": "10b_tool_filament_guide_lever_x_each_tool.stl",
@@ -184,11 +184,12 @@
    20.8,
    64.6
   ],
-  "bed_mm2": 82,
-  "steep_overhang_mm2": 15,
-  "widest_flat_ceiling_mm": 2.1,
+  "bed_mm2": 79,
+  "steep_overhang_mm2": 169,
+  "widest_flat_ceiling_mm": 2.0,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v31"
  },
  {
   "file": "11_tool_shroud_4010_TZ-V6.stl",
@@ -199,12 +200,12 @@
    31.9,
    41.8
   ],
-  "bed_mm2": 651,
-  "steep_overhang_mm2": 354,
-  "widest_flat_ceiling_mm": 4.6,
+  "bed_mm2": 784,
+  "steep_overhang_mm2": 270,
+  "widest_flat_ceiling_mm": 2.0,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v31"
  },
  {
   "file": "12_tool_shroud_4010_DragonHF.stl",
@@ -215,12 +216,12 @@
    32.0,
    42.6
   ],
-  "bed_mm2": 660,
-  "steep_overhang_mm2": 355,
-  "widest_flat_ceiling_mm": 4.6,
+  "bed_mm2": 798,
+  "steep_overhang_mm2": 268,
+  "widest_flat_ceiling_mm": 1.7,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "scan": "v30"
+  "scan": "v31"
  },
  {
   "file": "13_dock_x_each_tool.stl",
@@ -232,9 +233,10 @@
    37.5
   ],
   "bed_mm2": 299,
-  "steep_overhang_mm2": 0,
-  "widest_flat_ceiling_mm": 0.5,
+  "steep_overhang_mm2": 10,
+  "widest_flat_ceiling_mm": 0,
   "ceilings_over_limit": [],
-  "verdict": "OK"
+  "verdict": "OK",
+  "scan": "v31"
  }
 ]

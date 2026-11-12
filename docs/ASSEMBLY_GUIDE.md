@@ -1,4 +1,4 @@
-# Assembly guide (v30.11)
+# Assembly guide (v31.0)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -95,7 +95,7 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long.
 
 **Tools:** soldering iron with an M3 insert tip, 1.5, 2 and 2.5 mm hex keys (the 2.5 mm one at least 70 mm long, to reach the plate screws through the body), 5.5 mm nut driver, small vice or arbor press for the dowels and bearings, medium-strength thread locker, light grease for the idler gear.
 
-**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print the crank, trunnion, receiver and tool top in PC-CF if you can. The trunnion is tiny and prints standing on its square end: print 2–3 at once, or set a minimum layer time of about 8 s, so each layer can cool.
+**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print the crank, trunnion, receiver and tool top in PC-CF if you can. The trunnion is tiny and prints standing on its square end: print 2–3 at once, or set a minimum layer time of about 8 s, so each layer can cool. The guide lever is 65 mm tall on a small footprint: give it a 5 mm brim.
 
 ---
 
@@ -123,7 +123,7 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long.
 ### 1.4 Receiver: dowels and magnets
 ![07 Receiver](../images/assembly/inserts_07_receiver.png)
 
-- **Dowels:** press 2 Ø3×30 dowels in from the back until **23 mm** stand out at the front.
+- **Dowels:** press 2 Ø3×30 dowels in from the back until **23 mm** stand out at the front. The bores are Ø3.0, a firm press in a vice. If a pin can be pulled out by hand, fix it with a drop of CA glue: the tool drags on these pins at every change.
 - **Magnets:** fit 4 Ø6×2.65 magnets from the front, 2 stacked in each pocket. Mark their polarity: the tool magnets must attract them.
 
 ### 1.5 Tool top, for each tool
@@ -131,12 +131,13 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long.
 ![10 Tool top: guide-lever pivot](../images/assembly/inserts_10_tool_top_pivot.png)
 
 - **Magnets:** fit 2 Ø6×2.65 magnets from the back, 1 per pocket. Check that they *attract* the receiver magnets before you glue them.
-- **Guide lever:** put the guide lever (10b) in place and press the Ø3×12 pivot pin in from the front. The lever must swing freely.
+- **Guide lever:** put the guide lever (10b) in place and press the Ø3×12 pivot pin in from the front. The pin is a press fit in the tool top (Ø3.0) and a loose fit in the lever (Ø3.3). The lever must swing freely and drop back under its own weight.
+- **Check the pin bores:** a Ø3 dowel must slide through both head-pin bores (Ø3.3) and into both dock-pin bores (Ø3.4) with no force. If one drags, clear it with a 3.2 mm drill turned by hand.
 
 ### 1.6 Dock, for each tool
 ![13 Dock](../images/assembly/inserts_13_dock.png)
 
-Press 2 Ø3×15 dowels **8 mm** into the dock face, so that **7 mm** stand out.
+Press 2 Ø3×15 dowels **8 mm** into the dock face, so that **7 mm** stand out. The bores are Ø3.0; use a drop of CA glue if a pin is loose.
 
 ---
 
@@ -259,7 +260,7 @@ The stock BMG thumbscrew and the CW2 latch are not fitted. Keep the thumbscrew's
 ### 3.9 Crank and trunnion
 ![Opener: crank and trunnion](../images/assembly/opener_crank_trunnion.png)
 
-1. Push the 03 trunnion's round boss right through the 04 crank's Ø7.15 bore from the front, with its flats facing left and right. The boss end sits just inside the back face. A dab of grease helps; it should turn freely with no tight spots.
+1. Push the 03 trunnion's round boss right through the 04 crank's Ø7.3 bore from the front, with its flats facing left and right. The boss end sits just inside the back face. A dab of grease helps; it should turn freely with no tight spots.
 2. Nothing holds it in yet, so keep a finger on it, or let the grease hold it, until the pull rod is through (section 3.10). After that the rod keeps it in: even at the worst tilt the rod can take in the mast slot, the trunnion slides forward at most 2.2 mm, and 1.8 of the 4 mm boss stays in the crank. No screw is needed.
 3. Power the servo (section 2) and send it to the closed angle: `SET_SERVO SERVO=opener ANGLE=8`.
 4. From the front, put the crank's hub into the plate bore with its stop tab in the pocket and resting on the pocket's closed end. The trunnion points right, 6° below horizontal.

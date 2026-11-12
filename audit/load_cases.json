@@ -151,7 +151,7 @@
  },
  {
   "part": "03 trunnion",
-  "case": "pivot bearing in the crank (Ø6.9 boss x 4.0 in a Ø7.15 through bore)",
+  "case": "pivot bearing in the crank (Ø6.9 boss x 4.0 in a Ø7.3 through bore)",
   "load": "13.5 N",
   "stress_MPa": 0.5,
   "layers": "along",
@@ -163,9 +163,9 @@
   "part": "03 trunnion",
   "case": "retention: boss engagement after the worst rod tilt in the mast slot",
   "load": "2.2 mm forward slide",
-  "stress_MPa": 0.0,
+  "stress_MPa": null,
   "layers": "along",
-  "allow_MPa": 0.0,
+  "allow_MPa": null,
   "ok": true,
   "note": "rod tilt in the 3.4 mm mast slot (3.3°) plus hole clearance lets the trunnion slide 2.2 mm forward at most; 1.8 of the 4.0 mm boss stays in the bore"
  },
@@ -187,7 +187,7 @@
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "Ø7.15 x 4.1 through bore"
+  "note": "Ø7.3 x 4.1 through bore"
  },
  {
   "part": "04 crank",
