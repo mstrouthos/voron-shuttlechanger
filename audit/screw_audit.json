@@ -960,10 +960,10 @@
   "ok": true
  },
  {
-  "screw": "M5x10 trip arm",
+  "screw": "M5x10 shaft post",
   "axis": "z",
   "centre": [
-   -5.17,
+   -23.33,
    -44.0
   ],
   "span": [
@@ -973,7 +973,7 @@
   "thread": "M5",
   "path": [
    {
-    "part": "14 trip arm",
+    "part": "14 shaft post",
     "along": "z",
     "span": [
      70.0,
@@ -986,10 +986,10 @@
   "ok": true
  },
  {
-  "screw": "M5x10 trip arm",
+  "screw": "M5x10 shaft post",
   "axis": "z",
   "centre": [
-   10.83,
+   -7.33,
    -44.0
   ],
   "span": [
@@ -999,7 +999,7 @@
   "thread": "M5",
   "path": [
    {
-    "part": "14 trip arm",
+    "part": "14 shaft post",
     "along": "z",
     "span": [
      70.0,
@@ -1007,6 +1007,42 @@
     ],
     "min_free_radius": 2.75,
     "status": "clearance"
+   }
+  ],
+  "ok": true
+ },
+ {
+  "screw": "M3x16 shaft clamp",
+  "axis": "z",
+  "centre": [
+   -47.33,
+   -44.0
+  ],
+  "span": [
+   128.4,
+   144.4
+  ],
+  "thread": "M3",
+  "path": [
+   {
+    "part": "14 shaft post (upper jaw)",
+    "along": "z",
+    "span": [
+     137.4,
+     141.4
+    ],
+    "min_free_radius": 1.7,
+    "status": "clearance"
+   },
+   {
+    "part": "14 shaft post (below the slit)",
+    "along": "z",
+    "span": [
+     128.4,
+     136.2
+    ],
+    "min_free_radius": 1.25,
+    "status": "tapped or self-tapping"
    }
   ],
   "ok": true

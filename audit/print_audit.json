@@ -19,11 +19,11 @@
   "bodies": 1,
   "watertight": true,
   "size": [
-   31.0,
-   78.1,
+   31.7,
+   79.8,
    16.2
   ],
-  "bed_mm2": 680,
+  "bed_mm2": 716,
   "steep_overhang_mm2": 141,
   "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
@@ -195,16 +195,16 @@
   "bodies": 1,
   "watertight": true,
   "size": [
-   70.3,
-   87.4,
+   74.8,
+   20.0,
    56.0
   ],
-  "bed_mm2": 1625,
-  "steep_overhang_mm2": 414,
+  "bed_mm2": 1472,
+  "steep_overhang_mm2": 242,
   "widest_flat_ceiling_mm": 0,
   "ceilings_over_limit": [],
   "verdict": "OK",
-  "file": "14_dock_trip_arm_x_each_tool.stl",
+  "file": "14_dock_shaft_post_x_each_tool.stl",
   "scan": "v32"
  }
 ]

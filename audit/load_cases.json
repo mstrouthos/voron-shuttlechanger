@@ -121,29 +121,39 @@
  },
  {
   "part": "02 Guidler A mast",
-  "case": "finger bending between the rod and the trip bar, idler fully open",
-  "load": "21.8 N",
-  "stress_MPa": 3.0,
+  "case": "ring wall under the shaft, idler fully open",
+  "load": "20.9 N",
+  "stress_MPa": 2.0,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "6.5 x 9.7 section; the bar pushes 9.5 mm above the rod, the rod pulls the other way"
+  "note": "3.2 x 9.7 wall spanning the 12.6 mm ring, fixed at both ends"
  },
  {
   "part": "02 Guidler A mast",
-  "case": "jammed guidler: the gantry pushes the finger into the bar until it stalls (root z 104)",
+  "case": "jammed guidler: the gantry pushes the ring against the shaft until it stalls (root z 104)",
   "load": "60 N",
-  "stress_MPa": 17.1,
+  "stress_MPa": 18.6,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "60 N is an assumed stall force; 8.1 x 9.7 column, 30.3 mm lever"
+  "note": "60 N is an assumed stall force; 8.1 x 9.7 column, 32.8 mm lever"
  },
  {
   "part": "02 Guidler A mast",
-  "case": "finger tip knocked sideways (X) at z 147.5, root z 104",
+  "case": "jammed guidler: ring wall",
+  "load": "60 N",
+  "stress_MPa": 5.7,
+  "layers": "along",
+  "allow_MPa": 20.0,
+  "ok": true,
+  "note": "same wall, stall force"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "ring top knocked sideways (X) at z 149.2, root z 104",
   "load": "30 N",
-  "stress_MPa": 12.3,
+  "stress_MPa": 12.8,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -151,9 +161,9 @@
  },
  {
   "part": "02 Guidler A mast",
-  "case": "finger tip knocked front to back (Y) at z 147.5, root z 104",
+  "case": "ring top knocked front to back (Y) at z 149.2, root z 104",
   "load": "30 N",
-  "stress_MPa": 10.3,
+  "stress_MPa": 10.7,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -173,11 +183,11 @@
   "part": "05 plate",
   "case": "spring anchor root bending at the plate face, idler open",
   "load": "25.8 N",
-  "stress_MPa": 3.0,
+  "stress_MPa": 3.8,
   "layers": "across",
   "allow_MPa": 8.0,
   "ok": true,
-  "note": "wall + top gusset, I = 306 mm4; load on the ridge 6.4 mm in front of the plate"
+  "note": "wall + top gusset, I = 214 mm4; load on the ridge 6.4 mm in front of the plate"
  },
  {
   "part": "05 plate",
@@ -190,9 +200,9 @@
   "note": "two 1.7 mm strips beside the slot, about 1.5 mm of flattened ridge"
  },
  {
-  "part": "14 trip arm",
-  "case": "tower root bending, idler open (bar load at z 134, foot top at z 76)",
-  "load": "21.8 N",
+  "part": "14 shaft post",
+  "case": "tower root bending, idler open (shaft at z 136.8, foot top at z 76)",
+  "load": "20.9 N",
   "stress_MPa": 0.7,
   "layers": "along",
   "allow_MPa": 20.0,
@@ -200,29 +210,19 @@
   "note": "24 x 20 tower; printed on its left face so the load runs in the layer plane"
  },
  {
-  "part": "14 trip arm",
-  "case": "bar bending at the tower, load at the far end of the flat (48 mm out)",
-  "load": "21.8 N",
-  "stress_MPa": 3.5,
+  "part": "14 shaft post",
+  "case": "shaft bore bearing: couple from the shaft load 77 mm out, over the 20 mm bore",
+  "load": "20.9 N",
+  "stress_MPa": 3.7,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "16 x 7 bar"
+  "note": "about 5 mm of bore length carries each end"
  },
  {
-  "part": "14 trip arm",
-  "case": "tower torsion from the offset bar load",
-  "load": "21.8 N",
-  "stress_MPa": 0.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "shear, 24 x 20 section"
- },
- {
-  "part": "14 trip arm",
+  "part": "14 shaft post",
   "case": "foot bending beside the tower (ribs ignored)",
-  "load": "21.8 N",
+  "load": "20.9 N",
   "stress_MPa": 10.6,
   "layers": "along",
   "allow_MPa": 20.0,
@@ -230,33 +230,33 @@
   "note": "20 x 6 foot; the two 3.5 mm ribs add to this"
  },
  {
-  "part": "14 trip arm",
-  "case": "bar tip knocked sideways (X), 67 mm from the tower",
+  "part": "14 shaft post",
+  "case": "shaft tip knocked sideways, 80 mm out: bore bearing",
   "load": "30 N",
-  "stress_MPa": 6.7,
+  "stress_MPa": 5.4,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "crash load"
+  "note": "crash load; the steel shaft sees 196 MPa"
  },
  {
-  "part": "14 trip arm",
-  "case": "bar tip pushed down (Z), 67 mm from the tower",
-  "load": "20 N",
-  "stress_MPa": 10.3,
+  "part": "14 shaft post",
+  "case": "shaft tip knocked sideways: tower torsion",
+  "load": "30 N",
+  "stress_MPa": 1.1,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "handling load"
+  "note": "shear, 24 x 20 section"
  },
  {
-  "part": "14 trip arm",
-  "case": "deflection at the finger under the full opening load",
-  "load": "21.8 N",
+  "part": "Ø5 shaft",
+  "case": "bending at the post, head 36 mm out (ring 77 mm from the post)",
+  "load": "20.9 N",
   "stress_MPa": null,
   "layers": "along",
   "allow_MPa": null,
   "ok": true,
-  "note": "about 0.4 mm (bar 0.17, tower twist 0.16, tower bend 0.03 at E = 2 GPa): 3 % of the 12.7 mm travel; slide the arm along the rail to trim it"
+  "note": "steel: 132 MPa; tip deflection 0.52 mm there, 0.09 mm with the head docked"
  }
 ]

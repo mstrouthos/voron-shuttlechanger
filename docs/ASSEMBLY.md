@@ -1,51 +1,51 @@
-# Assembly, Klipper and audit notes (v32.0)
+# Assembly, Klipper and audit notes (v32.1)
 
-For the illustrated, step-by-step build (inserts, opener, trip arms and set-up), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
+For the illustrated, step-by-step build (inserts, opener, dock shafts and set-up), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
-Stock CW2 + LDO-36 · pull rod and spring set the idler tension · a trip arm at each dock opens the idler (no servo) · tool on 2 Ø3 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool during a 9 mm X shift · 63 mm dock pitch.
+Stock CW2 + LDO-36 · pull rod and spring set the idler tension · a Ø5 shaft at each dock opens the idler (no servo) · tool on 2 Ø3 pins + magnets · dock: 2 Ø3 pins enter 2 holes in the tool at the end of a 14 mm X shift · 63 mm dock pitch.
 
 All parts are in print orientation as single watertight bodies and need no supports (`print_audit.json`). `layer_audit.json` checks this layer by layer, the way a slicer would: nothing starts in mid-air, bridges stay under 10 mm and one-sided lips under 3 mm. `fits.json` lists every pin, pivot, press and screw fit with its clearance. The body is stock Voron geometry and keeps Voron's own bridges.
 
 ## Setup
-1. Guidler A + mast: prints flat like the stock part, mast and finger included, no supports. The mast rises on the left of the CW2 body-to-plate screw to a block with a slot for the pull rod, and carries on as a finger to 15.5 mm above the motor plate. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
+1. Guidler A + mast: prints flat like the stock part, mast and ring included, no supports. The mast rises on the left of the CW2 body-to-plate screw to a block with a slot for the pull rod, and ends in a ring (6.6 × 12.6 mm inside) whose top is 17 mm above the motor plate. The v29 Ø4.4 arm hole and the stock spring pocket are not used.
 2. Motor plate: press the 5 M3×5×4 inserts in (see the guide), the stock CW2 ones. Leave out the two upper-left CW2 rear screws (as in v29). The block that stands up from the front face near the top is the spring anchor.
 3. Pull rod, from the left: M3x60 + washer through the mast slot, then through the slot in the plate's anchor. Then a washer, the 0.7 × 6 × 40 spring, a washer and the tension nyloc. The spring's free end stops 2 mm short of the rod end, so the washer and nut start with almost no squeeze.
 4. Tension: turn the tension nyloc. Tighter = more grip. The reference is about **28.5 mm** of spring between the washers, about 13.6 N at the rod with a 1.2 N/mm spring. That is the same idler force as before. Spring rates vary between makers, so treat 28.5 mm as a start and set it by grip.
-5. Check by hand: push the finger to the left. The idler must swing open about 11° (the finger moves about 13 mm at the height of the plate top) and snap back when you let go. The rod swings down about 12° in the anchor slot as it opens.
+5. Check by hand: push the ring to the left. The idler must swing open about 11° (the ring moves about 13 mm) and snap back when you let go. The rod swings down about 12° in the anchor slot as it opens.
 6. Head onto the Tap: the whole head (CW2, motor, pull rod) is built on the bench. The 2 **M3x10** plate-to-Tap screws must be dropped into the plate's lower counterbores before the CW2 body goes on, tips flush with the back of the plate. With the head against the Tap front, push them home and tighten them with a 2.5 mm hex key through the round holes low in the body front.
 7. Receiver: press the Ø3x30 dowels through until 23 mm stick out at the front. Put 2 magnets in each pocket. Screw it to the receiver frame with 2x **M3x6** (they self-tap into Ø2.5 holes).
 8. Tool magnets: **1 per pocket**. Orient them so the pairs attract.
 9. Tool: put the shroud under the tool top and bolt the heatsink up through both with 4x **M2.5x10**. Press the Ø3x12 pivot pin through the tool top's front into the guide lever (the lever must swing freely). Push the spool's 4x2 PTFE 6 mm into the socket at the lever top.
 10. Receiver frame: bolt it to the CNC Tap with 2x M3x20 and the posts to the CW2 front with 2x **M3x10**. Those two screws go through the holes in the body's front face into M3 inserts pressed in from the back of the body, as on a stock CW2. Put inserts in the duct legs and bolt them under the frame wings with 2x M3x10.
 11. Dock: press 2x **Ø3x15 dowels** into the holes in the dock face so 7 mm stick out, then bolt it on with 2x **M5x10 SHCS** into drop-in T-nuts. Set the toolchange Z in your macro so the pins line up with the two Ø3.2 holes in the tool's front-left block (the hole lead-ins catch ±0.8 mm).
-12. Trip arm: bolt one to the **top slot** of the rail beside each dock with 2x **M5x10 SHCS** into drop-in T-nuts, foot flush with the rail's front and back faces, bar pointing back over the head. Set the bar's left face **33.7 mm to the left of the dock's left face** (the face the two pins stick out of). Sliding it right opens the idler less, left opens it more. The bar's underside is 1.3 mm above the motor plate, so the rail must sit within about 1 mm of its nominal height: jog the head in slowly the first time.
+12. Shaft post: bolt one to the **top slot** of the rail beside each dock with 2x **M5x10 SHCS** into drop-in T-nuts, foot flush with the rail's front and back faces. Push the **Ø5x100 shaft** through its bore from the front until the tip is **80 mm behind the rail**, and pinch it with the **M3x16** in the top (it self-taps below the slit). Slide the post until the gap between the shaft and the dock's left face (the face the two pins stick out of) is **37.3 mm**. Sliding it right opens the idler less, left opens it more. The shaft's underside is 2.3 mm above the motor plate, and the ring gives 0.9 mm of height either way: jog the head in slowly the first time.
 13. Wires: run the heater, thermistor and fan wires up the outside of the shroud's left side to the left edge of the tool top. Lay them on the outer face of the wire column at the front-left. Thread 2 zip ties (≤3.6 mm wide) front-to-back through its slots and around the bundle. Put the tie heads on the front or outer face, never at the back: the back of the column is only 1.5 mm from the receiver frame.
 
 ## Klipper
-The opener needs no config: there is no servo. It is worked by the tool-change moves.
+The opener needs no config: there is no servo. It is worked by the tool-change moves. "X−14" is 14.1 mm left of the dock position.
 
-- **Drop:** Y safe at X−9 → Y dock → X dock (slow; the last 1.7 mm tilts the guide lever) → Y safe.
-- **Pickup:** Y safe at X dock → Y dock (slow) → X−9 (slow) → Y safe.
+- **Drop:** Y safe at X−14 → Y dock → X dock (slow; the last 7 mm slide the tool onto the dock pins, the last 1.7 mm tilt the guide lever) → Y out 36 mm → X−14 → Y safe.
+- **Pickup:** Y safe at X−14 → Y in to 36 mm out → X dock → Y dock (slow) → X−14 (slow) → Y safe.
 
-Y safe must be at least **35 mm** behind the dock position: the trip bar reaches 29 mm behind it at the finger, and the dowels engage 23 mm.
+Y safe must be at least **50 mm** behind the dock position: the ring leaves the shaft tip 42 mm out.
 
-What the trip arm does during those moves:
-- **Y in, at X−9 (drop):** from 29 mm out the bar's ramp starts to hold the finger back. At Y dock it is 3.7 mm back and the idler 3.4° open.
-- **X shift +9:** the finger ends 12.7 mm back, the idler 11.4° open. At 1.7 mm before the end, where the dock starts to tilt the guide lever, it is already 9.9° open (2.3 mm at the idler).
-- **Y out, at X dock:** the bar holds the idler fully open for the first 10 mm, until the gears are past the filament, then the ramp lets the spring close it by 29 mm.
-- **Pickup** is the same in reverse: the idler opens on the way in, and closes on the filament during the −9 mm shift.
+What the shaft does during those moves:
+- **Y in, at X−14:** the ring slides onto the shaft with 0.8 mm of room each side. The idler stays closed.
+- **X shift to the dock:** after 0.8 mm the shaft meets the ring's left wall and holds it back. At the dock the ring is 13.3 mm back and the idler 11.4° open. At 1.7 mm before the end, where the dock starts to tilt the guide lever, it is already 10.1° open (2.3 mm at the idler).
+- **Y moves at X dock:** the ring slides along the shaft and the idler stays fully open, so the gears pass the filament freely.
+- **X shift back to X−14:** the spring closes the idler as the head moves. With the tool left in the dock this is done 36 mm out; with a new tool on the head it is done at the dock, and the same move slides the tool off the dock pins.
 
-The empty head runs with the idler closed. Never shift in X at the dock with Y less than 35 mm out, except the two 9 mm shifts above.
+Always shift back to X−14 before moving out past 42 mm. If the ring leaves the shaft while the idler is open, it snaps shut from fully open. The empty head runs with the idler closed.
 
 ## Structural audit
 - `screw_audit.json`: every screw's path through the printed parts, with the smallest clear radius in each part. Each part comes out as clearance, tapped/self-tapping, or blocked; none is blocked.
 - `struct_audit.json`: wall-thickness scan of every STL by inward ray casting. It flags regions under 1.2 mm.
-- `load_cases.json`: hand load cases. Allowables are 20 MPa along layers and 8 MPa across layers. All cases pass. The closest to its limit is the Guidler A mast root with a jammed guidler (17 of 20 MPa).
+- `load_cases.json`: hand load cases. Allowables are 20 MPa along layers and 8 MPa across layers. All cases pass. The closest to its limit is the Guidler A mast root with a jammed guidler (18.6 of 20 MPa).
 
 v32 opener (parts 02, 05 and 14):
 - **Opener sweep:** Guidler A, the idler and the pull-rod hardware from closed to 11.4° open, against the body, the plate, all hardware, the LDO-36, the tool, the lever and the PTFE. What remains is the stock guidler and idler hardware, which the model holds still, and the 0.1 mm the stock guidler touches the plate's pivot boss.
-- **Tool-change sweep:** approach, the 9 mm shift and the back-out in 0.5 mm steps, with the idler angle the trip bar gives at each step, the trip arm in place, and the arms and docked tools of both neighbouring docks. Clean, apart from the dock pushing the guide lever, which is how it works.
-- **Loads:** the bar pushes the finger with 11.5 N at first contact and 21.8 N fully open; the rod force goes from 13.6 to 25.8 N. A jammed guidler with the gantry stalling at an assumed 60 N puts 17 MPa in the mast root (limit 20 along the layers). The arm bends about 0.4 mm under the full load.
+- **Tool-change sweep:** the full drop sequence in 0.5 to 1 mm steps (in at X−14, shift to the dock, out 36 mm, shift back, leave), with the idler angle the shaft gives at each step, the shaft and post in place, and the shafts, posts and docked tools of both neighbouring docks. Pickup is the same path in reverse. Clean, apart from the dock pushing the guide lever and the shaft touching the ring wall, which is how it works.
+- **Loads:** the shaft pushes the ring with 11 N at first contact and 20.9 N fully open; the rod force goes from 13.6 to 25.8 N. A jammed guidler with the gantry stalling at an assumed 60 N puts 18.6 MPa in the mast root (limit 20 along the layers). The shaft bends 0.09 mm with the head docked and 0.52 mm with the head 36 mm out, where the idler is opened for a pickup.
 - **Wall thickness and gaps:** the new geometry adds no regions under 1.2 mm. The flagged regions left in 02 and 05 are stock geometry already in the earlier reports. The 02, 05 and 14 entries are marked `"scan": "v32"`.
 
 Fixed in v29:
@@ -80,6 +80,13 @@ Accepted (not on a load path):
 - the 1.7 mm strip of the plate's spring anchor in front of the rod slot (11 mm tall, backed by the ridge; the washer bears on it and on the 4.7 mm strip behind the slot)
 
 ## Version history
+- **v32.1** — the printed trip arm is replaced by a **Ø5 × 100 mm steel shaft**, and the finger on Guidler A by a **ring** that slides onto it. Reprint 02; print the new 14 (shaft post) instead of the trip arm.
+  - **Why:** with the head docked the steel shaft bends 0.09 mm, where the printed bar bent about 0.4. It needs no ramp, and the ring can't slip off it sideways.
+  - **Guidler A (02):** the mast ends in a ring, 6.6 × 12.6 mm inside, with a 1.2 mm lead-in at the front. The shaft slides 5.8 mm up the ring's left wall as the idler opens, which is why the ring is tall.
+  - **Shaft post (14):** a tower on the rail's top slot with a Ø5.1 bore, a slit and an M3×16 pinch screw. Still 2× M5×10 into T-nuts.
+  - **Moves:** a straight shaft can't open the idler while the head moves in Y, so the head now makes the whole opening with a sideways shift. It comes in 14.1 mm left of the dock (was 9) and shifts right to open. To close, it shifts back left: 36 mm out after a drop, at the dock after a pickup. Y safe goes from 35 to 50 mm.
+  - **Motor plate (05):** the anchor gusset is 1 mm shorter to clear the ring.
+  - **Checks:** opener sweep, tool-change sweep with the new sequence and both neighbouring docks, layer check and load cases, all redone. Not printed.
 - **v32.0** — the opener no longer has a servo: a trip arm at each dock opens the idler, the way Lineux Hotswap does it. Reprint 02 and 05, print one new 14 per dock. Parts 03, 04 and 06 are gone.
   - **Removed:** servo, crank, trunnion, servo bracket, 2 plate inserts, 2 M3×12, 2 of the 3 nylocs, the servo wiring and the Klipper servo section.
   - **Guidler A (02):** the mast ends in a finger that stands 15.5 mm above the motor plate. The column is 8.1 mm thick (was 5.6). The rod slot is 4.6 mm tall instead of 9.2, because the rod now turns with the mast.

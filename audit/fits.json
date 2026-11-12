@@ -32,27 +32,37 @@
    "note": "0.7 x 6 x 40 spring; 28.5 mm long closed, 18.2 mm fully open, solid at about 10 mm"
   },
   {
-   "fit": "Finger under the trip bar",
-   "parts": "02 / 14",
+   "fit": "Dock shaft in the Guidler A ring",
+   "parts": "02 / Ø5 shaft",
    "kind": "running",
-   "feature": "finger top z 147.5 closed, 141.9 open",
+   "feature": "Ø5 shaft",
    "hole_before": null,
-   "hole_now": "bar z 133.3 to 140.3",
-   "clearance_per_side": null,
-   "note": "the finger overlaps the full 7 mm of bar height in both states"
+   "hole_now": "6.6 x 12.6 ring",
+   "clearance_per_side": 0.8,
+   "note": "0.8 mm each side when the shaft enters, 1.2 mm lead-in chamfer; the shaft slides 5.8 mm up the wall as the idler opens, with 0.9 mm spare above and below"
   },
   {
-   "fit": "Trip bar over the head",
-   "parts": "05 / 14",
+   "fit": "Dock shaft over the head",
+   "parts": "05 / Ø5 shaft",
    "kind": "running",
    "feature": "plate top z 132.0, body top z 130.2",
    "hole_before": null,
-   "hole_now": "bar underside z 133.3",
-   "clearance_per_side": 1.3,
-   "note": "vertical clearance; needs the rail within about 1 mm of its nominal height"
+   "hole_now": "shaft underside z 134.3",
+   "clearance_per_side": 2.3,
+   "note": "vertical clearance; the ring allows the rail to be 0.9 mm high or low"
   },
   {
-   "fit": "Trip arm screws",
+   "fit": "Shaft in the post",
+   "parts": "14 / Ø5 shaft",
+   "kind": "clamp",
+   "feature": "Ø5 shaft",
+   "hole_before": null,
+   "hole_now": "Ø5.1 bore, 1.2 mm slit",
+   "clearance_per_side": 0.05,
+   "note": "pinched by an M3x16 that self-taps into a Ø2.5 hole below the slit"
+  },
+  {
+   "fit": "Shaft post screws",
    "parts": "14 / M5x10",
    "kind": "clearance",
    "feature": "Ø5 screw",

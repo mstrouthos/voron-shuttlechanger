@@ -315,10 +315,10 @@
    "flagged": []
   },
   {
-   "file": "14_dock_trip_arm_x_each_tool.stl",
+   "file": "14_dock_shaft_post_x_each_tool.stl",
    "islands": 0,
    "island_max_area": 0,
-   "bridge_max": 0,
+   "bridge_max": 0.66,
    "lip_max": 0,
    "lips_over_1p5": 0,
    "lip_area_over_1p5": 0,

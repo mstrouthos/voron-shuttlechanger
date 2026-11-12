@@ -26,12 +26,14 @@ M2.5x10 SHCS,0,4,hardware,heatsink -> tool top through the 3 mm shroud lip (8 mm
 Dowel pin Ø3x12 hardened,0,1,hardware,"guide lever pivot, pressed into the tool top"
 Hotend loom 2x22 AWG + 4x26 AWG,0,1,hardware,as v18
 Zip tie ≤3.6 mm wide,0,2,hardware,loom -> wire column on the tool top
-M5x10 SHCS + 2020 drop-in T-nut,0,4,hardware,2 for the dock (rail slot facing the head) and 2 for the trip arm (top slot)
+M5x10 SHCS + 2020 drop-in T-nut,0,4,hardware,2 for the dock (rail slot facing the head) and 2 for the shaft post (top slot)
 Dowel pin Ø3x15 hardened (DIN 6325),0,2,hardware,"dock pins: pressed 8 mm into the dock face, 7 mm stick out; the tool slides onto them in the +X shift"
-"2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, slot centre at head z 60, top face at z 70; needs a free top slot for the trip arms"
+"Shaft Ø5 x 100 mm, steel, both ends chamfered",0,1,hardware,"dock shaft: clamped in the shaft post, tip 80 mm behind the rail. The ring on Guidler A slides onto it and it opens the idler"
+M3x16 SHCS,0,1,hardware,clamps the shaft in the shaft post (self-taps into a Ø2.5 hole)
+"2020 extrusion, length = tools x 63 mm + 40",1,0,hardware,"dock rail, slot centre at head z 60, top face at z 70; needs a free top slot for the shaft posts"
 Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool top; pick the matching shroud
 01 CW2 main body,1,0,printed,"stock Voron + front slot; front holes for the frame-post screws, full right insert pocket"
-02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod, ending in a tall finger that the dock trip arm pushes (the v29 Ø4.4 arm hole is unused); flat like stock"
+02 Guidler A + mast,1,0,printed,"stock + mast for the pull rod, ending in a ring that slides onto the dock shaft (the v29 Ø4.4 arm hole is unused); flat like stock"
 02b Guidler B (stock CW2),1,0,printed,"unmodified Voron part, as printed for a stock CW2"
 05 Motor plate (spring anchor),1,0,printed,back face down; the anchor for the pull-rod spring stands up from the front face
 07 Receiver (pins + magnets),1,0,printed,"PC-CF, front face down"
@@ -41,4 +43,4 @@ Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,existing,both use the same tool t
 10b Filament guide lever,0,1,printed,"PC-CF/ASA, upright as exported; 65 mm tall, use a 5 mm brim"
 11 Shroud 4010 TZ-V6 or 12 Shroud 4010 Dragon HF,0,1,printed,lip face down
 13 Dock,0,1,printed,"PETG/ASA, upright as exported; press in the 2 Ø3 pins (Ø3.0 bores)"
-14 Dock trip arm,0,1,printed,"PETG/ASA, left face down (the long flat face); bolts to the top slot of the dock rail and opens the idler at the dock"
+14 Dock shaft post,0,1,printed,"PETG/ASA, left face down (the face with the slit); bolts to the top slot of the dock rail and clamps the Ø5 shaft"
