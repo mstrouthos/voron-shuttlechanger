@@ -80,7 +80,7 @@
    "islands": 0,
    "island_max_area": 0,
    "bridge_max": 4.1,
-   "lip_max": 0.89,
+   "lip_max": 1.24,
    "lips_over_1p5": 0,
    "lip_area_over_1p5": 0,
    "verdict": "OK",
@@ -106,18 +106,18 @@
    "islands": 0,
    "island_max_area": 0,
    "bridge_max": 1.95,
-   "lip_max": 2.84,
+   "lip_max": 2.35,
    "lips_over_1p5": 1,
-   "lip_area_over_1p5": 31.3,
+   "lip_area_over_1p5": 17.6,
    "verdict": "CHECK",
    "disposition": "ACCEPTED",
-   "note": "The flagged patch is the roof of the rod slot in the spring anchor: a 6 mm bridge anchored at both ends (the classifier calls it a lip).",
+   "note": "The flagged patch is the roof of the rod slot in the spring anchor: a 5.1 mm bridge anchored at both ends (the classifier calls it a lip).",
    "flagged": [
     {
      "kind": "lip",
      "z": 15.900000000000004,
-     "depth": 2.84,
-     "area": 31.27,
+     "depth": 2.35,
+     "area": 17.55,
      "at": [
       -9.0,
       28.3

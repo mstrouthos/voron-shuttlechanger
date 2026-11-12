@@ -143,11 +143,11 @@
   "part": "02 Guidler A mast",
   "case": "jammed guidler: bending where the cam joins the mast block (z 133)",
   "load": "60 N",
-  "stress_MPa": 0.9,
+  "stress_MPa": 1.2,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "12.3 x 9.7 section with the 45 deg gusset; the sharp inside corner there is gone (the bare 6.5 mm block saw 3.2 MPa plus the notch)"
+  "note": "the column now runs flush up to the cam on the left and a gusset joins it on the right: at least 10.5 x 9.7 (the bare 6.5 mm block saw 3.2 MPa plus a sharp corner)"
  },
  {
   "part": "02 Guidler A mast",
@@ -193,11 +193,11 @@
   "part": "05 plate",
   "case": "spring anchor root bending at the plate face, idler open",
   "load": "25.8 N",
-  "stress_MPa": 4.0,
+  "stress_MPa": 3.8,
   "layers": "across",
   "allow_MPa": 8.0,
   "ok": true,
-  "note": "4.5 mm wall + ridge, I = 139 mm4; load on the ridge 6.4 mm in front of the plate"
+  "note": "wall + top gusset, I = 214 mm4; load on the ridge 6.4 mm in front of the plate"
  },
  {
   "part": "05 plate",

@@ -1,4 +1,4 @@
-# Assembly, Klipper and audit notes (v32.3)
+# Assembly, Klipper and audit notes (v32.4)
 
 For the illustrated, step-by-step build (inserts, opener, dock shafts and set-up), see [ASSEMBLY_GUIDE.md](ASSEMBLY_GUIDE.md).
 
@@ -77,9 +77,15 @@ Accepted (not on a load path):
 - the 1.2 shroud lip, clamped between the heatsink and the tool top
 - the receiver frame's 0.8–1.0 webs, squeezed between the motor plate and the Tap
 - the stock CW2 body, plate and guidler features (bridging layers, gear-side wedges)
-- the 1.7 mm strip of the plate's spring anchor in front of the rod slot (11 mm tall and 6 mm deep; the washer bears on it and on the 4.7 mm strip behind the slot)
+- the 1.7 mm strip of the plate's spring anchor in front of the rod slot (11 mm tall, backed by the ridge; the washer bears on it and on the 4.7 mm strip behind the slot)
 
 ## Version history
+- **v32.4** — the motor plate (05) is back to the v32.2 shape, and the mast is reinforced on Guidler A alone. Reprint 02 only; a v32.2 plate is correct.
+  - **Motor plate (05):** identical to v32.2 again (the STL is byte for byte the same). The v32.3 change to its anchor is undone.
+  - **Guidler A (02), left side:** the 8.1 mm column now runs straight up to the cam, so the left side is one flush face from the base to the cam. The screw head and washer sit in a pocket in it, open to the left and the front. Before, the block above the column was set back 4 mm and the cam overhung it.
+  - **Guidler A (02), right side:** the gusset under the cam is full size (5.8 mm) only in front of the plate's anchor gusset and small (2 mm) beside it. The mast clears the v32.2 anchor by 0.95 mm with the idler closed, and moves away from it as it opens.
+  - **Fillets:** R3 where the column meets the base, R2 where it meets the block. The gusset under the cam's forward overhang stays, now across the full width.
+  - **Checks:** opener sweep, tool-change sweep, layer check and load cases redone. Not printed.
 - **v32.3** — the cam is blended into the Guidler A mast. Reprint 02 and 05.
   - **Guidler A (02):** the cam sat on the narrower mast block with a sharp inside corner on the side that is pulled when the shaft pushes. There is now a 45° gusset under the cam on that side, and another under its forward overhang. The joint is 12.3 mm wide instead of 6.5.
   - **Motor plate (05):** the spring anchor loses its top gusset, which was in the way, and its wall grows from 2.5 to 4.5 mm instead (4.0 of 8 MPa at the root). The rod slot is 6 mm tall, a 6 mm bridge when printed.

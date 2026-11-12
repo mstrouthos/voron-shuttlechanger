@@ -23,8 +23,8 @@
    74.0,
    35.4
   ],
-  "bed_mm2": 748,
-  "steep_overhang_mm2": 141,
+  "bed_mm2": 821,
+  "steep_overhang_mm2": 160,
   "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
   "verdict": "OK",
@@ -56,8 +56,8 @@
    17.6
   ],
   "bed_mm2": 2628,
-  "steep_overhang_mm2": 214,
-  "widest_flat_ceiling_mm": 6.0,
+  "steep_overhang_mm2": 199,
+  "widest_flat_ceiling_mm": 4.0,
   "ceilings_over_limit": [],
   "verdict": "OK",
   "file": "05_CW2_motor_plate_opener.stl",

@@ -1,4 +1,4 @@
-# Assembly guide (v32.3)
+# Assembly guide (v32.4)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -201,7 +201,7 @@ The stock BMG thumbscrew, its spring and the CW2 latch are not fitted. The pull 
 
 Thread the parts onto the M3×60 SHCS in this order, starting from the left:
 
-1. Screw head and a washer, on the left of the Guidler A mast. Push the rod through the mast slot.
+1. Screw head and a washer, on the left of the Guidler A mast. They sit in the pocket in the mast's left side. Push the rod through the mast slot.
 2. The slot in the **spring anchor**, the block that stands up from the plate's front face. It is fixed; the rod slides through it.
 3. A washer. It rocks on the anchor's rounded ridge as the rod swings.
 4. The spring (0.7 × 6 × 40).

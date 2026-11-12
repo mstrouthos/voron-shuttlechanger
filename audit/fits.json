@@ -17,9 +17,9 @@
    "kind": "sliding",
    "feature": "Ø3 rod",
    "hole_before": null,
-   "hole_now": "3.4 x 6.0 slot",
+   "hole_now": "3.4 x 5.1 slot",
    "clearance_per_side": 0.2,
-   "note": "1.5 mm of height each way for the rod's 12° swing through the 6 mm anchor; the washer rocks on the R5 ridge"
+   "note": "1.0 mm of height each way for the rod's 12° swing; the washer rocks on the R5 ridge"
   },
   {
    "fit": "Spring on pull rod",
@@ -30,6 +30,26 @@
    "hole_now": "Ø4.6 spring bore",
    "clearance_per_side": 0.8,
    "note": "0.7 x 6 x 40 spring; 28.5 mm long closed, 18.2 mm fully open, solid at about 10 mm"
+  },
+  {
+   "fit": "Guidler A mast beside the plate anchor",
+   "parts": "02 / 05",
+   "kind": "running",
+   "feature": "mast gussets",
+   "hole_before": null,
+   "hole_now": "anchor gusset and wall",
+   "clearance_per_side": 0.95,
+   "note": "smallest gap with the idler closed; opening moves the mast away"
+  },
+  {
+   "fit": "Rod head pocket in the mast",
+   "parts": "02 / M3x60",
+   "kind": "clearance",
+   "feature": "Ø5.5 head, Ø7 washer",
+   "hole_before": null,
+   "hole_now": "7.8 x 7.8 pocket, open to the left and front",
+   "clearance_per_side": 0.4,
+   "note": "the washer bears on the pocket floor"
   },
   {
    "fit": "Dock shaft on the Guidler A cam",

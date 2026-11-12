@@ -11,7 +11,7 @@ The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2.
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v32.3).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v32.4).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks. The whole head is built on the bench and then bolted to the Tap in one piece.
 
