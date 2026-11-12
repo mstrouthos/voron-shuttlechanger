@@ -121,17 +121,27 @@
  },
  {
   "part": "02 Guidler A mast",
-  "case": "ring wall under the shaft, idler fully open",
-  "load": "20.9 N",
-  "stress_MPa": 2.0,
-  "layers": "along",
-  "allow_MPa": 20.0,
+  "case": "column twist: the shaft pushes the cam in front of the mast centre line",
+  "load": "357 N mm",
+  "stress_MPa": 2.6,
+  "layers": "across",
+  "allow_MPa": 8.0,
   "ok": true,
-  "note": "3.2 x 9.7 wall spanning the 12.6 mm ring, fixed at both ends"
+  "note": "worst point of the ramp; 8.1 x 9.7 column, shear between layers"
  },
  {
   "part": "02 Guidler A mast",
-  "case": "jammed guidler: the gantry pushes the ring against the shaft until it stalls (root z 104)",
+  "case": "cam bending where it overhangs the mast (section at y 4.4), shaft on the ramp",
+  "load": "18 N",
+  "stress_MPa": 0.8,
+  "layers": "across",
+  "allow_MPa": 8.0,
+  "ok": true,
+  "note": "14 x 10 section, 14 mm lever"
+ },
+ {
+  "part": "02 Guidler A mast",
+  "case": "jammed guidler: the gantry pushes the cam against the shaft until it stalls (root z 104)",
   "load": "60 N",
   "stress_MPa": 18.6,
   "layers": "along",
@@ -141,19 +151,9 @@
  },
  {
   "part": "02 Guidler A mast",
-  "case": "jammed guidler: ring wall",
-  "load": "60 N",
-  "stress_MPa": 5.7,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "same wall, stall force"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "ring top knocked sideways (X) at z 149.2, root z 104",
+  "case": "cam top knocked sideways (X) at z 143.4, root z 104",
   "load": "30 N",
-  "stress_MPa": 12.8,
+  "stress_MPa": 11.1,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -161,13 +161,13 @@
  },
  {
   "part": "02 Guidler A mast",
-  "case": "ring top knocked front to back (Y) at z 149.2, root z 104",
-  "load": "30 N",
-  "stress_MPa": 10.7,
-  "layers": "along",
-  "allow_MPa": 20.0,
+  "case": "cam front tip knocked sideways (X), 31 mm in front of the mast: column twist",
+  "load": "20 N",
+  "stress_MPa": 4.4,
+  "layers": "across",
+  "allow_MPa": 8.0,
   "ok": true,
-  "note": "9.7 deep section"
+  "note": "handling load"
  },
  {
   "part": "02 Guidler A mast",
@@ -211,9 +211,9 @@
  },
  {
   "part": "14 shaft post",
-  "case": "shaft bore bearing: couple from the shaft load 77 mm out, over the 20 mm bore",
+  "case": "shaft bore bearing: couple from the shaft load 35 mm out, over the 20 mm bore",
   "load": "20.9 N",
-  "stress_MPa": 3.7,
+  "stress_MPa": 1.9,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -231,19 +231,19 @@
  },
  {
   "part": "14 shaft post",
-  "case": "shaft tip knocked sideways, 80 mm out: bore bearing",
+  "case": "shaft tip knocked sideways, 40 mm out: bore bearing",
   "load": "30 N",
-  "stress_MPa": 5.4,
+  "stress_MPa": 3.0,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
-  "note": "crash load; the steel shaft sees 196 MPa"
+  "note": "crash load; the steel shaft sees 98 MPa"
  },
  {
   "part": "14 shaft post",
   "case": "shaft tip knocked sideways: tower torsion",
   "load": "30 N",
-  "stress_MPa": 1.1,
+  "stress_MPa": 0.6,
   "layers": "along",
   "allow_MPa": 20.0,
   "ok": true,
@@ -251,12 +251,22 @@
  },
  {
   "part": "Ø5 shaft",
-  "case": "bending at the post, head 36 mm out (ring 77 mm from the post)",
+  "case": "bending at the post, head docked (contact about 35 mm from the post)",
   "load": "20.9 N",
   "stress_MPa": null,
   "layers": "along",
   "allow_MPa": null,
   "ok": true,
-  "note": "steel: 132 MPa; tip deflection 0.52 mm there, 0.09 mm with the head docked"
+  "note": "steel: 59 MPa; deflection 0.05 mm at the contact"
+ },
+ {
+  "part": "02 Guidler A",
+  "case": "push along Y from the ramp while the idler opens or closes",
+  "load": "about 20 N",
+  "stress_MPa": null,
+  "layers": "along",
+  "allow_MPa": null,
+  "ok": true,
+  "note": "the 40 deg ramp turns the shaft force partly into a push along the pivot screw; Guidler A sits between the body and the plate and takes it on its faces"
  }
 ]

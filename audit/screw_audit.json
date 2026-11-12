@@ -963,7 +963,7 @@
   "screw": "M5x10 shaft post",
   "axis": "z",
   "centre": [
-   -23.33,
+   -8.54,
    -44.0
   ],
   "span": [
@@ -989,7 +989,7 @@
   "screw": "M5x10 shaft post",
   "axis": "z",
   "centre": [
-   -7.33,
+   7.46,
    -44.0
   ],
   "span": [
@@ -1015,7 +1015,7 @@
   "screw": "M3x16 shaft clamp",
   "axis": "z",
   "centre": [
-   -47.33,
+   -32.54,
    -44.0
   ],
   "span": [

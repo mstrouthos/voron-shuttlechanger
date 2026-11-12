@@ -5,13 +5,13 @@ A hotend-only toolchanger for the Voron Trident, inspired by MedusaHC.
 **The extruder stays on the head; only the hotends change.** Each tool is a hotend, a 4010 fan and a small printed tool top. The tool hangs on two hardened pins and is held by magnets.
 
 The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2. **Nothing on the head is powered to open the idler: the dock does it.**
-- Guidler A (the idler arm) has a mast that ends in a **ring** above the head.
+- Guidler A (the idler arm) has a mast that ends in a ramped **cam** above the head.
 - A **pull rod** with a long spring holds the idler closed and sets the filament tension. The tension is set by turning one nut.
-- Each dock has a **Ø5 steel shaft** that points back over the head. The ring slides onto it as the head comes in. Shifting the head sideways then holds the ring back, which swings the idler open so the filament can leave the drive gears. Shifting back lets the spring close it.
+- Each dock has a short **Ø5 steel shaft** that points back towards the head. As the head moves in, the shaft pushes the cam aside, which swings the idler open so the filament can leave the drive gears. When the head leaves, the spring closes it again.
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v32.1).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: prototype (v32.2).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
 
 **Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks. The whole head is built on the bench and then bolted to the Tap in one piece.
 
@@ -26,22 +26,22 @@ The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2.
 
 Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 
-| Closed: the spring on the pull rod holds the idler on the filament | At the dock: the shaft holds the ring back, the idler is open 11.4° |
+| Closed: the spring on the pull rod holds the idler on the filament | At the dock: the shaft holds the cam back, the idler is open 11.4° |
 |---|---|
 | ![closed](images/opener_closed.png) | ![open](images/opener_open.png) |
 
 ## How it works
 - **Tool mount:** the head carries 2 Ø3×30 dowels and 4 Ø6×2.65 magnets. Each tool top has matching bores and 2 magnets.
 - **Filament path:** the filament runs through a printed Ø3.0 bore in the tool top and a tilting guide lever, up to the drive gears.
-- **Dock:** the tool slides along X onto 2 Ø3 steel pins on the dock (the last 7 mm of a 14 mm shift), which hold it while the head backs away in Y. The same shift tilts the guide lever so the filament clears the gears. Docks sit on a 2020 rail at a 63 mm pitch.
+- **Dock:** the tool slides 9 mm along X onto 2 Ø3 steel pins on the dock, which hold it while the head backs away in Y. The same shift tilts the guide lever so the filament clears the gears. Docks sit on a 2020 rail at a 63 mm pitch.
 - **Opener:** no servo, crank or wiring. It works on the motion the tool change already makes.
   - **Pull rod:** an M3×60 runs from the mast on Guidler A, through a fixed anchor on the motor plate, to a spring and a tension nut. It sits in the gap between the CW2 body and the plate.
-  - **Ring:** the mast carries on above the head as a ring, 6.6 mm wide and 12.6 mm tall inside.
-  - **Shaft:** a Ø5 × 100 mm steel shaft is clamped in a printed post on the top slot of the dock rail. It reaches 80 mm back over the head, 2.3 mm above the motor plate.
-  - **Opening:** the head comes in 14.1 mm left of the dock and the ring slides onto the shaft. Shifting right onto the dock pins holds the ring back 13.3 mm and opens the idler 11.4°, before the dock tilts the guide lever.
-  - **Closing:** the shaft holds the idler open while the head moves in Y. The head shifts back left to close it gently, either 36 mm out with the tool left in the dock, or at the dock with a new tool picked up.
+  - **Cam:** the mast carries on above the head as a cam: a hold face at the back and a 40° ramp in front of it. It reaches 13 mm in front of the CW2 body.
+  - **Shaft:** a Ø5 × 60 mm steel shaft is clamped in a printed post on the top slot of the dock rail. Its rounded tip is 40 mm behind the rail, 4 mm above the CW2 body. It stops short of the motor plate.
+  - **Opening:** from 27 mm out, the shaft tip rides up the ramp as the head comes in. The 9 mm shift onto the dock pins does the rest: the cam ends up 13 mm back and the idler 11.4° open, before the dock tilts the guide lever.
+  - **Closing:** the side of the shaft holds the idler open for the first 11 mm as the head backs out, then the ramp lets the spring close it.
   - **Force:** the shaft pushes with about 11 N at the start and 21 N fully open. The rod force goes from 13.6 N closed to 26 N.
-  - **Size:** the ring stands 17 mm above the motor plate (z 149). On the left it is 3 mm outside the CW2 body when closed and about 15 mm when open at the dock.
+  - **Size:** the cam stands 11 mm above the motor plate (z 143). On the left the mast is 3 mm outside the CW2 body when closed and about 15 mm when open at the dock.
 - **Hotends:** Trianglelab TZ-V6 3.0 or Phaetus Dragon HF, each with its own 4010 fan shroud.
 
 ![Dock](images/dock.png)
@@ -61,7 +61,7 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 | # | Part | Qty |
 |---|---|---|
 | 01 | CW2 main body (stock + front filament slot + front holes for the frame-post screws) | 1 |
-| 02 | Guidler A + mast (stock + mast and ring for the pull rod and the dock shaft) | 1 |
+| 02 | Guidler A + mast (stock + mast and cam for the pull rod and the dock shaft) | 1 |
 | 02b | Guidler B (stock CW2, unmodified) | 1 |
 | 05 | Motor plate (stock + spring anchor for the pull rod) | 1 |
 | 07 | Receiver (pins + magnets) | 1 |
@@ -84,16 +84,16 @@ Parts 03, 04 and 06 (trunnion, servo crank, servo bracket) no longer exist.
 - Ø6×2.65 magnets
 - 10× M3×5×4 heat-set inserts (Ø5 × 4 mm), all in Ø4.7 holes
 - stock CW2 drivetrain: Bondtech BMG gear kit, 2× MR85 bearings, LDO-36 motor
-- one Ø5 × 100 mm steel shaft per dock
+- one Ø5 × 60 mm steel shaft per dock
 - M3 and M5 screws (exact sizes and counts are in `BOM.csv` and the assembly guide)
 
 ## Klipper
-The opener needs no config, no pin and no macro of its own. The tool-change moves do the work. "X−14" is 14.1 mm left of the dock position.
+The opener needs no config, no pin and no macro. The tool-change moves do the work:
 
-- **Drop:** Y safe at X−14 → Y dock → X dock (slow) → Y out 36 mm → X−14 → Y safe.
-- **Pickup:** Y safe at X−14 → Y in to 36 mm out → X dock → Y dock (slow) → X−14 (slow) → Y safe.
+- **Drop:** Y safe at X−9 → Y dock → X dock (slow) → Y safe.
+- **Pickup:** Y safe at X dock → Y dock (slow) → X−9 (slow) → Y safe.
 
-Y safe must be at least 50 mm behind the dock position, so the ring is clear of every shaft when the head moves along the docks. Always shift back to X−14 before the ring leaves the shaft: otherwise the idler snaps shut from fully open. Setting the shaft and the tension is in the [assembly guide](docs/ASSEMBLY_GUIDE.md#5-set-up-and-test).
+Y safe must be at least 35 mm behind the dock position, so the cam is clear of every shaft when the head moves along the docks. Setting the shaft and the tension is in the [assembly guide](docs/ASSEMBLY_GUIDE.md#5-set-up-and-test).
 
 ## Credits
 - [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts; 02b is the stock CW2 Guidler B from the Stealthburner release.

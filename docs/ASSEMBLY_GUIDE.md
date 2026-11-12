@@ -1,4 +1,4 @@
-# Assembly guide (v32.1)
+# Assembly guide (v32.2)
 
 This guide builds the head, the tools and the docks from loose parts, including the stock Clockwork 2 drivetrain (bearings, gears, shafts, motor) and every screw. Part numbers match `stl/` and `BOM.csv`. The 3D viewer (`docs/index.html`) shows the finished assembly. For the tool-change sequence and audit notes, see [ASSEMBLY.md](ASSEMBLY.md).
 
@@ -19,7 +19,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 6 | MR85 bearing, body side | 21 | 08 Receiver frame |
 | 7 | 01 CW2 main body | 22 | 07 Receiver |
 | 8 | M3×6 FHCS: anti-squish stop, inside the body | 23 | Ø3×30 dowel ×2 |
-| 9 | 02 Guidler A + mast and ring | 24 | Ø6×2.65 magnet ×4 |
+| 9 | 02 Guidler A + mast and cam | 24 | Ø6×2.65 magnet ×4 |
 | 10 | 02b Guidler B | 25 | M3×6 SHCS ×2: receiver → frame |
 | 11 | BMG idler gear (with its bearings) | 26 | M3×20 SHCS ×2: frame → Tap |
 | 12 | Ø3×20 idler shaft | 27 | M3×10 SHCS ×2: frame posts → body |
@@ -84,7 +84,7 @@ The CW2 steps follow the official Voron Stealthburner manual; the page numbers a
 | 2 | Ø3×15 hardened dowel |
 | 4 | M5×10 SHCS (2 for the dock, 2 for the shaft post) |
 | 4 | M5 drop-in T-nut for 2020 |
-| 1 | Ø5 × 100 mm steel shaft, both ends chamfered |
+| 1 | Ø5 × 60 mm steel shaft, one end rounded |
 | 1 | M3×16 SHCS (shaft clamp) |
 
 Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long. Its top slot must be free: the shaft posts bolt to it.
@@ -93,7 +93,7 @@ Plus one 2020 extrusion for the dock rail, tools × 63 mm + 40 mm long. Its top 
 
 **Tools:** soldering iron with an M3 insert tip, 1.5, 2 and 2.5 mm hex keys (the 2.5 mm one at least 70 mm long, to reach the plate screws through the body), 5.5 mm nut driver, small vice or arbor press for the dowels and bearings, medium-strength thread locker, light grease for the idler gear.
 
-**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print Guidler A, the receiver and the tool top in PC-CF if you can. The guide lever is 65 mm tall on a small footprint: give it a 5 mm brim. The shaft post prints on its left face, the one the slit opens onto.
+**Printing:** all printed parts from `stl/` in ASA, PETG or PC-CF; 0.2 mm layers, 4 walls, 40 % infill, no supports. Print Guidler A, the receiver and the tool top in PC-CF if you can. The guide lever is 65 mm tall on a small footprint: give it a 5 mm brim. The shaft post prints on its left face, the one the slit opens onto. Guidler A prints flat like the stock part; its cam stands 35 mm tall.
 
 **The spring is the one part that doesn't come with a CW2 or BMG kit.** The short BMG thumbscrew spring can't be used here: opening the idler squeezes the spring a further 10 mm, and that one goes solid first.
 
@@ -210,7 +210,7 @@ Thread the parts onto the M3×60 SHCS in this order, starting from the left:
 Then:
 
 - **Tension:** turn the tension nyloc; tighter means more grip. A good starting point is about **28.5 mm** of spring between the two washers. Springs differ between makers, so set the final tension by grip (section 5.2).
-- **Bench check:** push the ring at the top of the mast to the left with a fingertip. The idler must swing open about 11° and snap back when you let go. Nothing may rub: the rod swings down about 12° in the anchor slot as the idler opens.
+- **Bench check:** push the cam at the top of the mast to the left with a fingertip. The idler must swing open about 11° and snap back when you let go. Nothing may rub: the rod swings down about 12° in the anchor slot as the idler opens.
 
 The head is now complete.
 
@@ -260,23 +260,23 @@ Bolt the duct legs under the frame wings with **2× M3×10 SHCS** from the top, 
 
 1. **Dock:** bolt each dock to the 2020 rail with **2× M5×10 SHCS** into drop-in T-nuts, in the slot that faces the head. Space the docks 63 mm apart.
 2. **Shaft post:** bolt one 14 shaft post to the **top slot** of the rail beside each dock, with **2× M5×10 SHCS** into drop-in T-nuts. The foot sits flush with the front and back faces of the rail. Leave the screws just loose enough to slide it; you set its position in section 5.1.
-3. **Shaft:** push the Ø5 × 100 shaft through the post from the front until its tip is **80 mm behind the rail** (its other end is then flush with the front of the post). Pinch it with the **M3×16 SHCS** in the top of the post. The screw self-taps into the plastic below the slit: snug is enough.
+3. **Shaft:** round one end of the Ø5 × 60 shaft with a file or on a grinder, so it has no sharp edge. Push the shaft through the post until the rounded tip is **40 mm behind the rail** (the other end is then flush with the front of the post). Pinch it with the **M3×16 SHCS** in the top of the post. The screw self-taps into the plastic below the slit: snug is enough.
 
-![Opener: dock shaft in the ring](../images/assembly/opener_dock_shaft.png)
+![Opener: dock shaft on the cam](../images/assembly/opener_dock_shaft.png)
 
 ---
 
 ## 5. Set up and test
 
 ### 5.1 Shaft position
-1. Slide each shaft post until the **gap between the shaft and its dock's left face is 37.3 mm** (the face the two pins stick out of). Tighten the two M5 screws.
-2. With the motors off, or jogging slowly, bring the head with a tool to 14.1 mm left of the dock, then in. The ring on Guidler A must slide onto the shaft without touching it: there is 0.8 mm of room on each side and 0.9 mm above and below. If it touches at the top or bottom, the rail is too high or too low.
-3. Shift right onto the dock pins. The shaft must hold the ring back, and the idler must be clear of the filament before the dock starts to tilt the guide lever, 1.7 mm from the end.
-4. If the idler doesn't open far enough, slide the post **left** by 0.5 mm at a time; **right** opens it less. Fully open is 11.4°: the ring is then 13.3 mm back.
-5. Back the head out 36 mm. The idler must stay open all the way. Then shift 14.1 mm left: the idler must close smoothly, and the ring must be free on the shaft at the end.
+1. Slide each shaft post until the **gap between the shaft and its dock's left face is 22.5 mm** (the face the two pins stick out of). Tighten the two M5 screws. Put a little grease on the cam's ramp and hold face.
+2. With the motors off, or jogging slowly, bring the head with a tool to the drop position: 9 mm left of the dock, then in. From about 16 mm out the shaft tip must ride up the ramp on Guidler A without catching. The shaft should sit near the middle of the cam's height; if it is near the top or bottom edge, the rail is too high or too low.
+3. Shift the 9 mm onto the dock pins. The side of the shaft must hold the cam back, and the idler must be clear of the filament before the dock starts to tilt the guide lever, 1.7 mm from the end.
+4. If the idler doesn't open far enough, slide the post **left** by 0.5 mm at a time; **right** opens it less. Fully open is 11.4°: the cam is then 13 mm back.
+5. Back the head out. The idler must stay open for the first 11 mm and be closed again 27 mm out.
 
 ### 5.2 Tension
 With filament loaded and the head away from the docks, a push on the extruder by hand should feed it without the gears slipping. Adjust with the tension nyloc (section 2.8).
 
 ### 5.3 In the tool-change macros
-The opener needs no command of its own, but the moves change: the head comes in 14.1 mm left of the dock, and it shifts back left to close the idler before it leaves the shaft. Keep Y safe at least 50 mm behind the dock position. The full drop and pickup sequence is in [ASSEMBLY.md](ASSEMBLY.md#klipper).
+The opener needs no command. Keep the moves into and out of the dock slow, and keep Y safe at least 35 mm behind the dock position. The full drop and pickup sequence is in [ASSEMBLY.md](ASSEMBLY.md#klipper).

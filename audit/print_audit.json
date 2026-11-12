@@ -20,10 +20,10 @@
   "watertight": true,
   "size": [
    31.7,
-   79.8,
-   16.2
+   74.0,
+   35.4
   ],
-  "bed_mm2": 716,
+  "bed_mm2": 732,
   "steep_overhang_mm2": 141,
   "widest_flat_ceiling_mm": 4.6,
   "ceilings_over_limit": [],
