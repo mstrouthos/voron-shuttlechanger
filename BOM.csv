@@ -41,7 +41,7 @@ M3x12 SHCS grade 12.9,0,2,Tool,hook screws; must be magnetic steel
 M3x5 set screw (steel),0,1,Tool,front of the tool; faces the dock magnet
 PTFE tube 4 x 2,0,1,Tool,into the top of the tool body
 Steel pin 5 x 30 with one end rounded,0,1,Dock,opens the swing arm
-M3x6 set screw,0,1,Dock,locks the pin
+M3x5 set screw,0,1,Dock,locks the pin
 Magnet 6 x 2.65,0,1,Dock,holds the parked tool
 M5x10 SHCS,0,2,Dock,dock to rail
 M5 2020 drop-in T-nut,0,2,Dock,

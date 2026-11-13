@@ -65,7 +65,7 @@ bom=[
  ['Dock',0,1,'Pin Ø5 × 30, one end rounded','opens the swing arm',['dpin']],
  ['Dock',0,1,'Magnet Ø6 × 2.65','holds the parked tool',['dmag']],
  ['Dock',0,2,'M5×10 SHCS + T-nut','dock → rail',['m5','tnut']],
- ['Dock',0,1,'M3×6 set screw','locks the pin',['dset']],
+ ['Dock',0,1,'M3×5 set screw','locks the pin',['dset']],
 ]
 D=dict(parts=parts,c=Cc,bom=bom)
 s=open('shell_old.html').read()

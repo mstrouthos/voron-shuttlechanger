@@ -58,7 +58,7 @@ Per tool you need one tool body, one shroud (v32 part 11 or 12) and one dock. Th
 ![Docks, seen from behind](../images/dock.png)
 
 1. One dock per tool on the back slot of the front rail, 54 mm apart, two M5x10 with T-nuts each. The docks must sit in front of the bed: the dock floor is 6 mm below the nozzle.
-2. Push the 5 mm pin into the block on the left of each dock, rounded end to the back, 29 mm showing. Lock it with the M3x6 set screw.
+2. Push the 5 mm pin into the block on the left of each dock, rounded end to the back, 29 mm showing. Lock it with the M3x5 set screw.
 
 ## 7 Set up
 
