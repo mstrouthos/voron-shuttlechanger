@@ -1,0 +1,49 @@
+Section,Item,Qty head,Qty per tool,Notes
+Printed,01 Back plate body,1,0,ABS/ASA; lies on its back (Tap face)
+Printed,02 Back plate front slab,1,0,ABS/ASA; lies on its back (motor face)
+Printed,03 Coupling plate,1,0,ABS/ASA; lies on its back
+Printed,04 Gear housing,1,0,ABS/ASA; lies on its front
+Printed,05 Swing arm,1,0,ABS/ASA; lies on its left side
+Printed,06 SB2209 spacer,2,0,ABS/ASA; stands on one end
+Printed,09 Duct and fan mount (v32 part),1,0,unchanged from v32
+Printed,10 Tool body,0,1,ABS/ASA; upright on its base
+Printed,11 or 12 Fan shroud 4010 (v32 part),0,1,TZ-V6 or Dragon HF; unchanged from v32
+Printed,13 Dock with wiper,0,1,ABS/ASA; lies on its back (rail face)
+Extruder,HGX gear set: two hobbed 37T gears (module 0.5),1,0,one fixed; one on the swing arm
+Extruder,Dual gear 17T/44T (module 0.5) on a 3 mm shaft,1,0,as CxChanger; check whether your HGX kit includes it
+Extruder,Bearing MR63ZZ 3 x 6 x 2.5,2,0,dual gear
+Extruder,Dowel pin 3 x 16 (hardened; h6 or m6),2,0,gear axles
+Extruder,Dowel pin 3 x 24,1,0,swing-arm pivot
+Extruder,LDO-36STH20-1004AHG motor with 10T pinion,1,0,from the CW2
+Extruder,BMG / CW2 idler spring,1,0,from the CW2
+Extruder,M3x35 SHCS,1,0,spring adjuster
+Extruder,M3 hex nut,1,0,captive in the slab
+Extruder,M3 nyloc nut,1,0,collar on the adjuster; the spring sits on it
+Extruder,M3x20 SHCS,1,0,contact screw at the foot of the swing arm (self-tapping)
+Coupling,Dowel pin 1.5 x 5,6,0,three V grooves (2 in the coupling plate; 4 in the body); glue in
+Coupling,Round-head (ball-end) pin 3 x 6,0,3,the three balls on each tool
+Coupling,Magnet 6 x 2.65,6,6,head: 2 top + 2x2 below; each tool the same
+Head fasteners,M3x16 SHCS,2,0,body to Tap; top holes
+Head fasteners,M3x8 SHCS,2,0,body to Tap; bottom holes
+Head fasteners,M3x8 SHCS,1,0,motor; upper ear
+Head fasteners,M3x6 SHCS,1,0,motor; lower ear (under the swing arm)
+Head fasteners,M3x10 SHCS,3,0,slab to body; self-tapping
+Head fasteners,M3x30 countersunk (ISO 10642),1,0,gear housing lower screw; goes through into the body
+Head fasteners,M3x20 countersunk (ISO 10642),1,0,gear housing upper screw
+Head fasteners,M3 heat-set insert,1,0,in the slab for the upper housing screw
+Head fasteners,M3x12 SHCS,2,0,SB2209 through the spacers; self-tapping
+Head fasteners,M3x10 SHCS,2,0,plate ears to the inserts in the duct legs (as v32)
+Electronics,BTT EBB SB2209 USB main board,1,0,right side of the head
+Electronics,Part cooling fans (as v32),1,0,
+Tool,Hotend: Trianglelab TZ-V6 3.0 or Phaetus Dragon HF,0,1,
+Tool,4010 fan,0,1,as v32
+Tool,M2.5x12 SHCS,0,4,tool body to hotend through the shroud
+Tool,M3x12 SHCS grade 12.9,0,2,hook screws; must be magnetic steel
+Tool,M3x5 set screw (steel),0,1,front of the tool; faces the dock magnet
+Tool,PTFE tube 4 x 2,0,1,into the top of the tool body
+Dock,Steel pin 5 x 30 with one end rounded,0,1,opens the swing arm
+Dock,M3x6 set screw,0,1,locks the pin
+Dock,Magnet 6 x 2.65,0,1,holds the parked tool
+Dock,M5x10 SHCS,0,2,dock to rail
+Dock,M5 2020 drop-in T-nut,0,2,
+Dock,Silicone strip 10 x 2 x 16 mm; self-adhesive; heat-resistant,0,1,nozzle wiper and plug
