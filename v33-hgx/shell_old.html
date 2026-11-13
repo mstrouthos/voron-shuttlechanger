@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hotend Changer v32.4</title></head><body>
+<style>
+:root{--bg:#f7f8fa;--fg:#1d2228;--mut:#5b6570;--line:#d9dee4;--accent:#d9622b;--panel:#ffffff;--hl:#fff3e8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15181c;--fg:#e8ebee;--mut:#9aa4ae;--line:#2c3238;--panel:#1c2026;--hl:#2e241c}}
+:root[data-theme="dark"]{--bg:#15181c;--fg:#e8ebee;--mut:#9aa4ae;--line:#2c3238;--panel:#1c2026;--hl:#2e241c}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+.wrap{display:grid;grid-template-columns:380px 1fr;height:100vh}aside{overflow:auto;padding:16px;border-right:1px solid var(--line);background:var(--panel)}
+main{position:relative;min-width:0}canvas{width:100%;height:100%;display:block}
+h1{font-size:17px;margin:0 0 6px}h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:16px 0 6px}
+button{font:inherit;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:5px 10px;border-radius:6px;margin:2px;cursor:pointer}button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+input[type=range]{width:100%}
+.st{white-space:pre-wrap;font:12px/1.5 ui-monospace,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px;margin-top:6px;overflow:auto}
+details{border:1px solid var(--line);border-radius:6px;margin:6px 0;background:var(--bg)}summary{cursor:pointer;padding:6px 8px;font-weight:600;display:flex;justify-content:space-between}
+summary small{color:var(--mut);font-weight:400}
+table{width:100%;border-collapse:collapse;font-size:12.5px}td{padding:4px 6px;border-top:1px solid var(--line);vertical-align:top}
+td.q{width:34px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}td.c{width:22px}
+tr.r td.n{cursor:pointer}tr.r:hover{background:var(--hl)}tr.iso{background:var(--hl)}tr.none td.n{cursor:default}
+.nt{display:block;color:var(--mut);font-size:11.5px}.sw{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:middle}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.row input[type=number]{width:56px;font:inherit;padding:3px;border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--fg)}
+@media (max-width:760px){.wrap{grid-template-columns:1fr;grid-template-rows:60vh auto;height:auto}main{height:60vh;order:-1}aside{border-right:0;border-top:1px solid var(--line)}}
+</style>
+<div class="wrap"><aside>
+<h1>Hotend changer · v32.4</h1>
+<h2>Hotend</h2><div><button id="hz" class="on">TZ-V6 3.0</button><button id="hd">Dragon HF</button></div>
+<h2>Tool change</h2>
+<input id="s" type="range" min="0" max="1" step="0.001" value="0" aria-label="Tool change progress">
+<div><button id="play">Play</button><button id="xr">See-through head</button></div>
+<div class="st" id="st"></div>
+<h2>Opener only</h2>
+<input id="ph" type="range" min="0" max="1" step="0.002" value="0" aria-label="Idler opening">
+<h2>Section cut</h2>
+<div><button data-c="0" class="on">Off</button><button data-c="x">X</button><button data-c="y">Y</button><button data-c="z">Z</button><button id="cf">Flip</button></div>
+<input id="cp" type="range" min="-70" max="140" step="0.5" value="0" aria-label="Section position">
+<h2>View</h2><div><button data-v="fr">Front-right</button><button data-v="fl">Front-left</button><button data-v="side">Side</button><button data-v="open">Opener</button><button data-v="tens">Pull rod</button><button data-v="trip">Dock shaft</button><button data-v="dock">Dock</button></div>
+<h2>Bill of materials</h2>
+<div class="row">Tools <input id="nt" type="number" min="1" max="12" value="4"> <button id="ex">Expand all</button><button id="rs">Show all</button></div>
+<div id="bom"></div>
+</aside><main><canvas id="c" aria-label="3D model of the head, tool and dock"></canvas></main></div>
+<script type="application/json" id="data">@@DATA@@</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+const $=id=>document.getElementById(id);
+const D=JSON.parse($('data').textContent), C=D.c;
+const canvas=$('c'), R=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true}); R.setPixelRatio(Math.min(devicePixelRatio,2)); R.outputColorSpace=THREE.SRGBColorSpace; R.localClippingEnabled=true;
+const scene=new THREE.Scene(); scene.environment=new THREE.PMREMGenerator(R).fromScene(new RoomEnvironment(),0.04).texture;
+const L=new THREE.DirectionalLight(0xffffff,1); L.position.set(100,-200,300); scene.add(L);
+const cam=new THREE.PerspectiveCamera(30,1,1,5000); cam.up.set(0,0,1); const ctl=new OrbitControls(cam,canvas); ctl.enableDamping=true;
+const f=s=>{const b=atob(s),u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i);return u.buffer;};
+const G={}; ['head','guid','rod','tool','tz','dr','dock','lev'].forEach(k=>G[k]=new THREE.Group());
+const headG=new THREE.Group(); scene.add(headG,G.tool,G.dock); headG.add(G.head);
+const rpv=new THREE.Group(); G.rod.position.set(-C.TM[0],0,-C.TM[1]); rpv.add(G.rod); headG.add(rpv);
+const piv=new THREE.Group(); piv.position.set(C.PIV[0],0,C.PIV[1]); G.guid.position.set(-C.PIV[0],0,-C.PIV[1]); piv.add(G.guid); headG.add(piv);
+G.tool.add(G.tz,G.dr); G.dr.visible=false;
+const lpv=new THREE.Group(); lpv.position.set(0,0,C.PVZ); G.lev.position.set(0,0,-C.PVZ); lpv.add(G.lev); G.tool.add(lpv);
+const clip=new THREE.Plane(new THREE.Vector3(1,0,0),0), planes=[];
+const meshes={}, mats=[];
+function mat(col,op,metal){const m=new THREE.MeshStandardMaterial({color:col,roughness:metal?.32:.55,metalness:metal?.85:.05,transparent:op<1,opacity:op,depthWrite:op>=1,side:THREE.DoubleSide,clippingPlanes:planes,clipShadows:true});m.userData.op=op;mats.push(m);return m;}
+for(const p of D.parts){const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.BufferAttribute(new Float32Array(f(p.v)),3)); g.setAttribute('normal',new THREE.BufferAttribute(new Float32Array(f(p.n)),3)); g.setIndex(new THREE.BufferAttribute(new Uint32Array(f(p.i)),1));
+ const m=new THREE.Mesh(g,mat(p.col,p.op,p.metal)); G[p.grp].add(m); meshes[p.id]=m;}
+// spring: rebuilt every frame between the plate anchor and the tension washer on the pull rod
+const springM=new THREE.Mesh(new THREE.BufferGeometry(),mat('#7f9bb8',1,true)); headG.add(springM); meshes.spring=springM;
+function spring(ax,az,bx,bz){const a=new THREE.Vector3(ax,C.YR,az),b=new THREE.Vector3(bx,C.YR,bz),d=b.clone().sub(a),Ln=d.length();d.normalize();
+ const u=new THREE.Vector3().crossVectors(d,new THREE.Vector3(0,1,0)).normalize(),v=new THREE.Vector3().crossVectors(d,u),n=6,Rr=2.6,pts=[];
+ for(let i=0;i<=n*24;i++){const t=i/(n*24),w=2*Math.PI*n*t;pts.push(a.clone().addScaledVector(d,Ln*t).addScaledVector(u,Rr*Math.cos(w)).addScaledVector(v,Rr*Math.sin(w)));}
+ springM.geometry.dispose(); springM.geometry=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),n*24,0.45,8,false);}
+// opener: g = idler opening (rad). The rod turns about the anchor ridge and slides through it; the spring is squeezed as the mast moves away.
+const L0=Math.hypot(C.AP[0]-C.TM[0],C.AP[1]-C.TM[1]);
+function opener(g){const dx=C.TM[0]-C.PIV[0],dz=C.TM[1]-C.PIV[1],tx=C.PIV[0]+dx*Math.cos(g)-dz*Math.sin(g),tz=C.PIV[1]+dx*Math.sin(g)+dz*Math.cos(g);
+ piv.rotation.y=-g; const a=Math.atan2(C.AP[1]-tz,C.AP[0]-tx), ux=Math.cos(a), uz=Math.sin(a), Ln=Math.hypot(C.AP[0]-tx,C.AP[1]-tz);
+ rpv.position.set(tx,0,tz); rpv.rotation.y=-a; spring(C.AP[0]+ux*0.6,C.AP[1]+uz*0.6,tx+ux*C.SW,tz+uz*C.SW); return {g,F:C.F0+C.KS*(Ln-L0)};}
+// how far the dock shaft holds the cam on Guidler A back at head offset (hx,hy), and the idler angle that gives.
+// The cam has a hold face (x = FX) and, in front of it, a ramp that falls away; the shaft reaches back to y = YT.
+function trip(hx,hy){const y=Math.min(C.YT-hy,14.1), c=y>=C.YH0?C.FX:(y>=C.YH0-C.DY?C.FX-(C.YH0-y)*(C.DO+0.6)/C.DY:null), d=c===null?0:Math.max(0,Math.min(C.DO,c+hx-C.W0));
+ const k=d/0.25,i=Math.min(C.GT.length-2,Math.floor(k)); return {d,g:C.GT[i]+(C.GT[i+1]-C.GT[i])*(k-i)};}
+// BOM
+let NT=4; const rows=[]; let iso=null;
+function setIso(r){iso=(iso===r)?null:r; refresh();}
+function refresh(){rows.forEach(x=>x.tr.classList.toggle('iso',x===iso));
+ const keep=new Set(iso?iso.ids:[]);
+ for(const [id,m] of Object.entries(meshes)){const M=m.material; if(iso&&!keep.has(id)){M.transparent=true;M.opacity=.06;M.depthWrite=false;} else {M.opacity=xray&&XR.includes(id)?.15:M.userData.op;M.transparent=M.opacity<1;M.depthWrite=M.opacity>=1;}}}
+function buildBom(){const box=$('bom'); box.innerHTML=''; rows.length=0; const secs={};
+ for(const [sec,qh,qt,item,note,ids] of D.bom){if(!secs[sec]){const d=document.createElement('details'); d.innerHTML=`<summary>${sec}<small></small></summary><table></table>`; box.appendChild(d); secs[sec]={d,t:d.querySelector('table'),n:0};}
+  const q=qh+qt*NT; secs[sec].n+=q; const tr=document.createElement('tr'); tr.className=ids.length?'r':'r none';
+  const col=ids.length&&meshes[ids[0]]?'#'+meshes[ids[0]].material.color.getHexString():'transparent';
+  tr.innerHTML=`<td class="c">${ids.length?'<input type="checkbox" checked aria-label="show">':''}</td><td class="q">${q}</td><td class="n"><span class="sw" style="background:${col}"></span>${item}<span class="nt">${note}${qt&&qh?` · ${qh} head + ${qt}/tool`:qt?` · ${qt} per tool`:''}</span></td>`;
+  const r={tr,ids}; rows.push(r); secs[sec].t.appendChild(tr);
+  const cb=tr.querySelector('input'); if(cb) cb.onchange=()=>ids.forEach(i=>meshes[i]&&(meshes[i].visible=cb.checked));
+  if(ids.length) tr.querySelector('.n').onclick=()=>setIso(r);}
+ for(const s of Object.values(secs)) s.d.querySelector('small').textContent=s.n+' pcs';}
+$('nt').oninput=e=>{NT=Math.max(1,Math.min(12,+e.target.value||1)); const open=[...document.querySelectorAll('#bom details')].map(d=>d.open); buildBom(); document.querySelectorAll('#bom details').forEach((d,i)=>d.open=open[i]);};
+$('ex').onclick=()=>{const ds=[...document.querySelectorAll('#bom details')],o=!ds.every(d=>d.open);ds.forEach(d=>d.open=o);$('ex').textContent=o?'Collapse all':'Expand all';};
+$('rs').onclick=()=>{iso=null;rows.forEach(r=>{r.tr.classList.remove('iso');const cb=r.tr.querySelector('input');if(cb)cb.checked=true;});Object.values(meshes).forEach(m=>m.visible=true);refresh();};
+// timeline
+const cl=x=>Math.max(0,Math.min(1,x)), ss=t=>{t=cl(t);return t*t*(3-2*t);};
+const K=[0,.17,.34,.5,.67,.84,1]; const seg=(s,i)=>ss((s-K[i])/(K[i+1]-K[i]));
+function apply(s){
+ let hx=-C.XSH,hy=40,att=true,tl=0,txt='';
+ if(s<K[1]){hy=40*(1-seg(s,0));txt='1 drop: approach 9 mm left of the dock; the shaft tip meets the ramp on Guidler A and starts to open the idler';}
+ else if(s<K[2]){hy=0;hx=-C.XSH*(1-seg(s,1));tl=cl((hx+1.7)/1.7);txt='2 shift +9 mm: the shaft opens the idler fully, dock pins enter the tool, the dock tilts the guide lever';}
+ else if(s<K[3]){hx=0;hy=40*seg(s,2);att=false;tl=1;txt='3 head backs out: idler held open until the gears are past the filament, then the ramp lets it close';}
+ else if(s<K[4]){hx=0;hy=40*(1-seg(s,3));att=false;tl=1;txt='4 pickup: the ramp opens the idler on the way in, pins enter, magnets snap';}
+ else if(s<K[5]){hy=0;hx=-C.XSH*seg(s,4);tl=cl((hx+1.7)/1.7);txt='5 shift -9 mm: tool slides off the dock pins, lever straightens, idler closes on the filament';}
+ else {hx=-C.XSH;hy=40*seg(s,5);txt='6 back out with the tool: the spring takes over';}
+ headG.position.set(hx,hy,0); if(att) G.tool.position.set(hx,hy,0); else G.tool.position.set(0,0,0);
+ const t=trip(hx,hy); lpv.rotation.y=-C.THETA*tl; status(txt,t.g,att,tl,t.d); $('ph').value=t.g/C.GO;}
+function status(txt,g0,att,tl,d){const {g,F}=opener(g0);
+ $('st').textContent=`${txt}\ncam held back ${(d||0).toFixed(1)} mm   rod ${F.toFixed(1)} N\nidler open ${(g*180/Math.PI).toFixed(1)}°   guide tilt ${(tl*1.7).toFixed(1)} mm   tool ${att?'on head':'in dock'}`;}
+let playing=false,t=0; const stop=()=>{playing=false;$('play').classList.remove('on');};
+$('play').onclick=()=>{playing=!playing; $('play').classList.toggle('on',playing);};
+$('s').oninput=e=>{stop();apply(+e.target.value);};
+$('ph').oninput=e=>{stop();status('opener only (as if pushed by hand)',C.GO*(+e.target.value),true,0,0);};
+let xray=false; const XR=['body','plate','motor','rframe','duct','tap','receiver','cw2hw','guidB'];
+$('xr').onclick=()=>{xray=$('xr').classList.toggle('on'); refresh();};
+// section cut
+let cax='0',cs=1; const N={x:[1,0,0],y:[0,1,0],z:[0,0,1]};
+function cut(){planes.length=0; if(cax!=='0'){clip.normal.set(...N[cax]).multiplyScalar(-cs); clip.constant=cs*(+$('cp').value); planes.push(clip);} mats.forEach(m=>m.needsUpdate=true);}
+document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{cax=b.dataset.c;document.querySelectorAll('[data-c]').forEach(x=>x.classList.toggle('on',x===b));
+ const r={x:[-70,40,-20],y:[-60,45,15],z:[-20,140,100],'0':[-70,140,0]}[cax]; $('cp').min=r[0];$('cp').max=r[1];$('cp').value=r[2];cut();});
+$('cp').oninput=cut; $('cf').onclick=()=>{cs=-cs;cut();};
+const hs=k=>{G.tz.visible=k==='z';G.dr.visible=k==='d';$('hz').classList.toggle('on',k==='z');$('hd').classList.toggle('on',k==='d');};
+$('hz').onclick=()=>hs('z'); $('hd').onclick=()=>hs('d');
+const V={fr:[[200,-260,190],[0,0,55]],fl:[[-230,-250,170],[0,0,55]],side:[[-320,0,70],[0,0,60]],open:[[-95,-115,175],[-20,8,120]],tens:[[45,-120,185],[-14,8,122]],dock:[[-70,-180,150],[4,-28,60]],trip:[[-190,-150,230],[-20,-5,115]]};
+function view(k){cam.position.set(...V[k][0]); ctl.target.set(...V[k][1]); ctl.update();}
+document.querySelectorAll('[data-v]').forEach(b=>b.onclick=()=>view(b.dataset.v)); view('fr');
+function rs(){const r=canvas.parentElement.getBoundingClientRect(); R.setSize(r.width,r.height,false); cam.aspect=r.width/Math.max(1,r.height); cam.updateProjectionMatrix();}
+addEventListener('resize',rs); rs(); buildBom(); apply(0);
+window.MM=meshes; window.VIEW=view; window.APPLY=apply; window.CAM=cam; window.CTL=ctl;
+let last=performance.now();
+(function loop(now){const dt=(now-last)/1000; last=now; if(playing){t=(t+dt/16)%1; $('s').value=t; apply(t);} ctl.update(); R.render(scene,cam); requestAnimationFrame(loop);})(last);
+</script>
+</body></html>
