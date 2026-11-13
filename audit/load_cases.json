@@ -1,282 +1,123 @@
-[
- {
-  "part": "13 dock",
-  "case": "finger hit sideways at the tip",
-  "load": "30 N",
-  "stress_MPa": 6.7,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "bending + torsion at the tower root"
- },
- {
-  "part": "13 dock",
-  "case": "Y pull on the 2 pin holes (magnet breakaway x2.5): bearing",
-  "load": "35 N",
-  "stress_MPa": 1.5,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2x Ø3 pins pressed 8 mm"
- },
- {
-  "part": "10 tool top",
-  "case": "dock block: pin-hole bearing (magnet breakaway x2.5)",
-  "load": "35 N",
-  "stress_MPa": 1.7,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2 holes, 6.8 long"
- },
- {
-  "part": "10 tool top",
-  "case": "dock block root (pins at z 58/65, root at the plate z 44)",
-  "load": "35 N",
-  "stress_MPa": 1.8,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "block + foot 12 wide, 12.9 deep at the plate"
- },
- {
-  "part": "10 tool top",
-  "case": "nozzle hit sideways: pin-bore bearing",
-  "load": "30 N",
-  "stress_MPa": 1.1,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "Ø3 steel pins carry the bending (σ ≈ 65 MPa in each pin at 15 N, hardened steel)"
- },
- {
-  "part": "10 tool top",
-  "case": "nozzle hit front/back: bore-end bearing",
-  "load": "30 N",
-  "stress_MPa": 7.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "couple over ~15 mm of engagement, Ø3 pins"
- },
- {
-  "part": "10 tool top",
-  "case": "wire column: 20 N yank on the loom, root above the sleeve",
-  "load": "20 N",
-  "stress_MPa": 3.8,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "8 x 6.6, merged with the pin sleeve below z 52.9"
- },
- {
-  "part": "10 tool top",
-  "case": "wire column: same yank at the lower tie slot",
-  "load": "20 N",
-  "stress_MPa": 4.1,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "slot 2.2 wide, 2.0 wall to the wire face"
- },
- {
-  "part": "08 receiver frame",
-  "case": "post knocked at the top (Y), above the buttress (z 64)",
-  "load": "30 N",
-  "stress_MPa": 5.4,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "9.7 x 5.4 post + 45 deg front buttress to z 65 (old 6.9 x 3.8 fin: 31 MPa)"
- },
- {
-  "part": "10b lever",
-  "case": "finger force on the spine, column root (z 52)",
-  "load": "5 N",
-  "stress_MPa": 2.4,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "a blocked lever is stopped by the body slot 6 mm below the contact, so the root never sees a large moment"
- },
- {
-  "part": "10b lever",
-  "case": "pivot boss bearing (Ø3 pin, 8.4 long)",
-  "load": "20 N",
-  "stress_MPa": 0.8,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "2.0 wall round the pin"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "column root bending, closed spring load at the rod (root z 104)",
-  "load": "13.6 N",
-  "stress_MPa": 2.7,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "8.1 x 9.7 section, 20.8 mm lever"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "column twist: the shaft pushes the cam in front of the mast centre line",
-  "load": "357 N mm",
-  "stress_MPa": 2.6,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "worst point of the ramp; 8.1 x 9.7 column, shear between layers"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "cam bending where it overhangs the mast (section at y 4.4), shaft on the ramp",
-  "load": "18 N",
-  "stress_MPa": 0.8,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "14 x 10 section, 14 mm lever"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "jammed guidler: bending where the cam joins the mast block (z 133)",
-  "load": "60 N",
-  "stress_MPa": 1.2,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "the column now runs flush up to the cam on the left and a gusset joins it on the right: at least 10.5 x 9.7 (the bare 6.5 mm block saw 3.2 MPa plus a sharp corner)"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "jammed guidler: the gantry pushes the cam against the shaft until it stalls (root z 104)",
-  "load": "60 N",
-  "stress_MPa": 18.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "60 N is an assumed stall force; 8.1 x 9.7 column, 32.8 mm lever"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "cam top knocked sideways (X) at z 143.4, root z 104",
-  "load": "30 N",
-  "stress_MPa": 11.1,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "crash load on the most exposed point of the head"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "cam front tip knocked sideways (X), 31 mm in front of the mast: column twist",
-  "load": "20 N",
-  "stress_MPa": 4.4,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "handling load"
- },
- {
-  "part": "02 Guidler A mast",
-  "case": "screw-head washer bearing on the mast left face, idler open",
-  "load": "25.8 N",
-  "stress_MPa": 0.9,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "Ø7 washer round the 3.4 mm slot"
- },
- {
-  "part": "05 plate",
-  "case": "spring anchor root bending at the plate face, idler open",
-  "load": "25.8 N",
-  "stress_MPa": 3.8,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "wall + top gusset, I = 214 mm4; load on the ridge 6.4 mm in front of the plate"
- },
- {
-  "part": "05 plate",
-  "case": "spring anchor: washer bearing on the ridge",
-  "load": "25.8 N",
-  "stress_MPa": 5.1,
-  "layers": "across",
-  "allow_MPa": 8.0,
-  "ok": true,
-  "note": "two 1.7 mm strips beside the slot, about 1.5 mm of flattened ridge"
- },
- {
-  "part": "14 shaft post",
-  "case": "tower root bending, idler open (shaft at z 136.8, foot top at z 76)",
-  "load": "20.9 N",
-  "stress_MPa": 0.7,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "24 x 20 tower; printed on its left face so the load runs in the layer plane"
- },
- {
-  "part": "14 shaft post",
-  "case": "shaft bore bearing: couple from the shaft load 35 mm out, over the 20 mm bore",
-  "load": "20.9 N",
-  "stress_MPa": 1.9,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "about 5 mm of bore length carries each end"
- },
- {
-  "part": "14 shaft post",
-  "case": "foot bending beside the tower (ribs ignored)",
-  "load": "20.9 N",
-  "stress_MPa": 10.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "20 x 6 foot; the two 3.5 mm ribs add to this"
- },
- {
-  "part": "14 shaft post",
-  "case": "shaft tip knocked sideways, 40 mm out: bore bearing",
-  "load": "30 N",
-  "stress_MPa": 3.0,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "crash load; the steel shaft sees 98 MPa"
- },
- {
-  "part": "14 shaft post",
-  "case": "shaft tip knocked sideways: tower torsion",
-  "load": "30 N",
-  "stress_MPa": 0.6,
-  "layers": "along",
-  "allow_MPa": 20.0,
-  "ok": true,
-  "note": "shear, 24 x 20 section"
- },
- {
-  "part": "Ø5 shaft",
-  "case": "bending at the post, head docked (contact about 35 mm from the post)",
-  "load": "20.9 N",
-  "stress_MPa": null,
-  "layers": "along",
-  "allow_MPa": null,
-  "ok": true,
-  "note": "steel: 59 MPa; deflection 0.05 mm at the contact"
- },
- {
-  "part": "02 Guidler A",
-  "case": "push along Y from the ramp while the idler opens or closes",
-  "load": "about 20 N",
-  "stress_MPa": null,
-  "layers": "along",
-  "allow_MPa": null,
-  "ok": true,
-  "note": "the 40 deg ramp turns the shaft force partly into a push along the pivot screw; Guidler A sits between the body and the plate and takes it on its faces"
- }
-]
+{
+ "grip_N": 40.0,
+ "spring_closed_N": 36.9,
+ "spring_open_N": 47.2,
+ "pin_push_N": [
+  22.5,
+  28.8
+ ],
+ "cases": [
+  {
+   "part": "swing arm",
+   "case": "dock pin push at the foot, leg 7.1 x 19.5",
+   "stress_MPa": 1.1,
+   "allow_MPa": 20,
+   "ok": true,
+   "note": "along layers; 29 N push"
+  },
+  {
+   "part": "swing arm",
+   "case": "same, gantry stall 60 N",
+   "stress_MPa": 2.4,
+   "allow_MPa": 20,
+   "ok": true,
+   "note": "along layers"
+  },
+  {
+   "part": "swing arm",
+   "case": "section at the pivot (16.5 wide, bore removed)",
+   "stress_MPa": 4.0,
+   "allow_MPa": 20,
+   "ok": true,
+   "note": "along layers"
+  },
+  {
+   "part": "swing arm",
+   "case": "idler axle in two webs, bearing",
+   "stress_MPa": 2.5,
+   "allow_MPa": 10,
+   "ok": true,
+   "note": "bearing"
+  },
+  {
+   "part": "front slab",
+   "case": "spring boss: nut bears on the 7.7 mm left wall, lever 5.65",
+   "stress_MPa": 3.4,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers; spring 47 N"
+  },
+  {
+   "part": "front slab + body",
+   "case": "pivot pin, 6 mm in the slab, load about grip + spring",
+   "stress_MPa": 4.8,
+   "allow_MPa": 10,
+   "ok": true,
+   "note": "bearing"
+  },
+  {
+   "part": "gear housing",
+   "case": "fixed gear axle, front end 3.25 mm in the housing, half the pinch load",
+   "stress_MPa": 2.1,
+   "allow_MPa": 10,
+   "ok": true,
+   "note": "bearing"
+  },
+  {
+   "part": "coupling plate + slab",
+   "case": "fixed gear axle, back end 3.4 mm engaged",
+   "stress_MPa": 2.0,
+   "allow_MPa": 10,
+   "ok": true,
+   "note": "bearing"
+  },
+  {
+   "part": "tool body",
+   "case": "bowden drag 10 N at the top, front beam 16 x 5.5, lever 44",
+   "stress_MPa": 5.5,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers (printed upright)"
+  },
+  {
+   "part": "tool body",
+   "case": "20 N sideways push on the stem top, beam 5.5 x 16",
+   "stress_MPa": 3.8,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers"
+  },
+  {
+   "part": "dock",
+   "case": "opener pin block 9.7 x 14.5 on the back plate, lever 28.5, normal push",
+   "stress_MPa": 3.6,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers; the block is also joined to the tongue along its length"
+  },
+  {
+   "part": "dock",
+   "case": "same, gantry stall 60 N",
+   "stress_MPa": 7.5,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers"
+  },
+  {
+   "part": "dock",
+   "case": "wiper floor: 5 N from the nozzle, floor 4.5 x 51.5, 16 mm past the side walls",
+   "stress_MPa": 0.5,
+   "allow_MPa": 8,
+   "ok": true,
+   "note": "across layers"
+  },
+  {
+   "part": "gear housing + slab",
+   "case": "20 N cable tug at the board: two M3 self-tapping screws, 4 mm in plastic",
+   "stress_MPa": 0.8,
+   "allow_MPa": 10,
+   "ok": true,
+   "note": "bearing on the thread; route the USB cable through a strain relief"
+  }
+ ]
+}

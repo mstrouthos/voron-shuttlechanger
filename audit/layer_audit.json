@@ -1,331 +1,135 @@
 {
- "method": "0.2 mm layers; a region is unsupported if nothing lies under it within a 0.25 mm step (45 deg). island = starts in mid-air; bridge = anchored on two opposite sides (limit 10 mm); lip = anchored on one side (ok to 1.5 mm, check to 3, fail beyond). Islands narrower than 0.45 mm are ignored.",
- "parts": [
-  {
-   "file": "01_CW2_main_body.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 9.5,
-   "lip_max": 4.69,
-   "lips_over_1p5": 4,
-   "lip_area_over_1p5": 101.0,
-   "verdict": "FAIL",
-   "disposition": "INHERITED",
-   "note": "Bridges of 7.3 and 9.5 mm over the filament slot and lips up to 4.7 mm beside the drive-gear bore. All of them are in the v29 body and the earlier bodies, unchanged; they are stock CW2 bridging features. Not modified.",
-   "flagged": [
-    {
-     "kind": "lip",
-     "z": 3.900000000000001,
-     "depth": 3.25,
-     "area": 8.3,
-     "at": [
-      -1.3,
-      4.8
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 10.100000000000001,
-     "depth": 4.69,
-     "area": 8.49,
-     "at": [
-      -4.2,
-      14.6
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 10.100000000000001,
-     "depth": 3.78,
-     "area": 6.28,
-     "at": [
-      -3.3,
-      4.8
-     ]
-    },
-    {
-     "kind": "bridge",
-     "z": 11.500000000000002,
-     "span": 7.3,
-     "area": 148.19,
-     "at": [
-      -1.8,
-      -27.5
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 11.500000000000002,
-     "depth": 4.54,
-     "area": 77.89,
-     "at": [
-      -2.5,
-      21.6
-     ]
-    },
-    {
-     "kind": "bridge",
-     "z": 13.300000000000002,
-     "span": 9.5,
-     "area": 115.27,
-     "at": [
-      -1.8,
-      -3.1
-     ]
-    }
-   ]
-  },
-  {
-   "file": "02_CW2_guidler_A_mast.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 4.1,
-   "lip_max": 1.24,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  },
-  {
-   "file": "02b_CW2_guidler_B_stock.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 0,
-   "lip_max": 1.04,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  },
-  {
-   "file": "05_CW2_motor_plate_opener.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 1.95,
-   "lip_max": 2.35,
-   "lips_over_1p5": 1,
-   "lip_area_over_1p5": 17.6,
-   "verdict": "CHECK",
-   "disposition": "ACCEPTED",
-   "note": "The flagged patch is the roof of the rod slot in the spring anchor: a 5.1 mm bridge anchored at both ends (the classifier calls it a lip).",
-   "flagged": [
-    {
-     "kind": "lip",
-     "z": 15.900000000000004,
-     "depth": 2.35,
-     "area": 17.55,
-     "at": [
-      -9.0,
-      28.3
-     ]
-    }
-   ]
-  },
-  {
-   "file": "07_receiver_pins_magnets.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 5.65,
-   "lip_max": 0,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  },
-  {
-   "file": "08_receiver_frame.stl",
-   "islands": 1,
-   "island_max_area": 0.88,
-   "bridge_max": 0,
-   "lip_max": 0,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "CHECK",
-   "disposition": "ACCEPTED",
-   "note": "One 0.37 mm wide apex of a teardrop roof appears a layer before the two sides meet. It is narrower than an extrusion line.",
-   "flagged": [
-    {
-     "kind": "island",
-     "z": 18.100000000000005,
-     "area": 0.88,
-     "size": 0.37,
-     "at": [
-      -22.7,
-      -12.3
-     ]
-    }
-   ]
-  },
-  {
-   "file": "09_duct_and_fan_mount.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 4.78,
-   "lip_max": 2.79,
-   "lips_over_1p5": 3,
-   "lip_area_over_1p5": 82.6,
-   "verdict": "CHECK",
-   "disposition": "ACCEPTED",
-   "note": "Largest patch is a 6 x 13 mm ceiling closed on three sides (bridge 6 mm). Outlet lips taper to a feather edge that lies on the bed.",
-   "flagged": [
-    {
-     "kind": "lip",
-     "z": 9.700000000000001,
-     "depth": 1.65,
-     "area": 3.94,
-     "at": [
-      -19.8,
-      27.8
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 11.100000000000001,
-     "depth": 1.65,
-     "area": 4.38,
-     "at": [
-      -26.5,
-      27.8
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 12.100000000000003,
-     "depth": 2.79,
-     "area": 74.3,
-     "at": [
-      -2.0,
-      37.8
-     ]
-    }
-   ]
-  },
-  {
-   "file": "10_tool_top_x_each_tool.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 1.7,
-   "lip_max": 1.06,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  },
-  {
-   "file": "10b_tool_filament_guide_lever_x_each_tool.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 2.49,
-   "lip_max": 2.45,
-   "lips_over_1p5": 2,
-   "lip_area_over_1p5": 14.6,
-   "verdict": "CHECK",
-   "disposition": "ACCEPTED",
-   "note": "Two small flat shelves, 2.5 and 1.7 mm deep, about 7 mm2 each. A 45 deg gusset under the lower one was tried and removed: it hits Guidler A when the lever tilts. Tall part (65 mm on 79 mm2): print with a 5 mm brim.",
-   "flagged": [
-    {
-     "kind": "lip",
-     "z": 34.300000000000004,
-     "depth": 2.45,
-     "area": 7.52,
-     "at": [
-      -2.7,
-      9.0
-     ]
-    },
-    {
-     "kind": "lip",
-     "z": 57.30000000000001,
-     "depth": 1.71,
-     "area": 7.09,
-     "at": [
-      3.5,
-      9.8
-     ]
-    }
-   ]
-  },
-  {
-   "file": "11_tool_shroud_4010_TZ-V6.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 7.8,
-   "lip_max": 0.99,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": [
-    {
-     "kind": "bridge",
-     "z": 26.500000000000004,
-     "span": 7.8,
-     "area": 11.42,
-     "at": [
-      0.0,
-      8.2
-     ]
-    }
-   ]
-  },
-  {
-   "file": "12_tool_shroud_4010_DragonHF.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 8.1,
-   "lip_max": 0.99,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": [
-    {
-     "kind": "bridge",
-     "z": 29.900000000000006,
-     "span": 8.1,
-     "area": 12.02,
-     "at": [
-      0.0,
-      8.5
-     ]
-    }
-   ]
-  },
-  {
-   "file": "13_dock_x_each_tool.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 0,
-   "lip_max": 0,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  },
-  {
-   "file": "14_dock_shaft_post_x_each_tool.stl",
-   "islands": 0,
-   "island_max_area": 0,
-   "bridge_max": 0.66,
-   "lip_max": 0,
-   "lips_over_1p5": 0,
-   "lip_area_over_1p5": 0,
-   "verdict": "OK",
-   "disposition": "OK",
-   "note": "",
-   "flagged": []
-  }
- ]
+ "01_back_plate_body": {
+  "size": [
+   59.0,
+   113.0,
+   12.2
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 4285,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0,
+  "max_lip": 0
+ },
+ "02_back_plate_front_slab": {
+  "size": [
+   51.5,
+   55.9,
+   18.8
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 2525,
+  "fails": [],
+  "check": [],
+  "max_bridge": 2.1,
+  "max_lip": 0
+ },
+ "03_coupling_plate": {
+  "size": [
+   33.0,
+   42.4,
+   3.0
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 1126,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0,
+  "max_lip": 0
+ },
+ "04_gear_housing": {
+  "size": [
+   21.7,
+   36.3,
+   15.7
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 475,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0.48,
+  "max_lip": 0
+ },
+ "05_swing_arm": {
+  "size": [
+   53.0,
+   19.5,
+   22.0
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 677,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0.68,
+  "max_lip": 0
+ },
+ "06_SB2209_spacer_x2": {
+  "size": [
+   6.4,
+   6.4,
+   6.6
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 23,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0,
+  "max_lip": 0
+ },
+ "10_tool_body_x_each_tool": {
+  "size": [
+   38.4,
+   25.0,
+   67.3
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 700,
+  "fails": [],
+  "check": [],
+  "max_bridge": 0.99,
+  "max_lip": 0.53
+ },
+ "13_dock_with_wiper_x_each_tool": {
+  "size": [
+   51.5,
+   84.3,
+   40.0
+  ],
+  "watertight": true,
+  "bodies": 1,
+  "bed_mm2": 1815,
+  "fails": [],
+  "check": [
+   {
+    "kind": "lip",
+    "z": 20.100000000000005,
+    "depth": 1.77,
+    "area": 16.13,
+    "at": [
+     -8.6,
+     -23.4
+    ]
+   },
+   {
+    "kind": "lip",
+    "z": 20.100000000000005,
+    "depth": 1.77,
+    "area": 16.13,
+    "at": [
+     14.4,
+     -23.4
+    ]
+   }
+  ],
+  "max_bridge": 2.01,
+  "max_lip": 1.77
+ }
 }

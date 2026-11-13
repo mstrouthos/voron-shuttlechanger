@@ -1,104 +1,107 @@
 # Voron Shuttlechanger
 
-A hotend-only toolchanger for the Voron Trident, inspired by MedusaHC.
+A hotend-only toolchanger for the Voron Trident on a CNC Tap V2.
 
-**The extruder stays on the head; only the hotends change.** Each tool is a hotend, a 4010 fan and a small printed tool top. The tool hangs on two hardened pins and is held by magnets.
+**The extruder stays on the head; only the hotends change.** Each tool is a hotend, a 4010 fan and a printed tool body that carries the filament up between the extruder gears. The tool sits on three ball pins and is held by magnets. Nothing on the head is powered to release it: the dock does it.
 
-The extruder is a stock Clockwork 2 (CW2) with an LDO-36 motor, on a CNC Tap V2. **Nothing on the head is powered to open the idler: the dock does it.**
-- Guidler A (the idler arm) has a mast that ends in a ramped **cam** above the head.
-- A **pull rod** with a long spring holds the idler closed and sets the filament tension. The tension is set by turning one nut.
-- Each dock has a short **Ø5 steel shaft** that points back towards the head. As the head moves in, the shaft pushes the cam aside, which swings the idler open so the filament can leave the drive gears. When the head leaves, the spring closes it again.
+The mechanism is [CxChanger](https://github.com/cx330-TXY/CxChanger)'s (GPL-3.0), repackaged for the Tap:
+- **Extruder:** two HGX hobbed gears, one fixed and one on a swing arm, driven by the CW2 motor through a 17/44 dual gear.
+- **Swing arm:** a spring holds it on the filament. A steel pin on each dock pushes its foot as the head shifts 3 mm sideways, which opens the gears.
+- **Coupling:** three ball pins on the tool sit in three V grooves on the head, with six pairs of magnets.
+- **Dock:** one printed part per tool. It hangs the tool on two screws, carries the opener pin, and has a floor with a silicone strip that wipes and plugs the nozzle.
 
 ![Head and tool](images/head_front.png)
 
-> **Status: prototype (v32.4).** The design passes automated collision, tool-change, printability, fit-clearance, wall-thickness and load-case checks. It has **not been printed or tested on a printer yet.** Expect changes.
+> **Status: draft (v36).** Checked on the model only: collisions through a full tool change, layer-by-layer printability, wall thickness and load cases. **Nothing has been printed or tested on a printer yet.** Expect changes.
 
-**Building one? Start with the [illustrated assembly guide](docs/ASSEMBLY_GUIDE.md)**: exploded views, the full hardware list and every step, from the CW2 bearings to the docks. The whole head is built on the bench and then bolted to the Tap in one piece.
+**Building one? Start with the [assembly guide](docs/ASSEMBLY_GUIDE.md).** Background, the tool-change moves and the check results are in the [design notes](docs/ASSEMBLY.md).
 
-![Exploded view of the head](images/assembly/exploded_head.png)
+| Extruder with the gear housing removed | Right side: the EBB SB2209 USB, as on a CW2 |
+|---|---|
+| ![Extruder](images/extruder.png) | ![Right side](images/head_right.png) |
 
 ## Interactive 3D viewer
-`docs/index.html` is a self-contained three.js viewer of the head, tool and dock. It shows all the hardware and has:
+`docs/index.html` is a self-contained three.js viewer of the head, tools and docks. It shows all the hardware and has:
 - a tool-change animation
-- an opener-only slider (the idler pushed open, as the dock does it)
+- a swing-arm slider
 - see-through and section-cut views
 - an expandable bill of materials (click a row to isolate the part)
 
 Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 
-| Closed: the spring on the pull rod holds the idler on the filament | At the dock: the shaft holds the cam back, the idler is open 11.4° |
-|---|---|
-| ![closed](images/opener_closed.png) | ![open](images/opener_open.png) |
-
 ## How it works
-- **Tool mount:** the head carries 2 Ø3×30 dowels and 4 Ø6×2.65 magnets. Each tool top has matching bores and 2 magnets.
-- **Filament path:** the filament runs through a printed Ø3.0 bore in the tool top and a tilting guide lever, up to the drive gears.
-- **Dock:** the tool slides 9 mm along X onto 2 Ø3 steel pins on the dock, which hold it while the head backs away in Y. The same shift tilts the guide lever so the filament clears the gears. Docks sit on a 2020 rail at a 63 mm pitch.
-- **Opener:** no servo, crank or wiring. It works on the motion the tool change already makes.
-  - **Pull rod:** an M3×60 runs from the mast on Guidler A, through a fixed anchor on the motor plate, to a spring and a tension nut. It sits in the gap between the CW2 body and the plate.
-  - **Cam:** the mast carries on above the head as a cam: a hold face at the back and a 40° ramp in front of it. It reaches 13 mm in front of the CW2 body.
-  - **Shaft:** a Ø5 × 60 mm steel shaft is clamped in a printed post on the top slot of the dock rail. Its rounded tip is 40 mm behind the rail, 4 mm above the CW2 body. It stops short of the motor plate.
-  - **Opening:** from 27 mm out, the shaft tip rides up the ramp as the head comes in. The 9 mm shift onto the dock pins does the rest: the cam ends up 13 mm back and the idler 11.4° open, before the dock tilts the guide lever.
-  - **Closing:** the side of the shaft holds the idler open for the first 11 mm as the head backs out, then the ramp lets the spring close it.
-  - **Force:** the shaft pushes with about 11 N at the start and 21 N fully open. The rod force goes from 13.6 N closed to 26 N.
-  - **Size:** the cam stands 11 mm above the motor plate (z 143). On the left the mast is 3 mm outside the CW2 body when closed and about 15 mm when open at the dock.
+- **Filament path:** the tool body has a lower and an upper filament guide joined by a beam on its front. Between them, 21 mm of filament is free, and that is where the two gears grip it.
+- **Tool change:** the head moves in until the tool's two hook screws pass through the large holes in the dock. A 3 mm shift to the right slides the hooks into slots and pushes the swing arm open. The head then backs straight out: the magnets let go and the gears slide off the filament.
+- **Opening force:** with a 40 N grip the dock pin is pushed with about 22 N at the start and 29 N fully open. The idler opens 1.5 mm.
+- **Spring:** the stock CW2 idler spring, on an M3 adjuster at the top of the head.
+- **Wiper:** the nozzle slides 3 mm across the silicone strip at every change and rests on it while parked.
+- **Part cooling:** the v32 duct and fan mount, unchanged, hung from two ears on the back plate.
+- **Electronics:** the EBB SB2209 USB stands on the right side of the head, long edge front to back, the same way up as on a CW2.
 - **Hotends:** Trianglelab TZ-V6 3.0 or Phaetus Dragon HF, each with its own 4010 fan shroud.
 
-![Dock](images/dock.png)
+| A tool | Docks, seen from behind |
+|---|---|
+| ![Tool](images/tool.png) | ![Docks](images/dock.png) |
 
 ## Repository layout
 | Path | Contents |
 |---|---|
-| `stl/` | Print-ready STLs for every printed part, including the one stock CW2 part (02b), already in print orientation, no supports needed |
-| `step/` | STEP (AP214) versions of every part, converted from the meshes: faceted solids, good for measuring and remixing |
+| `stl/` | Print-ready STLs, already in print orientation, no supports needed |
+| `step/` | STEP versions of the three parts carried over from v32 (09, 11, 12). The v36 parts have no STEP files yet |
 | `BOM.csv` | Full bill of materials (per head and per tool) |
-| `docs/ASSEMBLY_GUIDE.md` | Complete illustrated assembly: exploded views, full hardware list (stock CW2 included), every insert, bearing, gear, motor and screw, the opener, the dock shafts and the set-up |
-| `docs/ASSEMBLY.md` | Assembly notes, tool-change sequence, audit notes |
+| `docs/ASSEMBLY_GUIDE.md` | Build steps, from the printed parts to the first tool change |
+| `docs/ASSEMBLY.md` | Design notes: layout, tool-change moves, check results, version history |
 | `docs/index.html` | Interactive 3D viewer |
-| `audit/` | Printability (per-face and layer-by-layer), fit-clearance, wall-thickness, screw-path and load-case reports |
+| `audit/` | Layer-by-layer printability, wall-thickness and load-case reports |
+| `model/` | The scripts that build the model, run the checks, export the STLs and write the viewer |
 
 ## Printed parts
+![Printed parts as they lie on the bed](images/printed_parts.png)
+
 | # | Part | Qty |
 |---|---|---|
-| 01 | CW2 main body (stock + front filament slot + front holes for the frame-post screws) | 1 |
-| 02 | Guidler A + mast (stock + mast and cam for the pull rod and the dock shaft) | 1 |
-| 02b | Guidler B (stock CW2, unmodified) | 1 |
-| 05 | Motor plate (stock + spring anchor for the pull rod) | 1 |
-| 07 | Receiver (pins + magnets) | 1 |
-| 08 | Receiver frame | 1 |
-| 09 | Duct + fan mount | 1 |
-| 10 / 10b | Tool top / filament guide lever | 1 per tool |
-| 11 / 12 | 4010 shroud for TZ-V6 / Dragon HF | 1 per tool |
-| 13 | Dock | 1 per tool |
-| 14 | Dock shaft post | 1 per tool |
+| 01 | Back plate body (bolts to the Tap) | 1 |
+| 02 | Back plate front slab (motor, dual gear, pivot, spring adjuster) | 1 |
+| 03 | Coupling plate (top groove and magnets; covers the dual gear) | 1 |
+| 04 | Gear housing | 1 |
+| 05 | Swing arm | 1 |
+| 06 | SB2209 spacer | 2 |
+| 09 | Duct + fan mount (from v32) | 1 |
+| 10 | Tool body | 1 per tool |
+| 11 / 12 | 4010 shroud for TZ-V6 / Dragon HF (from v32) | 1 per tool |
+| 13 | Dock with wiper | 1 per tool |
 
-Parts 03, 04 and 06 (trunnion, servo crank, servo bracket) no longer exist.
-
-**Material:** ASA, PETG or PC-CF. Use PC-CF for Guidler A, the receiver and the tool top if you can.
-
-**Settings:** 0.2 mm layers, 4 walls, 40 % infill, no supports.
+**Material:** ABS or ASA. **Settings:** 0.2 mm layers, 4 walls, 40 % infill or more, no supports.
 
 **Key hardware:**
-- hardened dowels: Ø3×30, Ø3×12, Ø3×15 (all Ø3)
-- M3×60 SHCS, 1 M3 nyloc, 3 M3 washers and a **0.7 × 6 × 40 mm compression spring** (about 1.2 N/mm) for the pull rod. The short BMG thumbscrew spring can't be used: it goes solid before the idler is open
-- Ø6×2.65 magnets
-- 10× M3×5×4 heat-set inserts (Ø5 × 4 mm), all in Ø4.7 holes
-- stock CW2 drivetrain: Bondtech BMG gear kit, 2× MR85 bearings, LDO-36 motor
-- one Ø5 × 60 mm steel shaft per dock
-- M3 and M5 screws (exact sizes and counts are in `BOM.csv` and the assembly guide)
+- HGX gear set (two hobbed 37-tooth gears) and a 17/44 dual gear, module 0.5
+- 2 MR63 bearings, dowel pins Ø3 × 16 (2) and Ø3 × 24 (1)
+- the CW2's LDO-36 motor with its 10-tooth pinion, and its idler spring
+- 6 dowel pins Ø1.5 × 5, and 3 round-head pins Ø3 × 6 per tool
+- Ø6 × 2.65 magnets: 6 on the head, 7 per tool
+- per dock: a Ø5 × 30 steel pin and a strip of self-adhesive silicone
+- M3, M2.5 and M5 screws (exact sizes and counts are in `BOM.csv`)
 
 ## Klipper
-The opener needs no config, no pin and no macro. The tool-change moves do the work:
+The tool change needs no pin and no servo, only moves. Dock pitch is 54 mm.
 
-- **Drop:** Y safe at X−9 → Y dock → X dock (slow) → Y safe.
-- **Pickup:** Y safe at X dock → Y dock (slow) → X−9 (slow) → Y safe.
+- **Release:** 30 mm behind the dock → in → 3 mm right (slow) → out 30 mm → 3 mm left.
+- **Pickup:** 30 mm behind the dock → 3 mm right → in (slow) → 3 mm left (slow) → out.
 
-Y safe must be at least 35 mm behind the dock position, so the cam is clear of every shaft when the head moves along the docks. Setting the shaft and the tension is in the [assembly guide](docs/ASSEMBLY_GUIDE.md#5-set-up-and-test).
+Do not move sideways while less than 30 mm out with a tool parked: the cooling duct would catch a Dragon heater block. CxChanger's macros are a good starting point; reverse the sign of its side shift.
+
+## Not verified
+- HGX and dual-gear dimensions come from the CxChanger CAD, not from parts in hand.
+- Thread depth of the Tap's two bottom holes.
+- Holding force of the magnets against nozzle drag.
+- Clearance of the SB2209 to the belts and to the printer's right side.
+- The docks must sit in front of the bed: their floor is 6 mm below the nozzle tip.
 
 ## Credits
-- [Voron Design](https://github.com/VoronDesign): Clockwork 2 extruder and Stealthburner parts (GPL-3.0). Parts 01, 02 and 05 are modified Voron parts; 02b is the stock CW2 Guidler B from the Stealthburner release.
+- [CxChanger](https://github.com/cx330-TXY/CxChanger) by cx330-TXY: the extruder, coupling and dock concept, and the gear layout (GPL-3.0).
+- [Voron Design](https://github.com/VoronDesign): the Trident, Tap and the Clockwork 2 motor and spring this reuses.
+- BigTreeTech: the EBB SB2209 USB board model used to place the board.
 - MedusaHC, for the hotend-only toolchanger idea.
-- Voron Tap / CNC Tap V2, which the head mounts to.
 
 ## License
-GPL-3.0, the same license as the Voron parts this project modifies. See `LICENSE`.
+GPL-3.0. See `LICENSE`.

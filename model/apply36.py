@@ -3,7 +3,7 @@ import pickle,re,json,base64,numpy as np,trimesh
 import build36 as B
 from geo import to_tm,box
 P=B.build(); H=B.hardware(); N={k:to_tm(v) for k,v in {**P,**H}.items()}
-old=pickle.load(open('../old_parts.pkl','rb'))
+old=pickle.load(open("old_parts.pkl","rb"))
 b64=lambda a: base64.b64encode(np.ascontiguousarray(a).tobytes()).decode()
 def rec(pid,tm,grp,col,metal=False,op=1):
     t=trimesh.graph.smooth_shade(trimesh.Trimesh(tm.vertices,tm.faces,process=False),angle=np.radians(30))

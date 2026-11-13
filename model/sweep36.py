@@ -3,7 +3,7 @@ import numpy as np, manifold3d as mf, pickle, trimesh, itertools, sys
 import build36 as B
 from geo import to_mf
 P=B.build(); H=B.hardware(); A={**P,**H}
-old=pickle.load(open('../old_parts.pkl','rb'))
+old=pickle.load(open("old_parts.pkl","rb"))
 def oldm(k):
     g,v,t,c,m=old[k]; tm=trimesh.Trimesh(v,t,process=True); m=to_mf(tm); return m if m.status()==mf.Error.NoError and m.volume()>0 else None
 for k in ('tap','duct','fans','dscrew','ins_duct','tz_he','tz_bl','tz_sh','tz_fan','fscrew_tz','dr_he','dr_bl','dr_sh','dr_fan'):
