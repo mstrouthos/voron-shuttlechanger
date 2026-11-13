@@ -50,7 +50,7 @@ Per tool you need one tool body, one shroud (v32 part 11 or 12) and one dock. Th
 
 ![Tool](../images/tool.png)
 
-1. Shroud over the hotend, tool body on top, four M2.5x12 through both into the heatsink. The two front screws drop in from the top; the two rear ones go in through the slots in the back of the base.
+1. Shroud over the hotend, tool body on top, four M2.5x10 through both into the heatsink. The two front screws drop in from the top; the two rear ones go in through the slots in the back of the base.
 2. PTFE tube into the top of the tool body. Feed filament down through the body until it shows below the upper guide.
 
 ## 6 Docks
