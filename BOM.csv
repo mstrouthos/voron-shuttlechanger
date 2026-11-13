@@ -9,9 +9,8 @@ item,per_head,per_tool,category,note
 10 Tool body,0,1,Printed,ABS/ASA; upright on its base
 11 or 12 Fan shroud 4010 (v32 part),0,1,Printed,TZ-V6 or Dragon HF; unchanged from v32
 13 Dock with wiper,0,1,Printed,ABS/ASA; lies on its back (rail face)
-HGX gear set: two hobbed 37T gears (module 0.5),1,0,Extruder,one fixed; one on the swing arm
-Dual gear 17T/44T (module 0.5) on a 3 mm shaft,1,0,Extruder,as CxChanger; check whether your HGX kit includes it
-Bearing MR63ZZ 3 x 6 x 2.5,2,0,Extruder,dual gear
+HGX Lite gear kit: two hobbed 36T gears and the 17T/44T dual gear (module 0.5),1,0,Extruder,one hobbed gear fixed; one on the swing arm; the dual gear between the motor and the fixed gear
+Bearing MR63ZZ 3 x 6 x 2.5,2,0,Extruder,dual gear; HGX Lite kits come with bearings: check their size before buying
 Dowel pin 3 x 16 (hardened; h6 or m6),2,0,Extruder,gear axles
 Dowel pin 3 x 24,1,0,Extruder,swing-arm pivot
 LDO-36STH20-1004AHG motor with 10T pinion,1,0,Extruder,from the CW2

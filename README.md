@@ -74,8 +74,8 @@ Open the file in a browser, or turn on GitHub Pages for the `docs/` folder.
 **Material:** ABS or ASA. **Settings:** 0.2 mm layers, 4 walls, 40 % infill or more, no supports.
 
 **Key hardware:**
-- HGX gear set (two hobbed 37-tooth gears) and a 17/44 dual gear, module 0.5
-- 2 MR63 bearings, dowel pins Ø3 × 16 (2) and Ø3 × 24 (1)
+- HGX Lite gear kit: two hobbed 36-tooth gears and the 17/44 dual gear, module 0.5 (the kit as CxChanger buys it holds all three)
+- 2 MR63 bearings (HGX Lite kits come with bearings; check their size), dowel pins Ø3 × 16 (2) and Ø3 × 24 (1)
 - the CW2's LDO-36 motor with its 10-tooth pinion, and its idler spring
 - 6 dowel pins Ø1.5 × 5, and 3 round-head pins Ø3 × 6 per tool
 - Ø6 × 2.65 magnets: 6 on the head, 7 per tool

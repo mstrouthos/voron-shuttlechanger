@@ -7,7 +7,7 @@ Left and right are as you face the printer. Positions are in millimetres from th
 ## Layout
 - **Back plate:** three prints. The body bolts to the Tap with its four M3 holes and carries the lower coupling grooves and the duct ears. The front slab carries the motor (which passes through a window in the body), the dual-gear pocket, the arm pivot and the spring boss. The coupling plate covers the dual gear and carries the top groove and magnets.
 - **Gears:** the two HGX gears are 18.8 mm apart, 36 mm above the top of the heatsink. The fixed gear is on the right, its axle held by the gear housing in front and the coupling plate and slab behind. The idler is on the swing arm on the left, between two webs.
-- **Reduction:** motor pinion 10 → dual gear 44/17 → fixed gear 37, about 9.6 : 1.
+- **Reduction:** motor pinion 10 → dual gear 44/17 → fixed gear 36, about 9.3 : 1.
 - **Swing arm:** pivots on a Ø3 pin 18 mm above the idler. The spring pushes its top 19.5 mm above the pivot; the dock pin pushes a screw at its foot 32 mm below.
 - **Coupling:** balls at the top centre and at the two lower corners of the tool. Top groove vertical, lower grooves aimed at the centre of the triangle. Magnets leave a 0.3 mm gap.
 - **Motor:** above the Tap, where the CW2 motor sits, turned so its upper screw clears the spring boss.
